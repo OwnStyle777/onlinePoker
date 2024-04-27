@@ -12,6 +12,7 @@
     <link rel="apple-touch-icon" href="logo192.png" />
 
     <link href="index.css" rel="stylesheet">
+    <link href="players.css" rel="stylesheet">
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
@@ -23,15 +24,24 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div class="background">
-      <div class="line">
-       <img src="images/grayChip.png" alt="" style="width: 50px; height: 50px;">
-       <img src="images/dealer.png" alt="" style="width: 50px; height: 50px;">
-       
-      </div>
    
       <div id="tableContainer">
         
         <div id="tableWrapper">
+          <div id="player1" class="players"><img src="images/dealer.png" alt="" style="width: 25px; height: 25px; margin-left: 100px;">
+            <img src="chips/blueChip.png" alt="" style="width: 25px; height: 25px; margin-top: 80px; ">
+            <img src="chips/blackChip.png" alt="" style="width: 25px; height: 25px; margin-top: 80px;margin-left: 2px;">
+            <img src="chips/redChip.png" alt="" style="width: 25px; height: 25px; margin-left: 2px;">
+            <img src="chips/blueChip.png" alt="" style="width: 25px; height: 25px; ;margin-left: 2px;">
+            <img src="chips/yellowChip.png" alt="" style="width: 25px; height: 25px; ;margin-left: 2px;"></div>
+          <div id="player2" class="players"></div>
+          <div id="player3" class="players"></div>
+          <div id="player4" class="players"></div>
+          <div id="player5" class="players"></div>
+          <div id="player6" class="players"></div>
+          <div id="player7" class="players"></div>
+          <div id="player8" class="players"></div>
+          <div id="player9" class="players"></div>
           
           <img id="table" src="images/greenTable.png" alt="">
           
@@ -43,8 +53,15 @@
           <img class="backCards"src="images/cardBack.png" alt="" >
           <img class="backCards"src="images/cardBack.png" alt="">
         </div>
+       
+
+        
         </div>
-      <div><img src="images/Ace.png" style="width: 50px; height: 50px;"></div>
+        <ButtonGroup variant="contained" aria-label="Basic button group">
+          <Button>One</Button>
+          <Button>Two</Button>
+          <Button>Three</Button>
+        </ButtonGroup>
     </div>
 </div>
 

@@ -1,0 +1,175 @@
+.players{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+    border-color: #113c56;
+    background-color: #113c56;
+    opacity: 0.90;
+    color: aliceblue;
+    text-align: center;
+    
+}
+
+.players:hover{
+transform: scale(1.2) !important;
+transition: transform 0.3s ease;
+}
+
+  #player1{
+    top: 10%;
+    left: 25%;
+    box-shadow: #121212 0px -10px 15px 10px ;
+
+  }
+  #player2{
+    top: 10%;
+    left: 40%;
+    box-shadow: #121212 0px -10px 15px 10px ;
+
+  }
+  #player3{
+    top: 10%;
+    left: 55%;
+    box-shadow: #121212 0px -10px 15px 10px ;
+
+  }
+  #player4{
+    top: 10%;
+    left: 70%;
+    box-shadow: #121212 0px -10px 15px 10px ;
+
+  }
+  #player5{
+    top: 40%;
+    left: 8%;
+    box-shadow: #121212 -10px 0px 15px 10px ;
+
+  }
+  #player6{
+    top: 78%;
+    left: 25%;
+    box-shadow: #121212 0px 10px 15px 10px ;
+
+  }
+  #player7{
+    top: 78%;
+    left: 45%;
+    box-shadow: #121212 0px 10px 15px 10px ;
+
+  }
+
+  #player8{
+    top: 78%;
+    left: 65%;
+    box-shadow: #121212 0px 10px 15px 10px ;
+
+  }
+
+  #player9{
+    left: 85%;
+    top: 40%;
+    box-shadow: #121212 10px 0px 15px 10px ;
+
+  }
+
+  @media only screen  and (max-width: 1000px) {
+  
+    .players{
+        width: 80px; 
+        height: 80px; 
+
+    }
+    #player1, #player2, #player3, #player4{
+        top: 20%;
+    }
+
+    #player6, #player7, #player8{
+        top: 68%;
+    }
+
+  
+  }
+
+  @media only screen  and (max-width: 650px) {
+  
+    .players{
+        width: 75px; 
+        height: 75px; 
+
+    }
+    #player1, #player2, #player3, #player4{
+        top: 23%;
+    }
+
+    #player6, #player7, #player8{
+        top: 65%;
+    }
+
+  
+}
+    @media only screen  and (max-width: 560px) {
+  
+        .players{
+            width: 60px; 
+            height:60px; 
+    
+        }
+        #player1, #player2, #player3, #player4{
+            top: 28%;
+        }
+    
+        #player6, #player7, #player8{
+            top: 62%;
+        }
+    
+      
+      }
+
+      @media only screen  and (max-width: 450px) {
+  
+        .players{
+            width: 50px; 
+            height:50px; 
+    
+        }
+        #player1, #player2, #player3, #player4{
+            top: 32%;
+        }
+    
+        #player6, #player7, #player8{
+            top: 60%;
+        }
+    
+      
+      }
+
+      
+      @media only screen  and (max-height: 580px) {
+  
+        
+        #player1, #player2, #player3, #player4{
+            top: 12%;
+        }
+    
+        #player6, #player7, #player8{
+            top: 70%;
+        }
+    
+      
+      }
+
+      @media only screen  and (max-height: 480px) {
+  
+        
+        #player1, #player2, #player3, #player4{
+            top: 4%;
+        }
+    
+        #player6, #player7, #player8{
+            top: 80%;
+        }
+    
+      
+      }

@@ -31,6 +31,14 @@
   height: 100%; /* Výška stolu bude rovná polovici výšky obrazovky */
 
 }
+.backCards:hover{
+  transform:scale(1.2);
+  
+}
+.cards:hover{
+  transform:scale(1.2);
+}
+
 
 @media (max-aspect-ratio: 1/2) {
   /* Ak je pomer strán 1:1 alebo menší, použiť transformáciu scale */
