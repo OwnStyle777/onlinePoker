@@ -17,7 +17,12 @@ public class DeckOFCards {
         cards.addAll(Arrays.asList(Card.values()));
     }
 
-    private void shuffleCards(){
+    public void shuffleCards(){
         Collections.shuffle(cards);
     }
+
+    public List<Card> getCards() {
+        return cards;
+    }
+
 }
