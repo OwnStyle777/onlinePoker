@@ -2,7 +2,7 @@ package com.example.onlinePoker.players;
 
 import jakarta.persistence.Entity;
 
-@Entity
+
 public class Player {
 
    private String name;
