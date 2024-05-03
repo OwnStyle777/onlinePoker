@@ -14,8 +14,39 @@ public class Game {
     private Table table = new Table();
     private final DeckOFCards deckOFCards = new DeckOFCards();
     private List<Card> cards = deckOFCards.getCards();
+    private int smallBlindIndex = 1;
 
 
+    public void getBlinds(){
+        int dealerIndex ;
+        int bigBlindIndex ;
+        deactivateBlinds();
+        if (smallBlindIndex >= players.size()) {
+            smallBlindIndex = 0;
+        }
+        if (smallBlindIndex == 0) {
+            dealerIndex = players.size() - 1;
+        } else {
+            dealerIndex = smallBlindIndex - 1;
+        }
+        if (smallBlindIndex == players.size() - 1) {
+            bigBlindIndex = 0;
+        } else {
+            bigBlindIndex = smallBlindIndex + 1;
+        }
+        if(players.size() == 2){
+            players.get(smallBlindIndex).setSmallBlind(true);
+            players.get(bigBlindIndex).setBigBlind(true);
+
+        }else {
+
+            players.get(dealerIndex).setDealer(true);
+            players.get(smallBlindIndex).setSmallBlind(true);
+            players.get(bigBlindIndex).setBigBlind(true);
+        }
+
+        smallBlindIndex ++;
+    }
     public int getRandomCardIndex (List<Card> cards){
         Random random = new Random();
 
@@ -23,10 +54,22 @@ public class Game {
 
     }
 
+    public void deactivateBlinds (){
+        for(Player player: players){
+            player.setBigBlind(false);
+            player.setSmallBlind(false);
+            player.setDealer(false);
+        }
+
+    }
+
+
 
     public void dealTheCards(List<Player> players) {
         if (players.size() > 1) {
+
             deckOFCards.shuffleCards();
+
             for (Player player : players) {
                 int card1Index = getRandomCardIndex(cards);
                 Card card1 = cards.get(card1Index);
