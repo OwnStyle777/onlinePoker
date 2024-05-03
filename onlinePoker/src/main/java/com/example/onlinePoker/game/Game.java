@@ -5,6 +5,7 @@ import com.example.onlinePoker.table.Card;
 import com.example.onlinePoker.table.DeckOFCards;
 import com.example.onlinePoker.table.Table;
 
+import javax.xml.catalog.Catalog;
 import java.util.List;
 import java.util.Random;
 
@@ -70,7 +71,11 @@ public class Game {
     }
 
     public void dealTheRiver(){
-        
+        int card5Index = getRandomCardIndex(cards);
+        Card card5 = cards.get(card5Index);
+        cards.remove(card5Index);
+
+        table.setRiver(card5.toString());
     }
 
     public List<Player> getPlayers() {
