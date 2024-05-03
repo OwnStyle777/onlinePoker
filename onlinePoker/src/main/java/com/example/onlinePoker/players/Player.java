@@ -9,7 +9,15 @@ public class Player {
    private int totalChips;
    private String[] cards;
    private String combination;
+   private int stake;
 
+    public int getStake() {
+        return stake;
+    }
+
+    public void setStake(int stake) {
+        this.stake = stake;
+    }
 
     public String getName() {
         return name;
