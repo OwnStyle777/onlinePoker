@@ -10,6 +10,33 @@ public class Player {
    private String[] cards;
    private String combination;
    private int stake;
+   private boolean dealer = false;
+   private boolean smallBlind = false;
+   private boolean bigBlind = false;
+
+    public boolean isSmallBlind() {
+        return smallBlind;
+    }
+
+    public void setSmallBlind(boolean smallBlind) {
+        this.smallBlind = smallBlind;
+    }
+
+    public boolean isBigBlind() {
+        return bigBlind;
+    }
+
+    public void setBigBlind(boolean bigBlind) {
+        this.bigBlind = bigBlind;
+    }
+
+    public boolean isDealer() {
+        return dealer;
+    }
+
+    public void setDealer(boolean dealer) {
+        this.dealer = dealer;
+    }
 
     public int getStake() {
         return stake;
