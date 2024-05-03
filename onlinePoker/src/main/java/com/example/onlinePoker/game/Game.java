@@ -16,7 +16,6 @@ public class Game {
     private List<Card> cards = deckOFCards.getCards();
 
 
-
     public int getRandomCardIndex (List<Card> cards){
         Random random = new Random();
 
@@ -97,4 +96,12 @@ public class Game {
     public void setCards(List<Card> cards) {
         this.cards = cards;
     }
+    public Table getTable() {
+        return table;
+    }
+
+    public void setTable(Table table) {
+        this.table = table;
+    }
+
 }

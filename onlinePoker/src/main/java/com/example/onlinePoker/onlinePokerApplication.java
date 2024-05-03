@@ -3,6 +3,7 @@ package com.example.onlinePoker;
 import com.example.onlinePoker.game.Game;
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.table.DeckOFCards;
+import com.example.onlinePoker.table.Table;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -44,10 +45,22 @@ public class onlinePokerApplication {
 		game.setPlayers(playerList);
 
 		game.dealTheCards(playerList);
+		game.dealTheFlop();
+		game.dealTheTurn();
+		game.dealTheRiver();
 
+		int playerNumber = 1;
 		for(Player playerC: playerList){
-			System.out.println(Arrays.toString(playerC.getCards()));
+
+			String[] cards = playerC.getCards();
+
+			System.out.println("Player " + playerNumber + "Card1: " + cards[0] + " Card2: " + cards[1] );
+			playerNumber ++;
 		}
+
+
+		Table
+		System.out.println(ta);
 
 	}
 
