@@ -62,6 +62,14 @@ public class Game {
     }
 
     public void dealTheTurn(){
+        int card4Index = getRandomCardIndex(cards);
+        Card card4 = cards.get(card4Index);
+        cards.remove(card4Index);
+
+        table.setTurn(card4.toString());
+    }
+
+    public void dealTheRiver(){
         
     }
 
