@@ -3,12 +3,14 @@ package com.example.onlinePoker.game;
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.table.Card;
 import com.example.onlinePoker.table.DeckOFCards;
+import com.example.onlinePoker.table.Table;
 
 import java.util.List;
 import java.util.Random;
 
 public class Game {
     private List<Player> players;
+    private Table table = new Table();
     private final DeckOFCards deckOFCards = new DeckOFCards();
     private List<Card> cards = deckOFCards.getCards();
 
@@ -40,6 +42,27 @@ public class Game {
             }
         }
 
+    }
+
+    public void dealTheFlop(){
+        int card1Index = getRandomCardIndex(cards);
+        Card card1 = cards.get(card1Index);
+        cards.remove(card1Index);
+
+        int card2Index = getRandomCardIndex(cards);
+        Card card2 = cards.get(card2Index);
+        cards.remove(card2Index);
+
+        int card3Index = getRandomCardIndex(cards);
+        Card card3 = cards.get(card3Index);
+        cards.remove(card3Index);
+
+        String[] flop = {card1.toString(), card2.toString(), card3.toString()};
+        table.setFlop(flop);
+    }
+
+    public void dealTheTurn(){
+        
     }
 
     public List<Player> getPlayers() {
