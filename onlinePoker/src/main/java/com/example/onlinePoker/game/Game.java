@@ -10,6 +10,9 @@ public class Game {
     private List<Player> players;
     private Table table = new Table();
     private List<Card> cards;
+    private int smallBlind = 50;
+    private int bigBlind = 100;
+
 
 
     public int getBlinds(int smallBlindIndex){
@@ -35,9 +38,16 @@ public class Game {
 
 
         }else {
-            players.get(dealerIndex).setDealer(true);
-            players.get(smallBlindIndex).setSmallBlind(true);
-            players.get(bigBlindIndex).setBigBlind(true);
+            Player dealer = players.get(dealerIndex);
+            dealer.setDealer(true);
+
+            Player smallBlindPl  = players.get(smallBlindIndex);
+            smallBlindPl.setSmallBlind(true);
+            smallBlindPl.setTotalChips(smallBlindPl.getTotalChips() - smallBlind);
+
+            Player bigBlindPl = players.get(bigBlindIndex);
+            bigBlindPl.setBigBlind(true);
+            bigBlindPl.setTotalChips(bigBlindPl.getTotalChips() - bigBlind);
 
         }
 
@@ -144,6 +154,21 @@ public class Game {
 
     public void setTable(Table table) {
         this.table = table;
+    }
+    public int getSmallBlind() {
+        return smallBlind;
+    }
+
+    public void setSmallBlind(int smallBlind) {
+        this.smallBlind = smallBlind;
+    }
+
+    public int getBigBlind() {
+        return bigBlind;
+    }
+
+    public void setBigBlind(int bigBlind) {
+        this.bigBlind = bigBlind;
     }
 
 }

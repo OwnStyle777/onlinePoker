@@ -8,6 +8,7 @@ public class Table {
     private String turn;
     private String river;
 
+
     public int getPot() {
         return pot;
     }

@@ -13,7 +13,6 @@ public class Player {
    private boolean dealer = false;
    private boolean smallBlind = false;
    private boolean bigBlind = false;
-   private int raise;
    private String  action;
 
 
@@ -80,13 +79,6 @@ public class Player {
 
     public void setCombination(String combination) {
         this.combination = combination;
-    }
-    public int getRaise() {
-        return raise;
-    }
-
-    public void setRaise(int raise) {
-        this.raise = raise;
     }
     public String getAction() {
         return action;
