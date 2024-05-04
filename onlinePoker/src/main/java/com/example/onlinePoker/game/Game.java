@@ -2,22 +2,17 @@ package com.example.onlinePoker.game;
 
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.table.Card;
-import com.example.onlinePoker.table.DeckOFCards;
 import com.example.onlinePoker.table.Table;
 
-import javax.xml.catalog.Catalog;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Game {
     private List<Player> players;
     private Table table = new Table();
-    private final DeckOFCards deckOFCards = new DeckOFCards();
-    private List<Card> cards = deckOFCards.getCards();
-    private int smallBlindIndex = 1;
+    private List<Card> cards;
 
 
-    public void getBlinds(){
+    public int getBlinds(int smallBlindIndex){
         int dealerIndex ;
         int bigBlindIndex ;
         deactivateBlinds();
@@ -38,14 +33,15 @@ public class Game {
             players.get(smallBlindIndex).setSmallBlind(true);
             players.get(bigBlindIndex).setBigBlind(true);
 
-        }else {
 
+        }else {
             players.get(dealerIndex).setDealer(true);
             players.get(smallBlindIndex).setSmallBlind(true);
             players.get(bigBlindIndex).setBigBlind(true);
+
         }
 
-        smallBlindIndex ++;
+     return smallBlindIndex + 1 ;
     }
     public int getRandomCardIndex (List<Card> cards){
         Random random = new Random();
@@ -67,8 +63,9 @@ public class Game {
 
     public void dealTheCards(List<Player> players) {
         if (players.size() > 1) {
+            initializeDeck();
+            shuffleCards();
 
-            deckOFCards.shuffleCards();
 
             for (Player player : players) {
                 int card1Index = getRandomCardIndex(cards);
@@ -103,6 +100,13 @@ public class Game {
         String[] flop = {card1.toString(), card2.toString(), card3.toString()};
         table.setFlop(flop);
     }
+    public void shuffleCards(){
+        Collections.shuffle(cards);
+    }
+    public void initializeDeck(){
+        cards = new ArrayList<>();
+        cards.addAll(Arrays.asList(Card.values()));
+    }
 
     public void dealTheTurn(){
         int card4Index = getRandomCardIndex(cards);
@@ -127,11 +131,6 @@ public class Game {
     public void setPlayers(List<Player> players) {
         this.players = players;
     }
-
-    public DeckOFCards getDeckOFCards() {
-        return deckOFCards;
-    }
-
     public List<Card> getCards() {
         return cards;
     }
