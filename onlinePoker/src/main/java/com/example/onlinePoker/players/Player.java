@@ -6,13 +6,17 @@ import jakarta.persistence.Entity;
 public class Player {
 
    private String name;
-   private int totalChips;
+   private int totalChips = 20000;
    private String[] cards;
    private String combination;
    private int stake;
    private boolean dealer = false;
    private boolean smallBlind = false;
    private boolean bigBlind = false;
+   private int raise;
+   private String  action;
+
+
 
     public boolean isSmallBlind() {
         return smallBlind;
@@ -77,4 +81,20 @@ public class Player {
     public void setCombination(String combination) {
         this.combination = combination;
     }
+    public int getRaise() {
+        return raise;
+    }
+
+    public void setRaise(int raise) {
+        this.raise = raise;
+    }
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+
 }
