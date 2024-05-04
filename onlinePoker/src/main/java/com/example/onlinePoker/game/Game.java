@@ -8,12 +8,32 @@ import java.util.*;
 
 public class Game {
     private List<Player> players;
+    private List<Player> activePlayers;
     private Table table = new Table();
     private List<Card> cards;
     private int smallBlind = 50;
     private int bigBlind = 100;
+    private int stake = bigBlind;
 
 
+    public int raise (Player player, int raise){
+        
+        int toCall = 0;
+        if(player.getRoundStake() < stake){
+            toCall = stake - player.getRoundStake();
+        }
+        stake  += raise;
+        if(player.isSmallBlind())
+        player.setTotalChips(player.getTotalChips() - (raise + toCall));
+        player.setRoundStake(player.getRoundStake() + raise + toCall);
+        table.setPot(table.getPot() + raise + toCall);
+    return  stake;
+    }
+    public void call(Player player){
+        int call = stake - player.getRoundStake();
+        player.setTotalChips(player.getTotalChips() - call);
+        table.setPot(table.getPot() + call);
+    }
 
     public int getBlinds(int smallBlindIndex){
         int dealerIndex ;
@@ -43,11 +63,16 @@ public class Game {
 
             Player smallBlindPl  = players.get(smallBlindIndex);
             smallBlindPl.setSmallBlind(true);
+            smallBlindPl.setRoundStake(smallBlind);
             smallBlindPl.setTotalChips(smallBlindPl.getTotalChips() - smallBlind);
+            table.setPot(table.getPot() + smallBlind);
+
 
             Player bigBlindPl = players.get(bigBlindIndex);
             bigBlindPl.setBigBlind(true);
+            bigBlindPl.setRoundStake(bigBlind);
             bigBlindPl.setTotalChips(bigBlindPl.getTotalChips() - bigBlind);
+            table.setPot(table.getPot() + bigBlind);
 
         }
 
@@ -170,5 +195,13 @@ public class Game {
     public void setBigBlind(int bigBlind) {
         this.bigBlind = bigBlind;
     }
+    public int getStake() {
+        return stake;
+    }
+
+    public void setStake(int stake) {
+        this.stake = stake;
+    }
+
 
 }

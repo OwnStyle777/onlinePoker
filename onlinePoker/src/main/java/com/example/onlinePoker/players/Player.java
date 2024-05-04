@@ -9,11 +9,12 @@ public class Player {
    private int totalChips = 20000;
    private String[] cards;
    private String combination;
-   private int stake;
+   private int roundStake;
    private boolean dealer = false;
    private boolean smallBlind = false;
    private boolean bigBlind = false;
    private String  action;
+
 
 
 
@@ -41,12 +42,12 @@ public class Player {
         this.dealer = dealer;
     }
 
-    public int getStake() {
-        return stake;
+    public int getRoundStake() {
+        return roundStake;
     }
 
-    public void setStake(int stake) {
-        this.stake = stake;
+    public void setRoundStake(int roundStake) {
+        this.roundStake = roundStake;
     }
 
     public String getName() {
