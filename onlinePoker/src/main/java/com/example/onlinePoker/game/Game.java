@@ -16,8 +16,54 @@ public class Game {
     private int stake = bigBlind;
 
 
+
+
+    public void organizeActivePlayers(List<Player> players, int firstPlayer){
+        activePlayers = players;
+         Collections.rotate(activePlayers, activePlayers.size() - firstPlayer);
+
+    }
+
+    public void callBets(int firstPlayer) {
+        organizeActivePlayers(players, firstPlayer);
+        Scanner scanner = new Scanner(System.in);
+        Iterator<Player> iterator = activePlayers.iterator();
+
+        while (iterator.hasNext()) {
+            Player player = iterator.next();
+            if (player.getRoundStake() == stake) {
+                System.out.println( player.getName() + " fold  check raise");
+                String action = scanner.nextLine();
+                switch (action) {
+                    case "fold" -> fold(player, iterator);
+                    case "check" -> {}
+                    case "raise" -> {
+                        System.out.println("amount of raise");
+                        int raise = scanner.nextInt();
+                        raise(player, raise);
+                        callBets(activePlayers.indexOf(player) + 1);
+                    }
+                }
+
+            } else {
+                System.out.println(player.getName() + " fold raise call");
+                String action = scanner.nextLine();
+                switch (action) {
+                    case "fold" -> fold(player, iterator);
+                    case "raise" -> {
+                        System.out.println("amount of raise");
+                        int raise = scanner.nextInt();
+                        raise(player, raise);
+                        callBets(activePlayers.indexOf(player) + 1);
+                    }
+                    case "call" -> call(player);
+                }
+            }
+        }
+    }
+
     public int raise (Player player, int raise){
-        
+
         int toCall = 0;
         if(player.getRoundStake() < stake){
             toCall = stake - player.getRoundStake();
@@ -27,13 +73,25 @@ public class Game {
         player.setTotalChips(player.getTotalChips() - (raise + toCall));
         player.setRoundStake(player.getRoundStake() + raise + toCall);
         table.setPot(table.getPot() + raise + toCall);
+
+        System.out.println(player.getName() + " raises " + raise);
     return  stake;
     }
     public void call(Player player){
         int call = stake - player.getRoundStake();
+        System.out.println( player.getName() + " calls " + call);
         player.setTotalChips(player.getTotalChips() - call);
+        player.setRoundStake(player.getRoundStake() + call);
+        System.out.println(player.getTotalChips());
         table.setPot(table.getPot() + call);
     }
+
+
+    public void fold(Player player, Iterator<Player> iterator) {
+        iterator.remove();
+        System.out.println(player.getName() + "fold");
+    }
+
 
     public int getBlinds(int smallBlindIndex){
         int dealerIndex ;
@@ -202,6 +260,14 @@ public class Game {
     public void setStake(int stake) {
         this.stake = stake;
     }
+    public List<Player> getActivePlayers() {
+        return activePlayers;
+    }
+
+    public void setActivePlayers(List<Player> activePlayers) {
+        this.activePlayers = activePlayers;
+    }
+
 
 
 }
