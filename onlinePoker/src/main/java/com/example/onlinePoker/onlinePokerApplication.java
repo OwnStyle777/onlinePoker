@@ -50,6 +50,7 @@ public class onlinePokerApplication {
 
 
 		game.setPlayers(playerList);
+		game.setActivePlayers(playerList);
 		int smallBlind = 1;
 		int rounds = 0;
 
@@ -73,11 +74,13 @@ public class onlinePokerApplication {
 
 			}
 
-			game.callBets(firstPlayer);
-
+			game.callBets(firstPlayer, true);
 			game.dealTheFlop();
+			game.callBetsNextRounds(smallBlind);
 			game.dealTheTurn();
+			game.callBetsNextRounds(smallBlind);
 			game.dealTheRiver();
+			game.callBetsNextRounds(smallBlind);
 
 
 			System.out.println();

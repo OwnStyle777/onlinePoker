@@ -24,27 +24,40 @@ public class Game {
 
     }
 
-    public void callBets(int firstPlayer) {
+
+    //special method for firstRound before the flop
+    public void callBets(int firstPlayer, boolean firstIteration) {
         organizeActivePlayers(players, firstPlayer);
         Scanner scanner = new Scanner(System.in);
+        //iterator to allow safety remove or add elements during iteration
         Iterator<Player> iterator = activePlayers.iterator();
 
-        while (iterator.hasNext()) {
+        //boolean for stop running iteration
+        boolean continueIteration = true;
+
+
+        while (iterator.hasNext() && continueIteration ) {
             Player player = iterator.next();
-            if (player.getRoundStake() == stake) {
+            //big blind can do some action ,also when stake is equal to playerRoundStake ,but only in first iteration
+            if (player.getRoundStake() == stake && player.isBigBlind() && firstIteration) {
+                firstIteration = false;
                 System.out.println( player.getName() + " fold  check raise");
                 String action = scanner.nextLine();
                 switch (action) {
-                    case "fold" -> fold(player, iterator);
                     case "check" -> {}
                     case "raise" -> {
                         System.out.println("amount of raise");
                         int raise = scanner.nextInt();
                         raise(player, raise);
-                        callBets(activePlayers.indexOf(player) + 1);
+                        //recursive calling after someone raise move to the next player
+                        callBets(activePlayers.indexOf(player) + 1, false);
+                        continueIteration = false;
                     }
+
                 }
 
+            } else if(player.getRoundStake() == stake) {
+                System.out.println();
             } else {
                 System.out.println(player.getName() + " fold raise call");
                 String action = scanner.nextLine();
@@ -54,13 +67,67 @@ public class Game {
                         System.out.println("amount of raise");
                         int raise = scanner.nextInt();
                         raise(player, raise);
-                        callBets(activePlayers.indexOf(player) + 1);
+                        callBets(activePlayers.indexOf(player) + 1 ,false);
+                        continueIteration = false;
                     }
                     case "call" -> call(player);
                 }
             }
         }
     }
+
+    public void callBetsNextRounds(int firstPlayer){
+        organizeActivePlayers(players, firstPlayer);
+        Scanner scanner = new Scanner(System.in);
+
+        Iterator<Player> iterator = activePlayers.iterator();
+
+        //boolean for stop running iteration
+        boolean continueIteration = true;
+
+        while (iterator.hasNext() && continueIteration ) {
+            Player player = iterator.next();
+
+            if (player.getRoundStake() == stake && player.isBigBlind() ) {
+
+                System.out.println( player.getName() + " fold  check raise");
+                String action = scanner.nextLine();
+                switch (action) {
+                    case "check" -> {}
+                    case "raise" -> {
+                        System.out.println("amount of raise");
+                        int raise = scanner.nextInt();
+                        raise(player, raise);
+                        //recursive calling after someone raise move to the next player
+                        callBets(activePlayers.indexOf(player) + 1, false);
+                        continueIteration = false;
+                    }
+
+                }
+
+            } else if(player.getRoundStake() == stake) {
+                System.out.println();
+            } else {
+                System.out.println(player.getName() + " fold raise call");
+                String action = scanner.nextLine();
+                switch (action) {
+                    case "fold" -> fold(player, iterator);
+                    case "raise" -> {
+                        System.out.println("amount of raise");
+                        int raise = scanner.nextInt();
+                        raise(player, raise);
+                        callBets(activePlayers.indexOf(player) + 1 ,false);
+                        continueIteration = false;
+                    }
+                    case "call" -> call(player);
+                }
+            }
+        }
+
+
+    }
+
+
 
     public int raise (Player player, int raise){
 
