@@ -13,8 +13,8 @@ public class Player {
    private boolean dealer = false;
    private boolean smallBlind = false;
    private boolean bigBlind = false;
+   private  boolean isFold = false;
    private String  action;
-
 
 
 
@@ -89,5 +89,11 @@ public class Player {
         this.action = action;
     }
 
+    public boolean isFold() {
+        return isFold;
+    }
 
+    public void setFold(boolean fold) {
+        isFold = fold;
+    }
 }
