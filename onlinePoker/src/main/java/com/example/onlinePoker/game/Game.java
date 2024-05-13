@@ -8,7 +8,6 @@ import java.util.*;
 
 public class Game {
     private List<Player> players;
-    private List<Player> activePlayers;
     private Table table = new Table();
     private List<Card> cards;
     private int smallBlind = 50;
@@ -18,112 +17,169 @@ public class Game {
 
 
 
-    public void organizeActivePlayers(List<Player> players, int firstPlayer){
-        activePlayers = players;
-         Collections.rotate(activePlayers, activePlayers.size() - firstPlayer);
+    public void organizeActivePlayers(List<Player> players){
+        int firstPlayer = 0;
+        for(Player player: players){
+            if(player.isBigBlind()){
+                firstPlayer =  players.indexOf(player) + 1;
+            }
+        }
 
+        if (firstPlayer == players.size()){
+            firstPlayer = 0;
+        }else if(firstPlayer > players.size()){
+            firstPlayer = 1;
+        }
+         Collections.rotate(players, players.size() - firstPlayer);
+
+
+    }
+    public void organizeActivePlayers(List<Player> players, int firstPlayer){
+
+        if (firstPlayer == players.size()){
+            firstPlayer = 0;
+        }else if(firstPlayer > players.size()){
+            firstPlayer = 1;
+        }
+        Collections.rotate(players, players.size() - firstPlayer);
+
+
+    }
+
+    public void preparePlayersForNextRound(List<Player> players){
+        for (Player player: players){
+            player.setFold(false);
+            player.setRoundStake(0);
+        }
+    }
+
+    public void resetRoundStakes(){
+        for (Player player: players){
+            player.setRoundStake(0);
+        }
+        setStake(0);
     }
 
 
     //special method for firstRound before the flop
     public void callBets(int firstPlayer, boolean firstIteration) {
-        organizeActivePlayers(players, firstPlayer);
+        if(firstIteration){
+        setStake(100);}
+        if(firstPlayer >= 0){
+            organizeActivePlayers(players, firstPlayer);
+        }else {
+            organizeActivePlayers(players);
+        }
         Scanner scanner = new Scanner(System.in);
-        //iterator to allow safety remove or add elements during iteration
-        Iterator<Player> iterator = activePlayers.iterator();
+
 
         //boolean for stop running iteration
         boolean continueIteration = true;
 
+        for(Player player: players) {
+            System.out.println("roundStake: " + player.getRoundStake());
+            System.out.println("bigBlind: " + player.isBigBlind());
+            System.out.println("isFold: " + player.isFold());
+            System.out.println("player: " + player.getName());
+            System.out.println("stake: " + stake);
 
-        while (iterator.hasNext() && continueIteration ) {
-            Player player = iterator.next();
-            //big blind can do some action ,also when stake is equal to playerRoundStake ,but only in first iteration
-            if (player.getRoundStake() == stake && player.isBigBlind() && firstIteration) {
-                firstIteration = false;
-                System.out.println( player.getName() + " fold  check raise");
-                String action = scanner.nextLine();
-                switch (action) {
-                    case "check" -> {}
-                    case "raise" -> {
-                        System.out.println("amount of raise");
-                        int raise = scanner.nextInt();
-                        raise(player, raise);
-                        //recursive calling after someone raise move to the next player
-                        callBets(activePlayers.indexOf(player) + 1, false);
-                        continueIteration = false;
+            if (continueIteration) {
+
+                //big blind can do some action ,also when stake is equal to playerRoundStake ,but only in first iteration
+                if (player.getRoundStake() == stake && player.isBigBlind() && firstIteration && !player.isFold()) {
+                    firstIteration = false;
+                    System.out.println(player.getName() + " fold  check raise");
+                    String action = scanner.nextLine();
+                    switch (action) {
+                        case "check" -> {
+                        }
+                        case "raise" -> {
+                            System.out.println("amount of raise");
+                            int raise = scanner.nextInt();
+                            setStake( raise(player, raise));
+                            //recursive calling after someone raise move to the next player
+                            callBets(players.indexOf(player) + 1, false);
+                            continueIteration = false;
+                        }
+
                     }
 
-                }
-
-            } else if(player.getRoundStake() == stake) {
-                System.out.println();
-            } else {
-                System.out.println(player.getName() + " fold raise call");
-                String action = scanner.nextLine();
-                switch (action) {
-                    case "fold" -> fold(player, iterator);
-                    case "raise" -> {
-                        System.out.println("amount of raise");
-                        int raise = scanner.nextInt();
-                        raise(player, raise);
-                        callBets(activePlayers.indexOf(player) + 1 ,false);
-                        continueIteration = false;
+                } else if (player.getRoundStake() == stake) {
+                    System.out.println();
+                } else if (!player.isFold()) {
+                    System.out.println(player.getName() + " fold raise call");
+                    String action = scanner.nextLine();
+                    switch (action) {
+                        case "fold" -> fold(player);
+                        case "raise" -> {
+                            System.out.println("amount of raise");
+                            int raise = scanner.nextInt();
+                            setStake( raise(player, raise));
+                            callBets(players.indexOf(player) + 1, false);
+                            continueIteration = false;
+                        }
+                        case "call" -> call(player);
                     }
-                    case "call" -> call(player);
                 }
             }
         }
+
     }
 
-    public void callBetsNextRounds(int firstPlayer){
-        organizeActivePlayers(players, firstPlayer);
+    public void callBetsNextRounds(int firstPlayer, boolean firstIteration){
+
+        if(firstPlayer >= 0){
+            organizeActivePlayers(players, firstPlayer);
+        }else {
+            organizeActivePlayers(players);
+        }
         Scanner scanner = new Scanner(System.in);
 
-        Iterator<Player> iterator = activePlayers.iterator();
 
         //boolean for stop running iteration
         boolean continueIteration = true;
+        for(Player player: players) {
+            if (continueIteration) {
+                System.out.println("roundStake: " + player.getRoundStake());
+                System.out.println("bigBlind: " + player.isBigBlind());
+                System.out.println("isFold: " + player.isFold());
+                System.out.println("player: " + player.getName());
+                System.out.println("stake: " + stake);
 
-        while (iterator.hasNext() && continueIteration ) {
-            Player player = iterator.next();
 
-            if (player.getRoundStake() == stake && player.isBigBlind() ) {
+                if (player.getRoundStake() == stake && !player.isFold() && firstIteration) {
 
-                System.out.println( player.getName() + " fold  check raise");
-                String action = scanner.nextLine();
-                switch (action) {
-                    case "check" -> {}
-                    case "raise" -> {
-                        System.out.println("amount of raise");
-                        int raise = scanner.nextInt();
-                        raise(player, raise);
-                        //recursive calling after someone raise move to the next player
-                        callBets(activePlayers.indexOf(player) + 1, false);
-                        continueIteration = false;
+                    System.out.println(player.getName() + " check raise");
+                    String action = scanner.nextLine();
+                    switch (action) {
+                        case "check" -> {
+                        }
+                        case "raise" -> {
+                            System.out.println("amount of raise");
+                            int raise = scanner.nextInt();
+                            setStake(raise(player, raise));
+                            //recursive calling after someone raise move to the next player
+                            callBetsNextRounds(players.indexOf(player) + 1, false);
+                            continueIteration = false;
+                        }
                     }
-
-                }
-
-            } else if(player.getRoundStake() == stake) {
-                System.out.println();
-            } else {
-                System.out.println(player.getName() + " fold raise call");
-                String action = scanner.nextLine();
-                switch (action) {
-                    case "fold" -> fold(player, iterator);
-                    case "raise" -> {
-                        System.out.println("amount of raise");
-                        int raise = scanner.nextInt();
-                        raise(player, raise);
-                        callBets(activePlayers.indexOf(player) + 1 ,false);
-                        continueIteration = false;
+                } else if (!player.isFold() && player.getRoundStake() < stake) {
+                    System.out.println(player.getName() + " fold raise call");
+                    String action = scanner.nextLine();
+                    switch (action) {
+                        case "fold" -> fold(player);
+                        case "raise" -> {
+                            System.out.println("amount of raise");
+                            int raise = scanner.nextInt();
+                            setStake(raise(player, raise));
+                            callBetsNextRounds(players.indexOf(player) + 1, false);
+                            continueIteration = false;
+                        }
+                        case "call" -> call(player);
                     }
-                    case "call" -> call(player);
                 }
             }
         }
-
 
     }
 
@@ -154,8 +210,8 @@ public class Game {
     }
 
 
-    public void fold(Player player, Iterator<Player> iterator) {
-        iterator.remove();
+    public void fold(Player player) {
+        player.setFold(true);
         System.out.println(player.getName() + "fold");
     }
 
@@ -326,13 +382,6 @@ public class Game {
 
     public void setStake(int stake) {
         this.stake = stake;
-    }
-    public List<Player> getActivePlayers() {
-        return activePlayers;
-    }
-
-    public void setActivePlayers(List<Player> activePlayers) {
-        this.activePlayers = activePlayers;
     }
 
 

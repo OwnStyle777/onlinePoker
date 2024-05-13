@@ -21,8 +21,8 @@ public class onlinePokerApplication {
 		Player player = new Player();
 		Player player1 = new Player();
 		Player player2 = new Player();
-		Player player3 = new Player();
-		Player player4 = new Player();
+//		Player player3 = new Player();
+//		Player player4 = new Player();
 //		Player player5 = new Player();
 //		Player player6 = new Player();
 //		Player player7 = new Player();
@@ -30,15 +30,14 @@ public class onlinePokerApplication {
 
 
 		List<Player> playerList = new ArrayList<>();
-		List<Player> activePlayers = new ArrayList<>();
-		playerList.add(player1);
+        playerList.add(player1);
 		player1.setName("Martin");
 		playerList.add(player2);
 		player2.setName("Peter");
-		playerList.add(player3);
-		player3.setName("Jozef");
-		playerList.add(player4);
-		player4.setName("Andrej");
+//		playerList.add(player3);
+//		player3.setName("Jozef");
+//		playerList.add(player4);
+//		player4.setName("Andrej");
 //		playerList.add(player5);
 //		playerList.add(player6);
 //		playerList.add(player7);
@@ -47,16 +46,20 @@ public class onlinePokerApplication {
 		player.setName("Adam");
 
 
-
-
 		game.setPlayers(playerList);
-		game.setActivePlayers(playerList);
+
+
+
+
 		int smallBlind = 1;
 		int rounds = 0;
 
 		while(rounds < 2 ) {
+
+			game.preparePlayersForNextRound(playerList);
 			game.dealTheCards(playerList);
 			 smallBlind = game.getBlinds(smallBlind);
+
 			 int firstPlayer = smallBlind + 1;
 
 			for (Player playerC : playerList) {
@@ -76,15 +79,23 @@ public class onlinePokerApplication {
 
 			game.callBets(firstPlayer, true);
 			game.dealTheFlop();
-			game.callBetsNextRounds(smallBlind);
+			System.out.println("Flop :" + Arrays.toString(table.getFlop()));
+			game.resetRoundStakes();
+			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheTurn();
-			game.callBetsNextRounds(smallBlind);
+			System.out.println(" Turn :" + table.getTurn());
+			game.resetRoundStakes();
+			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheRiver();
-			game.callBetsNextRounds(smallBlind);
+			System.out.println(" River :" + table.getRiver());
+			game.resetRoundStakes();
+			game.callBetsNextRounds(smallBlind, true);
 
 
-			System.out.println();
+
+
 			System.out.println("Flop :" + Arrays.toString(table.getFlop()) + " Turn :" + table.getTurn() + " River :" + table.getRiver());
+
 		rounds ++;
 		}
 	}
