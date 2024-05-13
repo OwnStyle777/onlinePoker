@@ -292,7 +292,7 @@ public class Game {
                 cards.remove(card2Index);
 
 
-                String[] cards = {card1.toString(), card2.toString()};
+                Card[] cards = {card1, card2};
 
                 player.setCards(cards);
             }

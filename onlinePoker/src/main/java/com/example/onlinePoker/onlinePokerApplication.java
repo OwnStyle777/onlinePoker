@@ -2,6 +2,7 @@ package com.example.onlinePoker;
 
 import com.example.onlinePoker.game.Game;
 import com.example.onlinePoker.players.Player;
+import com.example.onlinePoker.table.Card;
 import com.example.onlinePoker.table.Table;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -64,9 +65,9 @@ public class onlinePokerApplication {
 
 			for (Player playerC : playerList) {
 
-				String[] cards = playerC.getCards();
+				Card[] cards = playerC.getCards();
 
-				System.out.println("Player:  "+ playerC.getName()  + "\n Card1: " + cards[0] + "\n Card2: " + cards[1]);
+				System.out.println("Player:  "+ playerC.getName()  + "\n Card1: " + cards[0].toString() + "\n Card2: " + cards[1].toString());
 				if (playerC.isDealer()) {
 					System.out.println("DEALER");
 				} else if (playerC.isBigBlind()) {
