@@ -1,5 +1,6 @@
 package com.example.onlinePoker.players;
 
+import com.example.onlinePoker.table.Card;
 import jakarta.persistence.Entity;
 
 
@@ -7,7 +8,7 @@ public class Player {
 
    private String name;
    private int totalChips = 20000;
-   private String[] cards;
+   private Card[] cards;
    private String combination;
    private int roundStake;
    private boolean dealer = false;
@@ -66,11 +67,11 @@ public class Player {
         this.totalChips = totalChips;
     }
 
-    public String[] getCards() {
+    public Card[] getCards() {
         return cards;
     }
 
-    public void setCards(String[] cards) {
+    public void setCards(Card[] cards) {
         this.cards = cards;
     }
 
