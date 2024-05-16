@@ -68,4 +68,47 @@ public interface HandEvaluator {
 
 return null;
     }
+
+    default  String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
+        List <Card> allCards = new ArrayList<>();
+
+        allCards.addAll(Arrays.asList(playerCards));
+        allCards.addAll(Arrays.asList(tableCards));
+
+     sortTheCards(allCards);
+      Card previous = null;
+      boolean onePair = false;
+      boolean secondPair = false;
+       Card highestPair = null;
+       Card lowerPair = null;
+
+     for(int i = allCards.size() - 1; i >= 0; i--) {
+
+         Card currentCard = allCards.get(i);
+
+         if (previous != null) {
+             if (previous.getValue() == currentCard.getValue()) {
+                 onePair = true;
+                 highestPair = currentCard;
+
+             }
+         }
+
+
+         if (highestPair != null) {
+             if (currentCard.getValue() != highestPair.getValue() && currentCard.getValue() == previous.getValue()) {
+                secondPair = true;
+                lowerPair = currentCard;
+                break;
+             }
+         }
+         previous = allCards.get(i);
+     }
+
+     if(onePair && secondPair){
+
+         return highestPair.toString() + "with " + lowerPair.toString();
+     }
+     return "";
+    }
 }
