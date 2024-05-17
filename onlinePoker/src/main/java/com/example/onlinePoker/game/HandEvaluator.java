@@ -47,6 +47,9 @@ public interface HandEvaluator {
     default void sortTheCards(List <Card> cards){
         cards.sort(Comparator.comparingInt(Card::getValue));
     }
+    default void sortTheCardsDescending(List <Card> cards){
+        cards.sort((card1, card2) -> Integer.compare(card2.getValue(), card1.getValue()));
+    }
      default String checkHighestPair(Card[] playerCards, Card [] tableCards){
         List <Card> allCards = new ArrayList<>();
 
@@ -111,5 +114,8 @@ return "";
          return "Pair of " + highestPair.toString() + " with " + lowerPair.toString();
      }
      return "";
+    }
+    default String check3ofKind(Card[] playerCards, Card [] tableCards){
+       return "";
     }
 }
