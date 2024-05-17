@@ -51,12 +51,7 @@ public interface HandEvaluator {
         cards.sort((card1, card2) -> Integer.compare(card2.getValue(), card1.getValue()));
     }
      default String checkHighestPair(Card[] playerCards, Card [] tableCards){
-        List <Card> allCards = new ArrayList<>();
-
-        allCards.addAll(Arrays.asList(playerCards));
-        allCards.addAll(Arrays.asList(tableCards));
-        sortTheCards(allCards);
-
+        List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
 
         Card previousCard = null;
         boolean isPair = false;
@@ -75,12 +70,16 @@ public interface HandEvaluator {
 
 return "";
     }
-
-    default    String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
+    default List <Card> concatenateArraysToList(Card[] playerCards, Card[] tableCards){
         List <Card> allCards = new ArrayList<>();
 
         allCards.addAll(Arrays.asList(playerCards));
         allCards.addAll(Arrays.asList(tableCards));
+        return allCards;
+    }
+
+    default    String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
+       List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
 
      sortTheCards(allCards);
       Card previous = null;
@@ -116,6 +115,7 @@ return "";
      return "";
     }
     default String check3ofKind(Card[] playerCards, Card [] tableCards){
+        List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
        return "";
     }
 }
