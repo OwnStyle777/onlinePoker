@@ -116,6 +116,29 @@ return "";
     }
     default String check3ofKind(Card[] playerCards, Card [] tableCards){
         List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
+        sortTheCardsDescending(allCards);
+
+        Card previousCard = null;
+        Card prePreviousCard = null;
+        boolean threeOfKind = false;
+
+        for(Card card: allCards){
+
+            if (previousCard != null && previousCard.getValue() == card.getValue()){
+
+                if (prePreviousCard != null && prePreviousCard.getValue() == previousCard.getValue()){
+                    threeOfKind = true;
+                    break;
+                }
+            }
+            prePreviousCard = previousCard;
+            previousCard = card;
+
+        }
+
+        if(threeOfKind){
+            return "Three of kind with " + previousCard.toString();
+        }
        return "";
     }
 }
