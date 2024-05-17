@@ -313,7 +313,7 @@ public class Game {
         Card card3 = cards.get(card3Index);
         cards.remove(card3Index);
 
-        String[] flop = {card1.toString(), card2.toString(), card3.toString()};
+        Card[] flop = {card1, card2, card3};
         table.setFlop(flop);
     }
     public void shuffleCards(){
@@ -329,7 +329,7 @@ public class Game {
         Card card4 = cards.get(card4Index);
         cards.remove(card4Index);
 
-        table.setTurn(card4.toString());
+        table.setTurn(card4);
     }
 
     public void dealTheRiver(){
@@ -337,7 +337,7 @@ public class Game {
         Card card5 = cards.get(card5Index);
         cards.remove(card5Index);
 
-        table.setRiver(card5.toString());
+        table.setRiver(card5);
     }
 
     public List<Player> getPlayers() {
