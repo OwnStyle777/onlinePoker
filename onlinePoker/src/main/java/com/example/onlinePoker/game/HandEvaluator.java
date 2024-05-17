@@ -51,17 +51,23 @@ public interface HandEvaluator {
         cards.sort((card1, card2) -> Integer.compare(card2.getValue(), card1.getValue()));
     }
      default String checkHighestPair(Card[] playerCards, Card [] tableCards){
+
         List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
+        sortTheCardsDescending(allCards);
 
         Card previousCard = null;
         boolean isPair = false;
+
          for(int i = allCards.size() - 1; i >= 0; i--) {
-            if (previousCard != null && allCards.get(i).getValue() == previousCard.getValue()){
+
+             Card currentCard = allCards.get(i);
+
+            if (previousCard != null && currentCard.getValue() == previousCard.getValue()){
                 isPair = true;
                 break;
 
             }
-            previousCard = allCards.get(i);
+            previousCard = currentCard;
         }
 
     if (isPair){
@@ -114,7 +120,7 @@ return "";
      }
      return "";
     }
-    default String check3ofKind(Card[] playerCards, Card [] tableCards){
+    default String check3ofKind(Card[] playerCards, Card[] tableCards){
         List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
         sortTheCardsDescending(allCards);
 
@@ -139,6 +145,34 @@ return "";
         if(threeOfKind){
             return "Three of kind with " + previousCard.toString();
         }
+       return "";
+    }
+
+    default String checkStraight(Card[] playerCards, Card [] tableCards){
+       List<Card> allCards = concatenateArraysToList(playerCards,tableCards);
+       sortTheCardsDescending(allCards);
+
+       int counter = 0;
+       Card previousCard = null;
+       boolean isStraight = false;
+
+       for(Card card: allCards){
+
+           if(previousCard != null && previousCard.getValue() == card.getValue() + 1){
+               counter ++;
+           } else if(counter == 4){
+               isStraight = true;
+               break;
+           }else if(previousCard != null && previousCard.getValue() == card.getValue()) {
+           } else{
+               counter = 0;
+           }
+           previousCard = card;
+       }
+
+       if(isStraight){
+           return " is Straight";
+       }
        return "";
     }
 }
