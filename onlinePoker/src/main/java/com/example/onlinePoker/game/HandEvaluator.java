@@ -7,15 +7,19 @@ import java.util.*;
 
 public interface HandEvaluator {
 
-    default  String checkTheHighestCard(Card[] playerCards, Card [] tableCards){
-        Card hightCard = null;
-        Card secondCard = null;
+   default String checkTheHighestCard(Card[] playerCards, Card[] tableCards){
+        Card hightCard;
+        Card secondCard;
         if(playerCards[0].getValue() < playerCards[1].getValue()){
             hightCard = playerCards[1];
             secondCard = playerCards[0];
         }else if(playerCards[0].getValue() > playerCards[1].getValue()){
             hightCard = playerCards[0];
             secondCard = playerCards[1];
+        }else {
+            Arrays.sort(tableCards);
+            hightCard = tableCards[tableCards.length -1];
+            secondCard = tableCards[tableCards.length -2];
         }
         boolean highCardIsBigger = false;
         boolean secondCardIsBigger = false;
@@ -24,10 +28,11 @@ public interface HandEvaluator {
                 highCardIsBigger = true;
 
             }
-            if (secondCard.getValue() > card.getValue()){
-                secondCardIsBigger = true;
-                break;
-            }
+
+                if (secondCard.getValue() > card.getValue()) {
+                    secondCardIsBigger = true;
+                    break;
+                }
         }
         if (highCardIsBigger && secondCardIsBigger){
             return "hight card " + hightCard.toString() +" with " + secondCard.toString();
@@ -52,24 +57,23 @@ public interface HandEvaluator {
 
         Card previousCard = null;
         boolean isPair = false;
-
-        for (Card card: allCards){
-            if (previousCard != null && card.getValue() == previousCard.getValue()){
+         for(int i = allCards.size() - 1; i >= 0; i--) {
+            if (previousCard != null && allCards.get(i).getValue() == previousCard.getValue()){
                 isPair = true;
                 break;
 
             }
-            previousCard = card;
+            previousCard = allCards.get(i);
         }
 
     if (isPair){
     return "is pair of " + previousCard.toString();
        }
 
-return null;
+return "";
     }
 
-    default  String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
+    default    String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
         List <Card> allCards = new ArrayList<>();
 
         allCards.addAll(Arrays.asList(playerCards));
@@ -86,28 +90,25 @@ return null;
 
          Card currentCard = allCards.get(i);
 
-         if (previous != null) {
-             if (previous.getValue() == currentCard.getValue()) {
+             if (previous != null && previous.getValue() == currentCard.getValue()) {
+
+                 if(!onePair){
                  onePair = true;
                  highestPair = currentCard;
-
+                 }
+                 else if (currentCard.getValue() != highestPair.getValue()){
+                     secondPair = true;
+                     lowerPair = currentCard;
+                     break;
+                 }
              }
-         }
 
-
-         if (highestPair != null) {
-             if (currentCard.getValue() != highestPair.getValue() && currentCard.getValue() == previous.getValue()) {
-                secondPair = true;
-                lowerPair = currentCard;
-                break;
-             }
-         }
          previous = allCards.get(i);
      }
 
      if(onePair && secondPair){
 
-         return highestPair.toString() + "with " + lowerPair.toString();
+         return "Pair of " + highestPair.toString() + " with " + lowerPair.toString();
      }
      return "";
     }
