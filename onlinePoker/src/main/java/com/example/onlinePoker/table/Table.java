@@ -4,9 +4,9 @@ package com.example.onlinePoker.table;
 public class Table {
 
     private int pot;
-    private String[] flop;
-    private String turn;
-    private String river;
+    private Card[] flop;
+    private Card turn;
+    private Card river;
 
 
     public int getPot() {
@@ -17,27 +17,27 @@ public class Table {
         this.pot = pot;
     }
 
-    public String[] getFlop() {
+    public Card[] getFlop() {
         return flop;
     }
 
-    public void setFlop(String[] flop) {
+    public void setFlop(Card[] flop) {
         this.flop = flop;
     }
 
-    public String getTurn() {
+    public Card getTurn() {
         return turn;
     }
 
-    public void setTurn(String turn) {
+    public void setTurn(Card turn) {
         this.turn = turn;
     }
 
-    public String getRiver() {
+    public Card getRiver() {
         return river;
     }
 
-    public void setRiver(String river) {
+    public void setRiver(Card river) {
         this.river = river;
     }
 }
