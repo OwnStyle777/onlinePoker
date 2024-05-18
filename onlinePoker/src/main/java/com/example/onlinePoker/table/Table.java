@@ -1,10 +1,12 @@
 package com.example.onlinePoker.table;
 
 
+import java.util.List;
+
 public class Table {
 
     private int pot;
-    private Card[] flop;
+    private List<Card> flop;
     private Card turn;
     private Card river;
 
@@ -17,11 +19,11 @@ public class Table {
         this.pot = pot;
     }
 
-    public Card[] getFlop() {
+    public List<Card> getFlop() {
         return flop;
     }
 
-    public void setFlop(Card[] flop) {
+    public void setFlop(List<Card> flop) {
         this.flop = flop;
     }
 

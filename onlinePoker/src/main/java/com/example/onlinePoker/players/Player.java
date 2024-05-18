@@ -1,7 +1,8 @@
 package com.example.onlinePoker.players;
 
+import com.example.onlinePoker.game.HandEvaluator;
 import com.example.onlinePoker.table.Card;
-import jakarta.persistence.Entity;
+
 
 
 public class Player {

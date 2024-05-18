@@ -4,10 +4,11 @@ import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.table.Card;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public interface HandEvaluator {
 
-   default String checkTheHighestCard(Card[] playerCards, Card[] tableCards){
+   default String checkTheHighestCard(Card[] playerCards, List<Card> tableCards){
         Card hightCard;
         Card secondCard;
         if(playerCards[0].getValue() < playerCards[1].getValue()){
@@ -17,9 +18,10 @@ public interface HandEvaluator {
             hightCard = playerCards[0];
             secondCard = playerCards[1];
         }else {
-            Arrays.sort(tableCards);
-            hightCard = tableCards[tableCards.length -1];
-            secondCard = tableCards[tableCards.length -2];
+            List<Card> cards = new ArrayList<>(tableCards);
+            sortTheCards(cards);
+            hightCard = tableCards.get(tableCards.size() - 1);
+            secondCard = tableCards.get(tableCards.size() - 2);
         }
         boolean highCardIsBigger = false;
         boolean secondCardIsBigger = false;
@@ -50,7 +52,7 @@ public interface HandEvaluator {
     default void sortTheCardsDescending(List <Card> cards){
         cards.sort((card1, card2) -> Integer.compare(card2.getValue(), card1.getValue()));
     }
-     default String checkHighestPair(Card[] playerCards, Card [] tableCards){
+     default String checkHighestPair(Card[] playerCards, List<Card> tableCards){
 
         List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
         sortTheCardsDescending(allCards);
@@ -76,15 +78,15 @@ public interface HandEvaluator {
 
 return "";
     }
-    default List <Card> concatenateArraysToList(Card[] playerCards, Card[] tableCards){
+    default List <Card> concatenateArraysToList(Card[] playerCards, List<Card> tableCards){
         List <Card> allCards = new ArrayList<>();
 
         allCards.addAll(Arrays.asList(playerCards));
-        allCards.addAll(Arrays.asList(tableCards));
+        allCards.addAll(tableCards);
         return allCards;
     }
 
-    default    String checkHighest2pairs(Card[] playerCards, Card [] tableCards){
+    default    String checkHighest2pairs(Card[] playerCards, List<Card> tableCards){
        List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
 
      sortTheCards(allCards);
@@ -120,7 +122,7 @@ return "";
      }
      return "";
     }
-    default String check3ofKind(Card[] playerCards, Card[] tableCards){
+    default String check3ofKind(Card[] playerCards, List<Card> tableCards){
         List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
         sortTheCardsDescending(allCards);
 
@@ -143,12 +145,12 @@ return "";
         }
 
         if(threeOfKind){
-            return "Three of kind with " + previousCard.toString();
+            return "Three of kind with " + previousCard;
         }
        return "";
     }
 
-    default String checkStraight(Card[] playerCards, Card [] tableCards){
+    default String checkStraight(Card[] playerCards, List<Card> tableCards){
        List<Card> allCards = concatenateArraysToList(playerCards,tableCards);
        sortTheCardsDescending(allCards);
 
@@ -174,5 +176,49 @@ return "";
            return " is Straight";
        }
        return "";
+    }
+
+    default String checkTheFullHouse (Card[] playerCards, List<Card> tableCards){
+       String threeOfKind = check3ofKind(playerCards, tableCards);
+       List<Card> allCards = concatenateArraysToList(playerCards, tableCards);
+
+        if(threeOfKind.length() > 1){
+        //get the value of 3ofKind card
+       String cardName = threeOfKind.substring(19, threeOfKind.length() -1);
+       Card cardType = Card.valueOf(cardName);
+       int  cardValue = cardType.getValue();
+
+            int counter = 0;
+            //use the iterator to safely remove cards of trio from list during iteration
+            Iterator<Card> iterator = allCards.iterator();
+            while (iterator.hasNext()) {
+                Card card = iterator.next();
+                if (card.getValue() == cardValue && counter < 3) {
+                    iterator.remove();
+                    counter++;
+                }
+            }
+
+            //collect cards to map, key is value of card and value is number of occurrences
+            Map<Integer, Long> valueCounts = allCards.stream()
+                    .collect(Collectors.groupingBy(Card::getValue, Collectors.counting()));
+
+            int highestPairValue = -1;
+            //iterate over the map and find entries with 2 or more occurrences
+            for (Map.Entry<Integer, Long> entry : valueCounts.entrySet()) {
+                if (entry.getValue() >= 2) {
+                    //find the highest pair by comparison of values
+                    highestPairValue = Math.max(highestPairValue, entry.getKey());
+                }
+            }
+
+            if (highestPairValue != -1) {
+                return "Full House with three " + cardName + "s and two " + highestPairValue + "s";
+            }
+
+       }
+
+       return "";
+
     }
 }

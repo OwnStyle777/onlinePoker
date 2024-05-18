@@ -313,7 +313,7 @@ public class Game {
         Card card3 = cards.get(card3Index);
         cards.remove(card3Index);
 
-        Card[] flop = {card1, card2, card3};
+        List<Card> flop = List.of(card1, card2, card3);
         table.setFlop(flop);
     }
     public void shuffleCards(){
