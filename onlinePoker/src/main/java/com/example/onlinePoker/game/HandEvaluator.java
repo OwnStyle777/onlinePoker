@@ -178,13 +178,58 @@ return "";
        return "";
     }
 
+    default String checkTheFlush(Card[] playerCards, List<Card> tableCards){
+
+
+       List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
+       sortTheCardsDescending(allCards);
+
+        boolean flush = false;
+        String typeOfFlush = "";
+
+        //create map with 4 groups of suits with number of their occurrences
+        Map<String, Long> valueCounts = allCards.stream()
+                .collect(Collectors.groupingBy(Card::getSuit, Collectors.counting()));
+
+        //iterate over the map and trying to find 5 occurrences
+        for(Map.Entry<String, Long> entry: valueCounts.entrySet()){
+           String suit = entry.getKey();
+           long occurrences = entry.getValue();
+
+           if(occurrences >= 5){
+               flush = true;
+               typeOfFlush = suit;
+               break;
+           }
+        }
+
+         if (flush) {
+             String finalTypeOfFlush = typeOfFlush;
+             //filter 5 highest cards and collect them to list
+             List<Card> flushCards = allCards.stream()
+                    .filter(card -> card.getSuit().equals(finalTypeOfFlush))
+                    .limit(5)
+                    .toList();
+             //count power of flush cards
+            int powerOfFlush = flushCards.stream()
+                    .mapToInt(Card::getValue)
+                    .sum();
+
+            return "Flush with " + typeOfFlush + ", power: " + powerOfFlush;
+        }
+
+
+
+        return "";
+    }
+
     default String checkTheFullHouse (Card[] playerCards, List<Card> tableCards){
        String threeOfKind = check3ofKind(playerCards, tableCards);
        List<Card> allCards = concatenateArraysToList(playerCards, tableCards);
 
         if(threeOfKind.length() > 1){
         //get the value of 3ofKind card
-       String cardName = threeOfKind.substring(19, threeOfKind.length() -1);
+       String cardName = threeOfKind.substring(19);
        Card cardType = Card.valueOf(cardName);
        int  cardValue = cardType.getValue();
 
