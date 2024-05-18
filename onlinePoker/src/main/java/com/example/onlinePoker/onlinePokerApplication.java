@@ -9,6 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.accept.HeaderContentNegotiationStrategy;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -20,7 +21,7 @@ public class onlinePokerApplication   {
 
 
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		SpringApplication.run(onlinePokerApplication.class, args);
 
 		Game game = new Game();
@@ -63,7 +64,7 @@ public class onlinePokerApplication   {
 		int smallBlind = 1;
 		int rounds = 0;
 
-		while(rounds < 5 ) {
+		while(rounds < 10 ) {
 
 			game.preparePlayersForNextRound(playerList);
 			game.dealTheCards(playerList);
@@ -97,8 +98,6 @@ public class onlinePokerApplication   {
 
 
 			game.dealTheFlop();
-			String  combination;
-			String combination1;
 
 			System.out.println();
 //			System.out.println("Flop :" + (table.getFlop()));
@@ -121,38 +120,30 @@ public class onlinePokerApplication   {
 			allTable.add(table.getRiver());
 			System.out.println("Table :" + (allTable));
 			System.out.println();
+
 			for(Player playerk: playerList){
-				combination = handEvaluator.checkTheHighestCard(playerk.getCards(), allTable);
-				combination1 = handEvaluator.checkHighestPair(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
-				combination1 = handEvaluator.checkHighest2pairs(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
-				combination1 = handEvaluator.check3ofKind(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
-				combination1 = handEvaluator.checkStraight(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
-				combination1 = handEvaluator.checkTheFlush(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
+				String combination = "";
+				String[] methodsToCheck = {
+						"checkTheHighestCard",
+						"checkHighestPair",
+						"checkHighest2pairs",
+						"check3ofKind",
+						"checkStraight",
+						"checkTheFlush",
+						"checkTheFullHouse",
+						"checkFourOfKind"
+				};
 
-				combination1 = handEvaluator.checkTheFullHouse(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
-				combination1 = handEvaluator.checkFourOfKind(playerk.getCards(), allTable);
-				if(combination1.length() > 1){
-					combination = combination1;
-				}
+				for (String methodName : methodsToCheck) {
+					//first get class of instance , get specific method by name and argument types after all invoke method on instance with specific arguments
+					String currentCombination = handEvaluator.getClass().getMethod(methodName, Card[].class, List.class)
+							.invoke(handEvaluator, playerk.getCards(), allTable).toString();
 
+					if (currentCombination.length() > 1) {
+						combination = currentCombination;
+
+					}
+				}
 
 				playerk.setCombination(combination);
 			}

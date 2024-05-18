@@ -299,4 +299,33 @@ return "";
        return "";
 
     }
+
+    default String checkTheStraightFlush(Card[] playerCards, List<Card> tableCards){
+        List<Card> allCards = concatenateArraysToList(playerCards,tableCards);
+        sortTheCardsDescending(allCards);
+
+        int counter = 0;
+        Card previousCard = null;
+        boolean isStraightFlush = false;
+
+        for(Card card: allCards){
+
+            if(previousCard != null && previousCard.getValue() == card.getValue() + 1 && Objects.equals(previousCard.getSuit(), card.getSuit())){
+                counter ++;
+            } else if(counter == 4){
+                isStraightFlush = true;
+                break;
+            }else if(previousCard != null && previousCard.getValue() == card.getValue()) {
+            } else{
+                counter = 0;
+            }
+            previousCard = card;
+        }
+
+        if(isStraightFlush){
+            return " is Straight flush";
+        }
+        return "";
+
+    }
 }
