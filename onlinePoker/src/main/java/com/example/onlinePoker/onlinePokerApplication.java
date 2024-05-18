@@ -139,10 +139,20 @@ public class onlinePokerApplication   {
 				if(combination1.length() > 1){
 					combination = combination1;
 				}
+				combination1 = handEvaluator.checkTheFlush(playerk.getCards(), allTable);
+				if(combination1.length() > 1){
+					combination = combination1;
+				}
+
 				combination1 = handEvaluator.checkTheFullHouse(playerk.getCards(), allTable);
 				if(combination1.length() > 1){
 					combination = combination1;
 				}
+				combination1 = handEvaluator.checkFourOfKind(playerk.getCards(), allTable);
+				if(combination1.length() > 1){
+					combination = combination1;
+				}
+
 
 				playerk.setCombination(combination);
 			}

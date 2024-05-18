@@ -204,8 +204,9 @@ return "";
         }
 
          if (flush) {
-             String finalTypeOfFlush = typeOfFlush;
+
              //filter 5 highest cards and collect them to list
+             String finalTypeOfFlush = typeOfFlush;  //lambda use effectively final variable
              List<Card> flushCards = allCards.stream()
                     .filter(card -> card.getSuit().equals(finalTypeOfFlush))
                     .limit(5)
@@ -263,6 +264,38 @@ return "";
 
        }
 
+       return "";
+
+    }
+
+    default String checkFourOfKind(Card[] playerCards, List<Card> tableCards){
+       List<Card> allCards = concatenateArraysToList(playerCards, tableCards);
+       sortTheCardsDescending(allCards);
+
+       Map<Integer, Long> valueCounts = allCards.stream()
+               .collect(Collectors.groupingBy(Card::getValue, Collectors.counting()));
+
+       boolean fourOfKind = false;
+        int valueOfCard = 0;
+       for(Map.Entry<Integer,Long> entry: valueCounts.entrySet()){
+           valueOfCard = entry.getKey();
+           long numberOfOccurrences = entry.getValue();
+           if(numberOfOccurrences == 4){
+               fourOfKind = true;
+               break;
+           }
+       }
+
+       if(fourOfKind){
+
+           int finalValueOfCard = valueOfCard;//lambda use effectively final variable
+           Card fourOfKindCard = allCards.stream()
+                   .filter(card -> card.getValue() == finalValueOfCard)
+                   .findFirst() // choose first card with finalValueOfCard
+                   .orElse(null);
+           return  "Four of kind with " + fourOfKindCard;
+
+       }
        return "";
 
     }
