@@ -20,7 +20,7 @@ public class PokerHandEvaluatorTest implements HandEvaluator {
     @MethodSource("provideCardsForStraightFlushTest")
     void testCheckTheStraightFlush(Card[] playerCards, List<Card> tableCards, String expected) {
         String result = checkTheStraightFlush(playerCards, tableCards);
-    assertEquals(expected, result);
+        assertEquals(expected, result);
     }
 
     @ParameterizedTest
@@ -54,5 +54,41 @@ public class PokerHandEvaluatorTest implements HandEvaluator {
                         "is Straight flush"
                 )
         );
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideCardsForNotStraightFlushTest")
+    void testIsNotTheStraight(Card[] playerCards, List<Card> tableCards) {
+
+        String result = checkStraight(playerCards, tableCards);
+        assertEquals("", result);
+    }
+
+    @MethodSource("provideCardsForNotStraightFlushTest")
+    void testIsNotTheStraightFlush(Card[] playerCards, List<Card> tableCards) {
+
+        String result = checkStraight(playerCards, tableCards);
+        assertEquals("", result);
+    }
+
+    static Stream<Arguments> provideCardsForNotStraightFlushTest() {
+        return Stream.of(
+                Arguments.of(
+                        new Card[]{Card.SEVEN_CLUBS, Card.SIX_CLUBS},
+                        Arrays.asList(Card.FIVE_CLUBS, Card.FOUR_CLUBS, Card.TEN_CLUBS, Card.TWO_CLUBS, Card.A_DIAMONDS)
+
+                ),
+                Arguments.of(
+                        new Card[]{Card.TWO_DIAMONDS, Card.THREE_DIAMONDS},
+                        Arrays.asList(Card.FIVE_DIAMONDS, Card.A_DIAMONDS, Card.SIX_DIAMONDS, Card.EIGHT_DIAMONDS, Card.NINE_DIAMONDS)
+
+                ),
+                Arguments.of(
+                        new Card[]{Card.EIGHT_CLUBS, Card.NINE_CLUBS},
+                        Arrays.asList(Card.J_CLUBS, Card.Q_CLUBS, Card.K_CLUBS, Card.A_CLUBS, Card.TWO_DIAMONDS)
+
+                        )
+
+                );
     }
 }

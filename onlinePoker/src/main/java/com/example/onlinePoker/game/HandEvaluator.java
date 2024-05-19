@@ -399,4 +399,53 @@ public interface HandEvaluator {
         return false;
     }
 
+    default String checkTheRoyalFlush (Card[] playerCards, List<Card> tableCards){
+        List <Card> allCards = concatenateArraysToList(playerCards, tableCards);
+
+        sortTheCardsDescending(allCards);
+        int clubs = 0;
+        int hearts = 0;
+        int diamonds = 0;
+        int spades = 0;
+        boolean hasAce = false;
+        boolean hasKing = false;
+        boolean hasQueen = false;
+        boolean hasJack = false;
+        boolean hasTen = false;
+        String suit;
+        int value;
+
+
+
+        for(Card card: allCards){
+            value = card.getValue();
+            switch (value){
+                case 14 -> hasAce = true;
+                case 13 -> hasKing = true;
+                case 12 -> hasQueen = true;
+                case 11 -> hasJack = true;
+                case 10 -> hasTen = true;
+            }
+
+            if (card.getValue() == 14 || card.getValue() == 13 || card.getValue() == 12 || card.getValue() == 11 || card.getValue() == 10) {
+                suit = card.getSuit();
+                switch (suit){
+                    case "hearts" -> hearts++;
+                    case "clubs" -> clubs++;
+                    case "diamonds" -> diamonds++;
+                    case "spades" -> spades++;
+                }
+            }
+        }
+
+        boolean isRoyalFlush = hasAce && hasKing && hasQueen && hasJack && hasTen;
+
+        if(clubs == 5 || hearts == 5 || diamonds == 5 || spades == 5 && isRoyalFlush){
+            return "is Royal flush";
+        }
+        return "";
+    }
+
+
+
 }
