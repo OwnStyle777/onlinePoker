@@ -2,7 +2,6 @@ package com.example.onlinePoker;
 
 import com.example.onlinePoker.game.HandEvaluator;
 import com.example.onlinePoker.table.Card;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -13,7 +12,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Stream;
 
-public class PokerHandEvaluatorTest implements HandEvaluator {
+public class StraightAndStraightFlushTest implements HandEvaluator {
 
 
     @ParameterizedTest
@@ -64,6 +63,7 @@ public class PokerHandEvaluatorTest implements HandEvaluator {
         assertEquals("", result);
     }
 
+    @ParameterizedTest
     @MethodSource("provideCardsForNotStraightFlushTest")
     void testIsNotTheStraightFlush(Card[] playerCards, List<Card> tableCards) {
 
