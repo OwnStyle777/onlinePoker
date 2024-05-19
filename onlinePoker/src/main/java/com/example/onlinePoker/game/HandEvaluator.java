@@ -162,10 +162,11 @@ return "";
 
            if(previousCard != null && previousCard.getValue() == card.getValue() + 1){
                counter ++;
-           } else if(counter == 4){
-               isStraight = true;
-               break;
-           }else if(previousCard != null && previousCard.getValue() == card.getValue()) {
+               if(counter == 4){
+                   isStraight = true;
+                   break;
+               }
+           } else if(previousCard != null && previousCard.getValue() == card.getValue()) {
            } else{
                counter = 0;
            }
@@ -312,10 +313,11 @@ return "";
 
             if(previousCard != null && previousCard.getValue() == card.getValue() + 1 && Objects.equals(previousCard.getSuit(), card.getSuit())){
                 counter ++;
-            } else if(counter == 4){
-                isStraightFlush = true;
-                break;
-            }else if(previousCard != null && previousCard.getValue() == card.getValue()) {
+                if(counter == 4){
+                    isStraightFlush = true;
+                    break;
+                }
+            } else if(previousCard != null && previousCard.getValue() == card.getValue()) {
             } else{
                 counter = 0;
             }
@@ -323,7 +325,7 @@ return "";
         }
 
         if(isStraightFlush){
-            return " is Straight flush";
+            return "is Straight flush";
         }
         return "";
 
