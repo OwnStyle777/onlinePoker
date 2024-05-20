@@ -30,7 +30,7 @@
         <div id="tableWrapper">
           <div id="player1" class="players"><img src="images/dealer.png" alt="" style="width: 25px; height: 25px; margin-left: 100px;">
             <img src="chips/blueChip.png" alt="" style="width: 25px; height: 25px; margin-top: 80px; ">
-            <img src="chips/blackChip.png" alt="" style="width: 25px; height: 25px; margin-top: 80px;margin-left: 2px;">
+            <img src="chips/blackChip.png" alt="" style=" width: 25px; height: 25px; margin-top: 80px;margin-left: 2px;">
             <img src="chips/redChip.png" alt="" style="width: 25px; height: 25px; margin-left: 2px;">
             <img src="chips/blueChip.png" alt="" style="width: 25px; height: 25px; ;margin-left: 2px;">
             <img src="chips/yellowChip.png" alt="" style="width: 25px; height: 25px; ;margin-left: 2px;"></div>
@@ -42,10 +42,12 @@
           <div id="player7" class="players"></div>
           <div id="player8" class="players"></div>
           <div id="player9" class="players"></div>
-          
-          <img id="table" src="images/greenTable.png" alt="">
-          
+          <img id="table" src="images/greenTable.png" alt=""> 
         </div>
+        <div>
+          <input type="text" id="playerNameInput" placeholder="Enter player name">
+          <button id="addPlayerButton">Add Player</button>
+      </div>
         <div id="floppContainer">
         <img class="cards"src="images/Ace.png" alt="" >
          <img class="backCards"src="images/cardBack.png" alt="" >
@@ -64,6 +66,11 @@
         </ButtonGroup>
     </div>
 </div>
-
+<div id="root"></div>
+<script src="react.development.js"></script>
+<script src="react-dom.development.js"></script>
+<script src="babel.js"></script>
+<script src="App.js"></script>
+<script src="scripts.js"></script>
   </body>
 </html>
