@@ -64,7 +64,7 @@ public class onlinePokerApplication   {
 		int smallBlind = 1;
 		int rounds = 0;
 
-		while(rounds < 10 ) {
+		while(rounds < 15 ) {
 
 			game.preparePlayersForNextRound(playerList);
 			game.dealTheCards(playerList);
@@ -131,7 +131,9 @@ public class onlinePokerApplication   {
 						"checkStraight",
 						"checkTheFlush",
 						"checkTheFullHouse",
-						"checkFourOfKind"
+						"checkFourOfKind",
+						"checkTheStraightFlush",
+						"checkTheRoyalFlush"
 				};
 
 				for (String methodName : methodsToCheck) {
