@@ -1,0 +1,27 @@
+#enterName{
+    color: #ffffff;
+}
+#addPlayer{
+    width: 200px;
+   border-radius: 10px !important;
+   
+   background-color: #161515;
+   border: solid 1px #113c56;
+
+
+}
+
+#addButton{
+    background-color: #113c56;
+    
+    
+}
+#playerNameField{
+    border: solid 1px #113c56;
+    color:  #ffffff;
+    
+}
+.css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root {
+    
+    color: #113c56 !important;
+}

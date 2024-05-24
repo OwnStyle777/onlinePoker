@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import AddPlayer from './components/AddPlayer';
 import PlayerTable from './components/PlayerTable';
+import PokerTable from './components/PokerTable';
 import './players.css'; 
 
 const App = () => {
@@ -20,8 +20,9 @@ const App = () => {
 
     return (
         <div>
-            <h1>Poker Game</h1>
-            <div id="tableWrapper">
+        
+            <PokerTable />
+      
                 {[...Array(9)].map((_, index) => (
                     <div
                         key={index}
@@ -30,20 +31,17 @@ const App = () => {
                         onClick={() => handlePlayerClick(index + 1)}
                     >
                         <div className="plusIcon">+</div>
-               
                         {selectedPlayer === index + 1 && (
-                            <div style={{ position: 'absolute', top: '0', left: '0', backgroundColor: 'white' }}>
+                            
                                 <AddPlayer onAddPlayer={handleAddPlayer} />
-                            </div>
+                            
                         )}
                     </div>
                 ))}
-            </div>
+         
             {players.length > 0 && <PlayerTable players={players} />}
         </div>
     );
 };
 
 export default App;
-
-ReactDOM.render(<App />, document.getElementById('root'));

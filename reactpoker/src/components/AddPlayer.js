@@ -1,4 +1,7 @@
 import React, { useState } from 'react';
+import { Button, TextField, Box, Typography } from '@mui/material';
+import './AddPlayer.css';
+
 
 const AddPlayer = ({ onAddPlayer }) => {
     const [playerName, setPlayerName] = useState('');
@@ -16,16 +19,31 @@ const AddPlayer = ({ onAddPlayer }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input
-                type="text"
-                placeholder="Enter player name"
+        <div>
+        <Box
+            component="form"
+            onSubmit={handleSubmit}
+            id="addPlayer"
+            sx={{
+             
+            }}
+           
+        >
+            <Typography variant="h6" id="enterName">Enter Player Name</Typography>
+            <TextField
+                label="Player Name"
+                id="playerNameField"
+                variant="outlined"
                 value={playerName}
                 onChange={handleChange}
             />
-            <button type="submit">Add Player</button>
-        </form>
+            <Button  id="addButton" type="submit" variant="contained" color="primary">
+                Add Player
+            </Button>
+        </Box>
+        </div>
     );
 };
+
 
 export default AddPlayer;
