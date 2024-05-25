@@ -1,0 +1,9 @@
+#playerTable{
+    position:absolute;
+    width: 200px;
+    border-radius: 10px !important;
+    
+    background-color: #161515;
+    border: solid 1px #113c56;
+    z-index: 999;
+}

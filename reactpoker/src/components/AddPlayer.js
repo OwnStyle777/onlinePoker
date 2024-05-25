@@ -24,9 +24,7 @@ const AddPlayer = ({ onAddPlayer }) => {
             component="form"
             onSubmit={handleSubmit}
             id="addPlayer"
-            sx={{
-             
-            }}
+        
            
         >
             <Typography variant="h6" id="enterName">Enter Player Name</Typography>
