@@ -21,3 +21,6 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+#ingore parcel-cache
+reactpoker/.parcel-cache/
