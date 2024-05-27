@@ -284,17 +284,19 @@ public class Game {
 
 
             for (Player player : players) {
-                int card1Index = getRandomCardIndex(cards);
-                Card card1 = cards.get(card1Index);
-                cards.remove(card1Index);
-                int card2Index = getRandomCardIndex(cards);
-                Card card2 = cards.get(card2Index);
-                cards.remove(card2Index);
+                if(player != null) {
+                    int card1Index = getRandomCardIndex(cards);
+                    Card card1 = cards.get(card1Index);
+                    cards.remove(card1Index);
+                    int card2Index = getRandomCardIndex(cards);
+                    Card card2 = cards.get(card2Index);
+                    cards.remove(card2Index);
 
 
-                Card[] cards = {card1, card2};
+                    Card[] cards = {card1, card2};
 
-                player.setCards(cards);
+                    player.setCards(cards);
+                }
             }
         }
 
