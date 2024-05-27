@@ -30,4 +30,18 @@
   position: absolute;
   border-radius: 10px !important;
 }
+
+#card1 {
+  width: 100px;
+  height: 100px;
+}
+
+.cards1 {
+  gap: 10px;
+  display: flex;
+}
+
+#playerTable h3, #playerTable p {
+  margin: 5px 0;
+}
 /*# sourceMappingURL=index.db9ed22c.css.map */

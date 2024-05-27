@@ -7,3 +7,19 @@
     border: solid 1px #113c56;
     z-index: 999;
 }
+
+#card1{
+    width: 100px;
+    height: 100px;
+}
+
+.cards1{
+    display: flex;
+    gap: 10px;
+}
+
+
+#playerTable h3, #playerTable p {
+    margin: 5px 0; /* Nastavte požadované medzery medzi <h3> a <p> */
+}
+

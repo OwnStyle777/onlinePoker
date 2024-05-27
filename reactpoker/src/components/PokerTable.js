@@ -6,7 +6,7 @@ import blueChip from '../../public/chips/blueChip.png';
 import blackChip from '../../public/chips/blackChip.png';
 import redChip from '../../public/chips/redChip.png';
 import yellowChip from '../../public/chips/yellowChip.png';
-import ace from '../../public/images/Ace.png';
+import ace from '../../public/cards/A_HEARTS.png';
 import cardBack from '../../public/images/cardBack.png';
 
 const PokerTable = () => {
@@ -15,7 +15,7 @@ const PokerTable = () => {
       <div id="tableContainer">
         <div id="tableWrapper">
           <img id="table" src={greenTable} alt="Poker Table" />
-   
+     
         </div>
         <div id="floppContainer">
           <img className="cards" src={ace} alt="Ace" />
