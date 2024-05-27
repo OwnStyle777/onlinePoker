@@ -23,7 +23,8 @@ const App = () => {
                 const updatedPlayers = JSON.parse(message.body);
                 setPlayers(updatedPlayers);
                 
-                if (updatedPlayers.length >= 2 && startRoundRef.current) {
+                const realPlayers = updatedPlayers.filter(player => player !== null);
+                if (realPlayers.length >= 2 && startRoundRef.current) {
                     const dealCardsMessage = { action: 'dealCards' };
                     startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
                     stompClient.send('/server/dealCards', {}, JSON.stringify(dealCardsMessage));
@@ -44,27 +45,32 @@ const App = () => {
 
 
 
+    
     const handleAddPlayer = (playerName) => {
         const newPlayer = { pName: playerName, chipCount: 20000 };
-        setPlayers((prevPlayers) => {
-            const newPlayers = [...prevPlayers];
-            newPlayers[selectedPlayer - 1] = newPlayer;
-            return newPlayers;
-        });
-        // Odoslanie správy na server
-        const sendMessage = (playerName) => {
-            stompClient.send('/server/addPlayer', {}, JSON.stringify(playerName));
-        };
-           // Odoslanie správy na server
-        sendMessage(playerName);
 
-        setPlayerPositions((prevPositions) => {
-            const newPositions = [...prevPositions];
-            newPositions[selectedPlayer - 1] = selectedPlayer;
-            return newPositions;
-        });
+        // Check if selectedPlayer is valid and within range
+        if (selectedPlayer > 0 && selectedPlayer <= 9) {
+            setPlayers((prevPlayers) => {
+                const newPlayers = [...prevPlayers];
+                newPlayers[selectedPlayer - 1] = newPlayer;
+                return newPlayers;
+            });
 
-        setSelectedPlayer(null);
+            setPlayerPositions((prevPositions) => {
+                const newPositions = [...prevPositions];
+                newPositions[selectedPlayer - 1] = selectedPlayer;
+                return newPositions;
+            });
+
+            // Odoslanie správy na server
+            const playerData = { name: playerName, position: selectedPlayer - 1 };
+        stompClient.send('/server/addPlayer', {}, JSON.stringify(playerData));
+
+            setSelectedPlayer(null);
+        } else {
+            console.warn('Invalid player position selected.');
+        }
     };
 
     const handlePlayerClick = (playerId) => {

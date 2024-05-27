@@ -27267,7 +27267,8 @@ const App = ()=>{
             (0, _webSocketDefault.default).subscribe("/client/players", (message)=>{
                 const updatedPlayers = JSON.parse(message.body);
                 setPlayers(updatedPlayers);
-                if (updatedPlayers.length >= 2 && startRoundRef.current) {
+                const realPlayers = updatedPlayers.filter((player)=>player !== null);
+                if (realPlayers.length >= 2 && startRoundRef.current) {
                     const dealCardsMessage = {
                         action: "dealCards"
                     };
@@ -27287,27 +27288,30 @@ const App = ()=>{
             pName: playerName,
             chipCount: 20000
         };
-        setPlayers((prevPlayers)=>{
-            const newPlayers = [
-                ...prevPlayers
-            ];
-            newPlayers[selectedPlayer - 1] = newPlayer;
-            return newPlayers;
-        });
-        // Odoslanie správy na server
-        const sendMessage = (playerName)=>{
-            (0, _webSocketDefault.default).send("/server/addPlayer", {}, JSON.stringify(playerName));
-        };
-        // Odoslanie správy na server
-        sendMessage(playerName);
-        setPlayerPositions((prevPositions)=>{
-            const newPositions = [
-                ...prevPositions
-            ];
-            newPositions[selectedPlayer - 1] = selectedPlayer;
-            return newPositions;
-        });
-        setSelectedPlayer(null);
+        // Check if selectedPlayer is valid and within range
+        if (selectedPlayer > 0 && selectedPlayer <= 9) {
+            setPlayers((prevPlayers)=>{
+                const newPlayers = [
+                    ...prevPlayers
+                ];
+                newPlayers[selectedPlayer - 1] = newPlayer;
+                return newPlayers;
+            });
+            setPlayerPositions((prevPositions)=>{
+                const newPositions = [
+                    ...prevPositions
+                ];
+                newPositions[selectedPlayer - 1] = selectedPlayer;
+                return newPositions;
+            });
+            // Odoslanie správy na server
+            const playerData = {
+                name: playerName,
+                position: selectedPlayer - 1
+            };
+            (0, _webSocketDefault.default).send("/server/addPlayer", {}, JSON.stringify(playerData));
+            setSelectedPlayer(null);
+        } else console.warn("Invalid player position selected.");
     };
     const handlePlayerClick = (playerId)=>{
         if (!playerPositions[playerId - 1]) setSelectedPlayer(playerId);
@@ -27316,7 +27320,7 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 79,
+                lineNumber: 85,
                 columnNumber: 13
             }, undefined),
             [
@@ -27331,33 +27335,33 @@ const App = ()=>{
                             children: "+"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 87,
+                            lineNumber: 93,
                             columnNumber: 21
                         }, undefined),
                         selectedPlayer === index + 1 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _addPlayerDefault.default), {
                             onAddPlayer: handleAddPlayer
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 89,
+                            lineNumber: 95,
                             columnNumber: 25
                         }, undefined),
                         playerPositions[index] && players[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playerTableDefault.default), {
                             player: players[index]
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 92,
+                            lineNumber: 98,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, index, true, {
                     fileName: "src/App.js",
-                    lineNumber: 81,
+                    lineNumber: 87,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 78,
+        lineNumber: 84,
         columnNumber: 9
     }, undefined);
 };
