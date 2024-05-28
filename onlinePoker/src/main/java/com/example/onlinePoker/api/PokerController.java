@@ -3,6 +3,8 @@ package com.example.onlinePoker.api;
 import com.example.onlinePoker.game.Game;
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.players.PlayerInfo;
+import com.example.onlinePoker.table.Card;
+import com.example.onlinePoker.table.Table;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.messaging.handler.annotation.MessageMapping;
@@ -22,7 +24,8 @@ public class PokerController {
     SimpMessagingTemplate messageTemplate;
 
     private  List<Player> listOfPlayers = new ArrayList<>(Collections.nCopies(9, null));
-    Game game;
+    Game game = new Game();
+    Table table = game.getTable();
 
     @MessageMapping("/getPlayers")
     @SendTo("/client/players")
@@ -67,7 +70,6 @@ public class PokerController {
     @MessageMapping("/dealCards")
     public ResponseEntity<?> startGame() {
         if (checkPlayersNumber(listOfPlayers) >= 2) {
-            game = new Game();
             game.dealTheCards(listOfPlayers);
             messageTemplate.convertAndSend("/client/players", listOfPlayers);
             return ResponseEntity.ok().build();
@@ -75,6 +77,20 @@ public class PokerController {
             return ResponseEntity.badRequest().body("Not enough players to start the game.");
         }
     }
+    @MessageMapping("/dealTheFlop")
+    @SendTo("/client/cards")
+    public List<Card>  dealTheFlop() {
+
+            game.dealTheFlop();
+            List<Card> flop = table.getFlop();
+        if(flop != null){
+            return flop;
+        } else{
+            throw new IllegalArgumentException("Flop cannot be null");
+        }
+
+    }
+
 
 
 
