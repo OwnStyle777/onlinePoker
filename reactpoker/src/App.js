@@ -13,12 +13,19 @@ const App = () => {
     const [selectedPlayer, setSelectedPlayer] = useState(null);
     const [playerPositions, setPlayerPositions] = useState(Array(9).fill(null));
     const startRoundRef = useRef(true); // Použitie useRef na udržanie stavu
+    const [flopCards, setFlopCards] = useState([]);
 
   
 
     useEffect(() => {
         stompClient.connect({}, () => {
             console.log('Connected to WebSocket');
+
+            stompClient.subscribe('/client/cards', (message) => {
+                const flop = JSON.parse(message.body);
+                setFlopCards(flop);
+            });
+
             stompClient.subscribe('/client/players', (message) => {
                 const updatedPlayers = JSON.parse(message.body);
                 setPlayers(updatedPlayers);

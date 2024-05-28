@@ -27261,9 +27261,14 @@ const App = ()=>{
     const [selectedPlayer, setSelectedPlayer] = (0, _react.useState)(null);
     const [playerPositions, setPlayerPositions] = (0, _react.useState)(Array(9).fill(null));
     const startRoundRef = (0, _react.useRef)(true); // Použitie useRef na udržanie stavu
+    const [flopCards, setFlopCards] = (0, _react.useState)([]);
     (0, _react.useEffect)(()=>{
         (0, _webSocketDefault.default).connect({}, ()=>{
             console.log("Connected to WebSocket");
+            (0, _webSocketDefault.default).subscribe("/client/cards", (message)=>{
+                const flop = JSON.parse(message.body);
+                setFlopCards(flop);
+            });
             (0, _webSocketDefault.default).subscribe("/client/players", (message)=>{
                 const updatedPlayers = JSON.parse(message.body);
                 setPlayers(updatedPlayers);
@@ -27320,7 +27325,7 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 85,
+                lineNumber: 92,
                 columnNumber: 13
             }, undefined),
             [
@@ -27335,37 +27340,37 @@ const App = ()=>{
                             children: "+"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 93,
+                            lineNumber: 100,
                             columnNumber: 21
                         }, undefined),
                         selectedPlayer === index + 1 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _addPlayerDefault.default), {
                             onAddPlayer: handleAddPlayer
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 95,
+                            lineNumber: 102,
                             columnNumber: 25
                         }, undefined),
                         playerPositions[index] && players[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playerTableDefault.default), {
                             player: players[index]
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 98,
+                            lineNumber: 105,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, index, true, {
                     fileName: "src/App.js",
-                    lineNumber: 87,
+                    lineNumber: 94,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 84,
+        lineNumber: 91,
         columnNumber: 9
     }, undefined);
 };
-_s(App, "85oef9zE4MYrUFUdO4JfM8Hi0vQ=");
+_s(App, "hI6ChyuAm4jvPPCfUW6Z1ziHkaM=");
 _c = App;
 exports.default = App;
 var _c;
