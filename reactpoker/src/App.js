@@ -23,8 +23,9 @@ const App = () => {
 
             stompClient.subscribe('/client/cards', (message) => {
                 const flop = JSON.parse(message.body);
+                console.log('Received flop:', flop); // Pridaj tento log
                 setFlopCards(flop);
-            });
+              });
 
             stompClient.subscribe('/client/players', (message) => {
                 const updatedPlayers = JSON.parse(message.body);
@@ -33,8 +34,12 @@ const App = () => {
                 const realPlayers = updatedPlayers.filter(player => player !== null);
                 if (realPlayers.length >= 2 && startRoundRef.current) {
                     const dealCardsMessage = { action: 'dealCards' };
-                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
+                    const dealtheFlopMessage = { action: 'dealTheFlop' };
+                  
                     stompClient.send('/server/dealCards', {}, JSON.stringify(dealCardsMessage));
+                    stompClient.send('/server/dealTheFlop', {}, JSON.stringify(dealtheFlopMessage));
+
+                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
                  
                 }
             });
@@ -89,7 +94,7 @@ const App = () => {
 
     return (
         <div>
-            <PokerTable />
+            <PokerTable flopCards={flopCards} />
             {[...Array(9)].map((_, index) => (
                 <div
                     key={index}
