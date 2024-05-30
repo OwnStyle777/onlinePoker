@@ -41,7 +41,7 @@
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\lmdb\dependencies\lmdb-data-v1\libraries\liblmdb\mtest4.c133609224978807310 0
 59C:\Users\DELL\Desktop\OnlinePoker\reactpoker\.gitattributes133611065133060450 0
 77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\yaml\browser\seq.js133609226628609380 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.f1e4005d.css.map133613507847420634 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.f1e4005d.css.map133615267998490720 0
 86C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\matches.d.ts133609226639520207 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\input-email-tel-url.js133609224997228057 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\update-browserslist-db\package.json133609224957803483 0
@@ -73,7 +73,7 @@
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\is-core-module\.nycrc133609226622974456 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\domhandler\lib\esm133609224965413124 1
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\esm\scrollTop.d.ts133609226640487624 0
-49C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist133613507848866786 1
+49C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist133615268004255299 1
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\useTouchRipple\index.js133609226662688253 0
 95C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\Select\Select.js133609226683871778 0
 81C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-image133609224954023643 1
@@ -122,7 +122,7 @@
 95C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\esm\_write_only_error.js133609224988301937 0
 117C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\svgo\plugins\plugins.js133609224973451625 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\internal\svg-icons\Person.js133609226681338378 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\src\components\PokerTable.js133611866916222184 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\src\components\PokerTable.js133615267987271820 0
 81C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Card133609226667435550 1
 71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\escalade\dist133609224957015697 1
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\hash\LICENSE133609226622515675 0
@@ -156,7 +156,7 @@
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\Skeleton\Skeleton.js133609226684569809 0
 84C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\math\cbrt\index.js133611796818201251 0
 72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\ordered-binary133609224961902585 1
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_CLUBS.cc6c04b5.png133613507846951970 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_CLUBS.cc6c04b5.png133615268002280577 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\Grid\gridClasses.d.ts133609226704885393 0
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\socket.io-client\build\esm-debug\index.d.ts133611001107431296 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\_\_get_prototype_of133609224991204163 1
@@ -197,7 +197,7 @@
 134C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\csso\lib\restructure\3-disjoinRuleset.js133609224956068116 0
 86C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\svgo\plugins\minifyStyles.js133609224977032066 0
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\type\finite\ensure.js133611796810671420 0
-55C:\Users\DELL\Desktop\OnlinePoker\reactpoker\src\App.js133613507788785195 0
+55C:\Users\DELL\Desktop\OnlinePoker\reactpoker\src\App.js133615265638847115 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\utils\test\sourcemap.test.js133609224978946927 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\internal\animate.js133609226632259614 0
 77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\Paper133609226710171256 1
@@ -285,7 +285,7 @@
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\scheduler\umd\scheduler.development.js133609224960376595 0
 69C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\ansi-styles133609224955599388 1
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\workers\lib\process133609224970180376 1
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_HEARTS.3f02b4ee.png133613507842035979 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_HEARTS.3f02b4ee.png133615267997982082 0
 67C:\Users\DELL\Desktop\OnlinePoker\reactpoker\src\reportWebVitals.js133583258562949478 0
 71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\public\images\cardBack.png133586300023450328 0
 95C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\formatMuiErrorMessage133609226640856623 1
@@ -779,7 +779,7 @@
 76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-tree\cjs\utils133609224985270040 1
 95C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\source-map\dist\utils.js.flow133609224955330425 0
 71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\public\cards\SIX_CLUBS.png133585933974568203 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blackChip.6bd1317a.png133613507842543680 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blackChip.6bd1317a.png133615267998341122 0
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\use-insertion-effect-with-fallbacks133609226625148653 1
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\mp3.js133609225000299911 0
 74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\public\cards\SIX_DIAMONDS.png133585933974239042 0
@@ -1513,7 +1513,7 @@
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\sockjs-client\lib\event\close.js133611796808297812 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\stompjs\example\webworker\index.html133611796814311669 0
 76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\utf-8-validate\src133611796807509849 1
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_CLUBS.c361acf8.png133613507846971836 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_CLUBS.c361acf8.png133615268002290564 0
 109C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useIsFocusVisible\useIsFocusVisible.d.ts133609226649942338 0
 80C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\yaml\browser\schema.js133609226628469753 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useEnhancedEffect\index.d.ts133609226649513627 0
@@ -1764,7 +1764,7 @@
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardContent\package.json133609226698941288 0
 71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\tslib\modules133609224960436448 1
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\cjs\_class_call_check.cjs133609224966330678 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_SPADES.3e7988a9.png133613507846951970 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_SPADES.3e7988a9.png133615268002270644 0
 108C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\RadioGroup\radioGroupClasses.js133609226682325710 0
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\number\min-safe-integer\implement.js133611796816785041 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\workers\lib\childState.js133609224959100008 0
@@ -2159,7 +2159,7 @@
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\regions\SR.js133609225003950072 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core\dist\esm\dom-utils\getComputedStyle.js133609226640328038 0
 75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\ws\lib\limiter.js133611001103432002 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_CLUBS.4af1027b.png133613507846971836 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_CLUBS.4af1027b.png133615268002839095 0
 75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\websocket\.github133611796813025122 1
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\modern\TabsList\tabsListClasses.js133609226654490166 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\domutils\lib\esm\index.js.map133609224969611894 0
@@ -2230,7 +2230,7 @@
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\background-sync.js133609224976643100 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlparser2\lib\Tokenizer.d.ts.map133609224960456385 0
 68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\parcel\src133609224957643993 1
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\logo512.1c7f983f.png133613507846862133 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\logo512.1c7f983f.png133615268002270644 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\generateUtilityClass133609226668173575 1
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\websocket-extensions\lib\pipeline\pledge.js133611796805645963 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\esm\_array_without_holes.js133609224981041326 0
@@ -2431,7 +2431,7 @@
 114C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\node\Identifier.js133609224988311910 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\babel-plugin-macros\package.json133609226623453167 0
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\websocket\.github\workflows133611796813094942 1
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_HEARTS.12c1cd46.png133613507842015093 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_HEARTS.12c1cd46.png133615267997762693 0
 132C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\WhiteSpace.js133609224985908311 0
 82C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\utility-types\SUPPORT.md133609224965353410 0
 80C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\type\integer\coerce.js133611796805626024 0
@@ -3238,7 +3238,7 @@
 74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\type\docs\map.md133611796815169394 0
 86C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\Option\Option.d.ts133609226666537954 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-css\LICENSE133609224952427871 0
-78C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blueBackground.1302cb80.jpeg133613507847611085 0
+78C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blueBackground.1302cb80.jpeg133615268003547200 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\Input\inputClasses.d.ts133609226665809892 0
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\type\docs\natural-number.md133611796815189313 0
 81C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\micromatch\package.json133609224954173179 0
@@ -4101,7 +4101,7 @@
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\src\_array_without_holes.mjs133609224993617697 0
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\SpeedDialAction\speedDialActionClasses.d.ts133609226711078875 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\socket.io-parser\build\esm\is-binary.d.ts133611001104888099 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\favicon.956925d8.ico133613507841496477 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\favicon.956925d8.ico133615267997992064 0
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\svg-smil.js133609225004408863 0
 67C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\lmdb\dist133609224986426940 1
 113C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\SpeedDialAction\speedDialActionClasses.js133609226685836332 0
@@ -4296,7 +4296,7 @@
 106C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\insertadjacenthtml.js133609224997706765 0
 138C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-htmlnano\node_modules\css-tree\lib\syntax\node\MediaFeature.js133609224979964211 0
 106C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\entities\lib\encode.d.ts133609224977560655 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_HEARTS.9a9d4d40.png133613507841985741 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_HEARTS.9a9d4d40.png133615267997732745 0
 84C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\semver\functions\coerce.js133609224956118104 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\object\valid-value.js133611796827487600 0
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\semver\functions\compare.js133609224959359316 0
@@ -4861,7 +4861,7 @@
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\event-emitter\benchmark\single-on.js133611796810731229 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\react\umd\react.development.js133609224965413124 0
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\get-port\package.json133609224952457770 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\manifest.webmanifest133613507840550402 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\manifest.webmanifest133615267997273997 0
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\legacy\utils\MuiCancellableEvent.js133609226649274108 0
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-css133609224955389990 1
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\collectElements.d.ts133609226638303463 0
@@ -4936,7 +4936,7 @@
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\regions\ER.js133609224993587781 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\Popper\Popper.types.js133609226650700296 0
 68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\parcel\lib133609224955070881 1
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_SPADES.f98e176b.png133613507846971836 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_SPADES.f98e176b.png133615268002290564 0
 73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\json5\README.md133609224962141874 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\MenuList\MenuList.js133609226679194228 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\posthtml-parser\dist\index.js133609224954143264 0
@@ -5176,7 +5176,7 @@
 86C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\esm\closest.d.ts133609226638283514 0
 73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\ext\lib\private133611796806603396 1
 82C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\msgpackr-extract\LICENSE133609224952288225 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_DIAMONDS.542b9d80.png133613507842474376 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_DIAMONDS.542b9d80.png133615267997982082 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\Unstable_Grid2\Grid2Props.js133609226654111188 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\cssUtils.d.ts133609226703718520 0
 104C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\lib\modules\removeEmptyAttributes.cjs133609224968464961 0
@@ -5606,7 +5606,7 @@
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AlertTitle\AlertTitle.js133609226630504310 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\esm\_export_star.js133609224986038027 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\cjs\_object_without_properties_loose.cjs133609224977700266 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_CLUBS.476110da.png133613507846942043 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_CLUBS.476110da.png133615268002280577 0
 67C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\json5\lib133609224967746941 1
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core\lib\dom-utils\instanceOf.js.flow133609226636318762 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\esm\ownerWindow.js133609226630504310 0
@@ -5855,7 +5855,7 @@
 70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\lib133609224979724888 1
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\Button\Button.types.js133609226627991040 0
 78C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\LICENSE.txt133609224982976175 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_SPADES.86bcad5a.png133613507846961951 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_SPADES.86bcad5a.png133615268002290564 0
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\package.json133609224975546045 0
 130C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\scope\default.js133609224974149767 0
 76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\README.md133609224978797329 0
@@ -6059,7 +6059,7 @@
 118C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\docs\versioned_docs\version-2.0.0\060-contribute.md133609224978498147 0
 130C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Selector.js133609224983624437 0
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\010-introduction.md133609224976294048 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_CLUBS.0c42b07a.png133613507846971836 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_CLUBS.0c42b07a.png133615268002870849 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\version.js133609224991333808 0
 113C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\htmlnano\docs\versioned_docs\version-1.1.1\020-usage.md133609224976772751 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\react\types\index.d.ts133609226635321433 0
@@ -7018,7 +7018,7 @@
 104C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-postcss\lib\loadPlugins.js133609224957643993 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\array\#\fill\implement.js133611796815747817 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core\lib\utils\computeOffsets.js133609226638413165 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\cardBack.46f9dd52.png133613507842563729 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\cardBack.46f9dd52.png133615267998690185 0
 110C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\Pagination\paginationClasses.js133609226680839726 0
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\array\#\fill\is-implemented.js133611796824132582 0
 86C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\es5-ext\array\#\fill\shim.js133611796826220954 0
@@ -7552,7 +7552,7 @@
 84C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\animate.js133609226624659944 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-what\lib\commonjs\types.d.ts.map133609224966151184 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\attribute.d.ts133609226637934444 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_HEARTS.2ef8a80e.png133613507842025060 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_HEARTS.2ef8a80e.png133615267997762693 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\canUseDOM.d.ts133609226638094018 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\dom-helpers\cjs\childElements.d.ts133609226638134014 0
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\modern\TabPanel\tabPanelClasses.js133609226653652418 0
@@ -7721,7 +7721,7 @@
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@babel\types\lib\builders\generated\index.js133611788970884755 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Pagination133609226680869620 1
 109C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\node\Ratio.js133609224989947528 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_CLUBS.ce818e81.png133613507846971836 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_CLUBS.ce818e81.png133615268002290564 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\node\Raw.js133609224990037411 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\utils\test\throttle.test.js133609224979286032 0
 108C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\node\Rule.js133609224990107125 0
@@ -7743,7 +7743,7 @@
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\react\types\theming.d.ts133609226635800145 0
 76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\logger\lib133609224953255646 1
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\config\generator.js133609224988042612 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_HEARTS.1fa67072.png133613507841985741 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_HEARTS.1fa67072.png133615267997732745 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@babel\types\lib\converters\toKeyAlias.js133611788976459892 0
 112C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\csso\node_modules\css-tree\lib\syntax\config\parser.js133609224989827850 0
 125C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\CDC.js133609224960955063 0
@@ -8155,7 +8155,7 @@
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\Badge\index.js133609226641086022 0
 83C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-tree\lib\utils\url.js133609224991423572 0
 116C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\domutils\lib\esm\querying.d.ts.map133609224973262134 0
-69C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\dealer.52256aaf.png133613507842483840 0
+69C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\dealer.52256aaf.png133615267998341122 0
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-tree\lib\tokenizer\adopt-buffer.js133609224985908311 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-tree\lib\tokenizer\index.js133609224989199525 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\src\_inherits.mjs133609224994615032 0
@@ -8524,7 +8524,7 @@
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\modern\composeClasses\index.js133609226638642657 0
 121C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\entities\lib\generated\encode-html.d.ts133609224977440993 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\source-map\index.d.ts133609224980283354 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_DIAMONDS.4d2d34de.png133613507841995238 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_DIAMONDS.4d2d34de.png133615267997732745 0
 123C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\entities\lib\generated\encode-html.js.map133609224973860541 0
 110C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\entities\lib\esm\decode.d.ts133609224977151792 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\Step\stepClasses.js133609226686743907 0
@@ -8612,7 +8612,7 @@
 72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\braces\LICENSE133609224952358044 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\ThemeProvider.d.ts133609226712355400 0
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core\dist\esm\popper-lite.js133609226629317481 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_DIAMONDS.3a0918f5.png133613507842005106 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\A_DIAMONDS.3a0918f5.png133615267997745151 0
 109C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\domutils\lib\esm\feeds.d.ts133609224975934990 0
 113C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\css-select\node_modules\domutils\lib\esm\feeds.d.ts.map133609224967188387 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-html\node_modules\srcset\index.js133609224953295536 0
@@ -9327,7 +9327,7 @@
 109C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\css-text-wrap-balance.js133609224990785301 0
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\workers\src\process\ProcessChild.js133609224969801407 0
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\css-transitions.js133609224991014713 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.975ef6c8.js.map133613507848856774 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.975ef6c8.js.map133615268003397620 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\Paper\paperClasses.js133609226681208736 0
 106C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\css-widows-orphans.js133609224991194182 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\utils\test\config.test.js133609224961703214 0
@@ -9420,7 +9420,7 @@
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useOption\useOption.types.d.ts133609226668402972 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\imagecapture.js133609224996669662 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\ime.js133609224996739401 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_SPADES.f64e143b.png133613507846971836 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_SPADES.f64e143b.png133615268002849069 0
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\unstable_useNumberInput\useNumberInput.types.js133609226658958223 0
 118C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\img-naturalwidth-naturalheight.js133609224996779256 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\utils\useForkRef.js133609226695011794 0
@@ -9445,7 +9445,7 @@
 108C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\intersectionobserver.js133609224997756645 0
 104C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\intl-pluralrules.js133609224997766782 0
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\jpeg2000.js133609224998055849 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_CLUBS.ec24f59a.png133613507846961951 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_CLUBS.ec24f59a.png133615268002280577 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\refType\refType.d.ts133609226649762813 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\caniuse-lite\data\features\jpegxl.js133609224998075802 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\.bin\download-lmdb-prebuilds.cmd133609225012716703 0
@@ -9904,7 +9904,7 @@
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\_\_throw133609224992680246 1
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\TableFooter\tableFooterClasses.d.ts133609226711956500 0
 82C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\_\_to_array133609224992740086 1
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_SPADES.ad20dc45.png133613507846981889 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_SPADES.ad20dc45.png133615268002870849 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\_\_to_property_key133609224992859795 1
 108C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\TextField\textFieldClasses.js133609226692817806 0
 81C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@swc\helpers\_\_type_of133609224993138989 1
@@ -10245,7 +10245,7 @@
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@socket.io\component-emitter\lib\esm133611001104070297 1
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\styled\base\dist\emotion-styled-base.cjs.default.d.ts133609226629267621 0
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@socket.io\component-emitter\lib\esm\index.js133611001103513327 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_SPADES.5e05abe5.png133613507846951970 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_SPADES.5e05abe5.png133615268002280577 0
 72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core133609226627392738 1
 77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@popperjs\core\dist133609226629447146 1
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\lib\SVGOOptimizer.js133609224953455224 0
@@ -10672,7 +10672,7 @@
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\data133609224985988187 1
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-image\lib133609224957165190 1
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-image\package.json133609224959109980 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_SPADES.26a67b25.png133613507846971836 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_SPADES.26a67b25.png133615268002290564 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-image\src\ImageTransformer.js133609224954372649 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\transformer-image\src\validateConfig.js133609224958371958 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@babel\runtime\helpers\inheritsLoose.js133611788980459149 0
@@ -11047,7 +11047,7 @@
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\system\Unstable_Grid\Grid.js133609226636558127 0
 125C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\tokenizer\utils.js133609224985619109 0
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\atrule133609224984541991 1
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_CLUBS.10c0a38f.png133613507846981889 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_CLUBS.10c0a38f.png133615268002870849 0
 136C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\scope\atrulePrelude.js133609224959219727 0
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\SpeedDialAction\speedDialActionClasses.js133609226685796448 0
 131C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\scope\selector.js133609224983704242 0
@@ -11075,7 +11075,7 @@
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\internal\SwitchBase.js133609226689855606 0
 132C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Percentage.js133609224981330641 0
 141C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\PseudoClassSelector.js133609224982826569 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_HEARTS.d330ec63.png133613507842046613 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_HEARTS.d330ec63.png133615267997992064 0
 106C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Accordion\AccordionContext.js133609226627432528 0
 143C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\PseudoElementSelector.js133609224982946249 0
 127C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@parcel\optimizer-svgo\node_modules\css-tree\lib\syntax\node\Ratio.js133609224983115785 0
@@ -11859,7 +11859,7 @@
 80C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\MenuItem133609226709592821 1
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useLazyRef\package.json133609226648306706 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useLazyRef\useLazyRef.js133609226647020161 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\logo192.c5da3a7e.png133613507846951970 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\logo192.c5da3a7e.png133615268002270644 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useIsFocusVisible\package.json133609226648276801 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\Tab\tabClasses.d.ts133609226667266003 0
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\useId\index.d.ts133609226649563341 0
@@ -12032,7 +12032,7 @@
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\deepmerge\deepmerge.js133609226629287657 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\deepmerge\index.js133609226640756889 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\debounce\debounce.js133609226628938502 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_CLUBS.f5f57583.png133613507846981889 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_CLUBS.f5f57583.png133615268002849069 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\debounce\index.js133609226640736943 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\modern\Tabs\Tabs.types.js133609226653911732 0
 120C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\utils\node\createChainedFunction\createChainedFunction.js133609226628389974 0
@@ -13057,7 +13057,7 @@
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\index.d.ts133609226708156636 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useTabsList\package.json133609226663525997 0
 87C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\index.js133609226672492116 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_SPADES.527d7cef.png133613507846981889 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_SPADES.527d7cef.png133615268002859041 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\makeStyles.d.ts133609226709503076 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\props.d.ts133609226710370741 0
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\styles\responsiveFontSizes.js133609226683343017 0
@@ -13240,7 +13240,7 @@
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\TableBody\index.js133609226661850479 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\AccordionDetails133609226667056565 1
 82C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Alert133609226667096456 1
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blueChip.aa39f75c.png133613507842555397 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\blueChip.aa39f75c.png133615267998341122 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@floating-ui\react-dom\README.md133609226624310875 0
 83C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\AppBar133609226667136351 1
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Backdrop133609226667226257 1
@@ -13412,7 +13412,7 @@
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Tab\tabClasses.js133609226690254524 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Switch\switchClasses.js133609226690065041 0
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\SwipeableDrawer\index.js133609226670158270 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\yellowChip.55532527.png133613507842563729 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\yellowChip.55532527.png133615267998341122 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\SwipeableDrawer\SwipeableDrawer.js133609226689576340 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\SwipeableDrawer\SwipeArea.js133609226689666110 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Chip\index.js133609226667615177 0
@@ -13611,7 +13611,7 @@
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Drawer\index.js133609226667964132 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\Divider\index.js133609226667924243 0
 110C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\DialogTitle\dialogTitleClasses.js133609226650331297 0
-76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_DIAMONDS.3613a3a8.png133613507842015093 0
+76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_DIAMONDS.3613a3a8.png133615267997753944 0
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\DialogContentText\DialogContentText.js133609226650022115 0
 122C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\DialogContentText\dialogContentTextClasses.js133609226650092077 0
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\node\DialogContentText\index.js133609226667884348 0
@@ -13849,7 +13849,7 @@
 110C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@babel\runtime\helpers\defineEnumerableProperties.js133611788976429952 0
 111C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\TableSortLabel\TableSortLabel.js133609226692049713 0
 118C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\TableSortLabel\tableSortLabelClasses.js133609226692139475 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_SPADES.aeb815f5.png133613507846971836 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_SPADES.aeb815f5.png133615268002290564 0
 106C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\TableRow\tableRowClasses.js133609226691960071 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\modern\useMenuButton\useMenuButton.js133609226657362489 0
 113C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\modern\TablePagination\TablePagination.js133609226691580970 0
@@ -14145,7 +14145,7 @@
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ListItemIcon\ListItemIcon.d.ts133609226709283643 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ListItemIcon\ListItemIcon.js133609226677827766 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ListItemIcon\listItemIconClasses.js133609226677917571 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_HEARTS.50d94cbc.png133613507842005106 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_HEARTS.50d94cbc.png133615267997753944 0
 101C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\FormGroup\FormGroup.js133609226652136598 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ListItemButton\index.d.ts133609226707199205 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ListItemButton\package.json133609226700078241 0
@@ -14557,12 +14557,12 @@
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AppBar\appBarClasses.js133609226634683143 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\Alert\alertClasses.js133609226630304843 0
 104C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AccordionSummary\index.js133609226657960888 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_CLUBS.fdc7c717.png133613507846961951 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_CLUBS.fdc7c717.png133615268002280577 0
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AccordionDetails\AccordionDetails.js133609226627701871 0
 122C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AccordionDetails\accordionDetailsClasses.js133609226628170552 0
 115C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AccordionActions\AccordionActions.js133609226625228422 0
 104C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\legacy\AccordionActions\index.js133609226657911022 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\redChip.401401c4.png133613507842563729 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\redChip.401401c4.png133615267998341122 0
 91C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\internal\animate.js133609226632169854 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\internal\svg-icons133609226696388124 1
 96C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\internal\SwitchBase.d.ts133609226711647308 0
@@ -14753,7 +14753,7 @@
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardMedia\CardMedia.js133609226645344622 0
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardMedia\cardMediaClasses.d.ts133609226703180135 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardMedia\index.js133609226656993620 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_HEARTS.34352112.png133613507842025060 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_HEARTS.34352112.png133615267997753944 0
 94C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardMedia\package.json133609226699021071 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\CardHeader\CardHeader.d.ts133609226703110139 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useTabs\package.json133609226663486163 0
@@ -14781,7 +14781,7 @@
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\Card\package.json133609226698851555 0
 100C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ButtonGroup\ButtonGroup.d.ts133609226702840852 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ButtonGroup\buttonGroupClasses.js133609226640756889 0
-76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_DIAMONDS.feb3e5c2.png133613507842035979 0
+76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_DIAMONDS.feb3e5c2.png133615267997982082 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ButtonGroup\ButtonGroupContext.d.ts133609226702900695 0
 92C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\material\ButtonGroup\index.js133609226656873799 0
 84C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\hash\package.json133609226624959147 0
@@ -14883,7 +14883,7 @@
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useCompound133609226667844555 1
 84C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useTabPanel133609226661122432 1
 79C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useDropdown133609226667924243 1
-77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_DIAMONDS.a2e4ec2d.png133613507842045023 0
+77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\THREE_DIAMONDS.a2e4ec2d.png133615267997982082 0
 76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useInput133609226668043915 1
 75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useMenu133609226668153641 1
 81C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\useMenuButton133609226668193520 1
@@ -15177,7 +15177,7 @@
 103C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useCompound\useCompoundItem.js133609226655966229 0
 95C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useButton\useButton.js133609226655796675 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useBadge\index.js133609226645224944 0
-70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_CLUBS.bd7fa81a.png133613507846951970 0
+70C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_CLUBS.bd7fa81a.png133615268002280577 0
 99C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useBadge\useBadge.types.js133609226655657043 0
 107C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\useAutocomplete\useAutocomplete.js133609226655427661 0
 105C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@mui\base\node\unstable_useNumberInput\index.js133609226645175070 0
@@ -15612,7 +15612,7 @@
 158C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\use-insertion-effect-with-fallbacks\dist\emotion-use-insertion-effect-with-fallbacks.esm.js133609226624211162 0
 165C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\use-insertion-effect-with-fallbacks\dist\emotion-use-insertion-effect-with-fallbacks.worker.esm.js133609226624410615 0
 83C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\unitless\LICENSE133609226622505702 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_DIAMONDS.ba3c0f4d.png133613507841985741 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_DIAMONDS.ba3c0f4d.png133615267997745151 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\unitless\package.json133609226624899299 0
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\unitless\README.md133609226625627372 0
 90C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\unitless\src\index.d.ts133609226626644649 0
@@ -15730,7 +15730,7 @@
 102C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@babel\types\lib\validators\isBlockScoped.js133611788980149978 0
 98C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\memoize\dist\declarations\types133609226626544924 1
 85C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\is-prop-valid\dist133609226626514990 1
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_CLUBS.578e1769.png133613507846981889 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FIVE_CLUBS.578e1769.png133615268002310503 0
 88C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\is-prop-valid\LICENSE133609226622515675 0
 93C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\is-prop-valid\package.json133609226625238402 0
 97C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\@emotion\is-prop-valid\types\index.d.ts133609226627133336 0
@@ -15996,27 +15996,27 @@
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\.bin\update-browserslist-db.cmd133609225012766486 0
 89C:\Users\DELL\Desktop\OnlinePoker\reactpoker\node_modules\.bin\update-browserslist-db.ps1133609225012766486 0
 82C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\greenTable.54d15fce.png.19288.7w133610255973554341 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_HEARTS.87b7ae9c.png133613507842035979 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_DIAMONDS.98c52ce3.png133613507841995238 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_HEARTS.8d242e53.png133613507842015093 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_HEARTS.96bb3c08.png133613507842015093 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_DIAMONDS.c0b6b0e7.png133613507842025060 0
-77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_DIAMONDS.d3ee9c5c.png133613507842025060 0
-77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_DIAMONDS.0bfe191a.png133613507842025060 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_DIAMONDS.4118b726.png133613507842035979 0
-74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_HEARTS.0e6fa678.png133613507842035979 0
-76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_DIAMONDS.56321e2f.png133613507842046613 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_HEARTS.1a1381e3.png133613507842483840 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_SPADES.939f721c.png133613507846951970 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_CLUBS.a6e36a22.png133613507846961951 0
-71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_SPADES.08e4a4d2.png133613507846971836 0
-75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_SPADES.bfabe37a.png133613507846971836 0
-68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.61d3354a.css133613507846981889 0
-68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.f1e4005d.css133613507846991822 0
-68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.db9ed22c.css133613507847021748 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_SPADES.0c4c9a3c.png133613507847021748 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.61d3354a.css.map133613507847420634 0
-72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.db9ed22c.css.map133613507847420634 0
-73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\greenTable.54d15fce.png133613507848188585 0
-60C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.html133613507848687245 0
-67C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.975ef6c8.js133613507848697212 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\J_HEARTS.8d242e53.png133615267997752694 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_HEARTS.96bb3c08.png133615267997753944 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TEN_DIAMONDS.c0b6b0e7.png133615267997753944 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_DIAMONDS.98c52ce3.png133615267997753944 0
+77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_DIAMONDS.d3ee9c5c.png133615267997753944 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_DIAMONDS.4118b726.png133615267997762693 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_HEARTS.87b7ae9c.png133615267997822516 0
+68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.f1e4005d.css133615267997822516 0
+68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.61d3354a.css133615267997862660 0
+77C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SEVEN_DIAMONDS.0bfe191a.png133615267997982082 0
+76C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_DIAMONDS.56321e2f.png133615267997992064 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\TWO_HEARTS.1a1381e3.png133615267997992064 0
+74C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\FOUR_HEARTS.0e6fa678.png133615267997972937 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.61d3354a.css.map133615267998510672 0
+68C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.db9ed22c.css133615267999149754 0
+72C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.db9ed22c.css.map133615267999567846 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\K_SPADES.939f721c.png133615268002280577 0
+71C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\Q_SPADES.08e4a4d2.png133615268002280577 0
+75C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\EIGHT_SPADES.bfabe37a.png133615268002290564 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\NINE_CLUBS.a6e36a22.png133615268002290564 0
+60C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.html133615268002759300 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\SIX_SPADES.0c4c9a3c.png133615268002870849 0
+67C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\index.975ef6c8.js133615268002888971 0
+73C:\Users\DELL\Desktop\OnlinePoker\reactpoker\dist\greenTable.54d15fce.png133615268004215417 0

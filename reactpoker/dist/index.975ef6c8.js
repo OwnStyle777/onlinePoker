@@ -27267,6 +27267,7 @@ const App = ()=>{
             console.log("Connected to WebSocket");
             (0, _webSocketDefault.default).subscribe("/client/cards", (message)=>{
                 const flop = JSON.parse(message.body);
+                console.log("Received flop:", flop); // Pridaj tento log
                 setFlopCards(flop);
             });
             (0, _webSocketDefault.default).subscribe("/client/players", (message)=>{
@@ -27277,8 +27278,12 @@ const App = ()=>{
                     const dealCardsMessage = {
                         action: "dealCards"
                     };
-                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
+                    const dealtheFlopMessage = {
+                        action: "dealTheFlop"
+                    };
                     (0, _webSocketDefault.default).send("/server/dealCards", {}, JSON.stringify(dealCardsMessage));
+                    (0, _webSocketDefault.default).send("/server/dealTheFlop", {}, JSON.stringify(dealtheFlopMessage));
+                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
                 }
             });
             // Inicializácia - získanie zoznamu hráčov
@@ -27323,9 +27328,11 @@ const App = ()=>{
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {
+                flopCards: flopCards
+            }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 92,
+                lineNumber: 97,
                 columnNumber: 13
             }, undefined),
             [
@@ -27340,33 +27347,33 @@ const App = ()=>{
                             children: "+"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 100,
+                            lineNumber: 105,
                             columnNumber: 21
                         }, undefined),
                         selectedPlayer === index + 1 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _addPlayerDefault.default), {
                             onAddPlayer: handleAddPlayer
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 102,
+                            lineNumber: 107,
                             columnNumber: 25
                         }, undefined),
                         playerPositions[index] && players[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playerTableDefault.default), {
                             player: players[index]
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 105,
+                            lineNumber: 110,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, index, true, {
                     fileName: "src/App.js",
-                    lineNumber: 94,
+                    lineNumber: 99,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 91,
+        lineNumber: 96,
         columnNumber: 9
     }, undefined);
 };
@@ -50910,7 +50917,10 @@ var _aHeartsPng = require("../../public/cards/A_HEARTS.png");
 var _aHeartsPngDefault = parcelHelpers.interopDefault(_aHeartsPng);
 var _cardBackPng = require("../../public/images/cardBack.png");
 var _cardBackPngDefault = parcelHelpers.interopDefault(_cardBackPng);
-const PokerTable = ()=>{
+var _loadImages = require("../utils/loadImages");
+const PokerTable = ({ flopCards })=>{
+    // Preverenie, že flopCards je platné pole
+    const cardsToShow = flopCards && flopCards.length ? flopCards.slice(0, 3) : [];
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "background",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50924,77 +50934,50 @@ const PokerTable = ()=>{
                         alt: "Poker Table"
                     }, void 0, false, {
                         fileName: "src/components/PokerTable.js",
-                        lineNumber: 17,
+                        lineNumber: 26,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/PokerTable.js",
-                    lineNumber: 16,
+                    lineNumber: 25,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     id: "floppContainer",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "cards",
-                            src: (0, _aHeartsPngDefault.default),
-                            alt: "Ace"
-                        }, void 0, false, {
-                            fileName: "src/components/PokerTable.js",
-                            lineNumber: 21,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "backCards",
-                            src: (0, _cardBackPngDefault.default),
-                            alt: "Back of Card"
-                        }, void 0, false, {
-                            fileName: "src/components/PokerTable.js",
-                            lineNumber: 22,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "backCards",
-                            src: (0, _cardBackPngDefault.default),
-                            alt: "Back of Card"
-                        }, void 0, false, {
-                            fileName: "src/components/PokerTable.js",
-                            lineNumber: 23,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "backCards",
-                            src: (0, _cardBackPngDefault.default),
-                            alt: "Back of Card"
-                        }, void 0, false, {
-                            fileName: "src/components/PokerTable.js",
-                            lineNumber: 24,
-                            columnNumber: 11
-                        }, undefined),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            className: "backCards",
-                            src: (0, _cardBackPngDefault.default),
-                            alt: "Back of Card"
-                        }, void 0, false, {
-                            fileName: "src/components/PokerTable.js",
-                            lineNumber: 25,
-                            columnNumber: 11
-                        }, undefined)
+                        cardsToShow.map((card, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "cards",
+                                src: (0, _loadImages.getCardImage)(`${card}.png`),
+                                alt: card
+                            }, index, false, {
+                                fileName: "src/components/PokerTable.js",
+                                lineNumber: 30,
+                                columnNumber: 13
+                            }, undefined)),
+                        new Array(5 - cardsToShow.length).fill(null).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "backCards",
+                                src: (0, _cardBackPngDefault.default),
+                                alt: "Back of Card"
+                            }, index, false, {
+                                fileName: "src/components/PokerTable.js",
+                                lineNumber: 38,
+                                columnNumber: 13
+                            }, undefined))
                     ]
                 }, void 0, true, {
                     fileName: "src/components/PokerTable.js",
-                    lineNumber: 20,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/PokerTable.js",
-            lineNumber: 15,
+            lineNumber: 24,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/PokerTable.js",
-        lineNumber: 14,
+        lineNumber: 23,
         columnNumber: 5
     }, undefined);
 };
@@ -51008,7 +50991,7 @@ $RefreshReg$(_c, "PokerTable");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../index.css":"irmnC","../../public/images/greenTable.png":"54LJw","../../public/images/dealer.png":"wdhFd","../../public/chips/blueChip.png":"6u0tb","../../public/chips/blackChip.png":"40zvb","../../public/chips/redChip.png":"3zJoS","../../public/chips/yellowChip.png":"1sFga","../../public/images/cardBack.png":"fryiY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/cards/A_HEARTS.png":"ccqGO"}],"irmnC":[function() {},{}],"54LJw":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../index.css":"irmnC","../../public/images/greenTable.png":"54LJw","../../public/images/dealer.png":"wdhFd","../../public/chips/blueChip.png":"6u0tb","../../public/chips/blackChip.png":"40zvb","../../public/chips/redChip.png":"3zJoS","../../public/chips/yellowChip.png":"1sFga","../../public/images/cardBack.png":"fryiY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/cards/A_HEARTS.png":"ccqGO","../utils/loadImages":"4kgN4"}],"irmnC":[function() {},{}],"54LJw":[function(require,module,exports) {
 module.exports = require("2128a6e03f9a1f8").getBundleURL("bLxZJ") + "greenTable.54d15fce.png" + "?" + Date.now();
 
 },{"2128a6e03f9a1f8":"lgJ39"}],"wdhFd":[function(require,module,exports) {
