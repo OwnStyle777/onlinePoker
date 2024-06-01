@@ -15,10 +15,10 @@ import greenTable from '../../public/images/greenTable.png';
 import cardBack from '../../public/images/cardBack.png';
 import { getCardImage } from '../utils/loadImages';
 
-const PokerTable = ({ flopCards, turnCard}) => {
+const PokerTable = ({ flopCards, turnCard, riverCard}) => {
   // Preverenie, že flopCards je platné pole
   
-  const cardsToShow = [...(flopCards || []), turnCard].filter(Boolean);
+  const cardsToShow = [...(flopCards || []), turnCard, riverCard].filter(Boolean);
 
   if (cardsToShow.length === 0) {
     return (

@@ -123,7 +123,7 @@ const App = () => {
 
     return (
         <div>
-            <PokerTable flopCards = {flopCards} turnCard = {turnCard} />
+            <PokerTable flopCards = {flopCards} turnCard = {turnCard} riverCard = {riverCard} />
             {[...Array(9)].map((_, index) => (
                 <div
                     key={index}
