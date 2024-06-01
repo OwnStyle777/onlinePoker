@@ -81,10 +81,26 @@ public class PokerController {
     @SendTo("/client/cards")
     public List<Card>  dealTheFlop() {
 
+        System.out.println("method is called");
             game.dealTheFlop();
             List<Card> flop = table.getFlop();
         if(flop != null){
             return flop;
+        } else{
+            throw new IllegalArgumentException("Flop cannot be null");
+        }
+
+    }
+
+    @MessageMapping("/dealTheTurn")
+    @SendTo("/client/turn")
+    public Card  dealTheTurn() {
+
+        System.out.println("method is called");
+        game.dealTheTurn();
+        Card turn = table.getTurn();
+        if(turn != null){
+            return turn;
         } else{
             throw new IllegalArgumentException("Flop cannot be null");
         }
