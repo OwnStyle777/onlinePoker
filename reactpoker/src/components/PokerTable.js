@@ -15,9 +15,33 @@ import greenTable from '../../public/images/greenTable.png';
 import cardBack from '../../public/images/cardBack.png';
 import { getCardImage } from '../utils/loadImages';
 
-const PokerTable = ({ flopCards }) => {
+const PokerTable = ({ flopCards, turnCard}) => {
   // Preverenie, že flopCards je platné pole
-  const cardsToShow = flopCards && flopCards.length ? flopCards.slice(0, 3) : [];
+  
+  const cardsToShow = [...(flopCards || []), turnCard].filter(Boolean);
+
+  if (cardsToShow.length === 0) {
+    return (
+      <div className="background">
+        <div id="tableContainer">
+          <div id="tableWrapper">
+            <img id="table" src={greenTable} alt="Poker Table" />
+          </div>
+          <div id="floppContainer">
+            {new Array(5).fill(null).map((_, index) => (
+              <img
+                key={index}
+                className="backCards"
+                src={cardBack}
+                alt="Back of Card"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
 
   return (
     <div className="background">
@@ -31,15 +55,15 @@ const PokerTable = ({ flopCards }) => {
               key={index}
               className="cards"
               src={getCardImage(`${card}.png`)}
-              alt={card}
+             
             />
           ))}
           {new Array(5 - cardsToShow.length).fill(null).map((_, index) => (
             <img
-              key={index}
+              key={index + cardsToShow.length}
               className="backCards"
               src={cardBack}
-              alt="Back of Card"
+          
             />
           ))}
         </div>

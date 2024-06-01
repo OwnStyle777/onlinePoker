@@ -27262,13 +27262,20 @@ const App = ()=>{
     const [playerPositions, setPlayerPositions] = (0, _react.useState)(Array(9).fill(null));
     const startRoundRef = (0, _react.useRef)(true); // Použitie useRef na udržanie stavu
     const [flopCards, setFlopCards] = (0, _react.useState)([]);
+    const [turnCard, setTurnCard] = (0, _react.useState)(null);
+    const [riverCard, setRiverCard] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         (0, _webSocketDefault.default).connect({}, ()=>{
             console.log("Connected to WebSocket");
             (0, _webSocketDefault.default).subscribe("/client/cards", (message)=>{
                 const flop = JSON.parse(message.body);
-                console.log("Received flop:", flop); // Pridaj tento log
+                console.log("Received flop:", flop);
                 setFlopCards(flop);
+            });
+            (0, _webSocketDefault.default).subscribe("/client/turn", (message)=>{
+                const turn = JSON.parse(message.body);
+                console.log("Received turn:", turn);
+                setTurnCard(turn);
             });
             (0, _webSocketDefault.default).subscribe("/client/players", (message)=>{
                 const updatedPlayers = JSON.parse(message.body);
@@ -27278,15 +27285,21 @@ const App = ()=>{
                     const dealCardsMessage = {
                         action: "dealCards"
                     };
-                    const dealtheFlopMessage = {
+                    const dealTheFlopMessage = {
                         action: "dealTheFlop"
                     };
+                    const dealTheTurnMessage = {
+                        action: "dealTheTurn"
+                    };
                     (0, _webSocketDefault.default).send("/server/dealCards", {}, JSON.stringify(dealCardsMessage));
-                    (0, _webSocketDefault.default).send("/server/dealTheFlop", {}, JSON.stringify(dealtheFlopMessage));
-                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
+                    (0, _webSocketDefault.default).send("/server/dealTheFlop", {}, JSON.stringify(dealTheFlopMessage));
+                    setTimeout(()=>{
+                        (0, _webSocketDefault.default).send("/server/dealTheTurn", {}, JSON.stringify(dealTheTurnMessage));
+                    }, 1000); // one second between flop and turn
+                    startRoundRef.current = false; //set startRoundRef tu false after deal the cards
                 }
             });
-            // Inicializácia - získanie zoznamu hráčov
+            //inicialization list of player 
             (0, _webSocketDefault.default).send("/server/getPlayers", {}, {});
         });
         return ()=>{
@@ -27314,7 +27327,7 @@ const App = ()=>{
                 newPositions[selectedPlayer - 1] = selectedPlayer;
                 return newPositions;
             });
-            // Odoslanie správy na server
+            //send message to server
             const playerData = {
                 name: playerName,
                 position: selectedPlayer - 1
@@ -27329,10 +27342,11 @@ const App = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {
-                flopCards: flopCards
+                flopCards: flopCards,
+                turnCard: turnCard
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 97,
+                lineNumber: 110,
                 columnNumber: 13
             }, undefined),
             [
@@ -27347,37 +27361,37 @@ const App = ()=>{
                             children: "+"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 105,
+                            lineNumber: 118,
                             columnNumber: 21
                         }, undefined),
                         selectedPlayer === index + 1 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _addPlayerDefault.default), {
                             onAddPlayer: handleAddPlayer
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 107,
+                            lineNumber: 120,
                             columnNumber: 25
                         }, undefined),
                         playerPositions[index] && players[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playerTableDefault.default), {
                             player: players[index]
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 110,
+                            lineNumber: 123,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, index, true, {
                     fileName: "src/App.js",
-                    lineNumber: 99,
+                    lineNumber: 112,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 96,
+        lineNumber: 109,
         columnNumber: 9
     }, undefined);
 };
-_s(App, "hI6ChyuAm4jvPPCfUW6Z1ziHkaM=");
+_s(App, "aDdCTJJpaT932gCslQ7C7QhwAGY=");
 _c = App;
 exports.default = App;
 var _c;
@@ -50918,9 +50932,60 @@ var _aHeartsPngDefault = parcelHelpers.interopDefault(_aHeartsPng);
 var _cardBackPng = require("../../public/images/cardBack.png");
 var _cardBackPngDefault = parcelHelpers.interopDefault(_cardBackPng);
 var _loadImages = require("../utils/loadImages");
-const PokerTable = ({ flopCards })=>{
+const PokerTable = ({ flopCards, turnCard })=>{
     // Preverenie, že flopCards je platné pole
-    const cardsToShow = flopCards && flopCards.length ? flopCards.slice(0, 3) : [];
+    const cardsToShow = [
+        ...flopCards || [],
+        turnCard
+    ].filter(Boolean);
+    if (cardsToShow.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "background",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            id: "tableContainer",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "tableWrapper",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        id: "table",
+                        src: (0, _greenTablePngDefault.default),
+                        alt: "Poker Table"
+                    }, void 0, false, {
+                        fileName: "src/components/PokerTable.js",
+                        lineNumber: 28,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/PokerTable.js",
+                    lineNumber: 27,
+                    columnNumber: 11
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    id: "floppContainer",
+                    children: new Array(5).fill(null).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            className: "backCards",
+                            src: (0, _cardBackPngDefault.default),
+                            alt: "Back of Card"
+                        }, index, false, {
+                            fileName: "src/components/PokerTable.js",
+                            lineNumber: 32,
+                            columnNumber: 15
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/PokerTable.js",
+                    lineNumber: 30,
+                    columnNumber: 11
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/PokerTable.js",
+            lineNumber: 26,
+            columnNumber: 9
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/PokerTable.js",
+        lineNumber: 25,
+        columnNumber: 7
+    }, undefined);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "background",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50934,12 +50999,12 @@ const PokerTable = ({ flopCards })=>{
                         alt: "Poker Table"
                     }, void 0, false, {
                         fileName: "src/components/PokerTable.js",
-                        lineNumber: 26,
+                        lineNumber: 50,
                         columnNumber: 11
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/PokerTable.js",
-                    lineNumber: 25,
+                    lineNumber: 49,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50947,37 +51012,35 @@ const PokerTable = ({ flopCards })=>{
                     children: [
                         cardsToShow.map((card, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 className: "cards",
-                                src: (0, _loadImages.getCardImage)(`${card}.png`),
-                                alt: card
+                                src: (0, _loadImages.getCardImage)(`${card}.png`)
                             }, index, false, {
                                 fileName: "src/components/PokerTable.js",
-                                lineNumber: 30,
+                                lineNumber: 54,
                                 columnNumber: 13
                             }, undefined)),
                         new Array(5 - cardsToShow.length).fill(null).map((_, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                 className: "backCards",
-                                src: (0, _cardBackPngDefault.default),
-                                alt: "Back of Card"
-                            }, index, false, {
+                                src: (0, _cardBackPngDefault.default)
+                            }, index + cardsToShow.length, false, {
                                 fileName: "src/components/PokerTable.js",
-                                lineNumber: 38,
+                                lineNumber: 62,
                                 columnNumber: 13
                             }, undefined))
                     ]
                 }, void 0, true, {
                     fileName: "src/components/PokerTable.js",
-                    lineNumber: 28,
+                    lineNumber: 52,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/PokerTable.js",
-            lineNumber: 24,
+            lineNumber: 48,
             columnNumber: 7
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/PokerTable.js",
-        lineNumber: 23,
+        lineNumber: 47,
         columnNumber: 5
     }, undefined);
 };
