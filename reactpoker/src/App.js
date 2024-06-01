@@ -14,6 +14,8 @@ const App = () => {
     const [playerPositions, setPlayerPositions] = useState(Array(9).fill(null));
     const startRoundRef = useRef(true); // Použitie useRef na udržanie stavu
     const [flopCards, setFlopCards] = useState([]);
+    const [turnCard, setTurnCard] = useState(null);
+    const [riverCard, setRiverCard] = useState(null);
 
   
 
@@ -23,8 +25,14 @@ const App = () => {
 
             stompClient.subscribe('/client/cards', (message) => {
                 const flop = JSON.parse(message.body);
-                console.log('Received flop:', flop); // Pridaj tento log
+                console.log('Received flop:', flop); 
                 setFlopCards(flop);
+              });
+
+              stompClient.subscribe('/client/turn', (message) => {
+                const turn = JSON.parse(message.body);
+                console.log('Received turn:', turn); 
+                setTurnCard(turn);
               });
 
             stompClient.subscribe('/client/players', (message) => {
@@ -34,17 +42,22 @@ const App = () => {
                 const realPlayers = updatedPlayers.filter(player => player !== null);
                 if (realPlayers.length >= 2 && startRoundRef.current) {
                     const dealCardsMessage = { action: 'dealCards' };
-                    const dealtheFlopMessage = { action: 'dealTheFlop' };
+                    const dealTheFlopMessage = { action: 'dealTheFlop' };
+                    const dealTheTurnMessage = {action: 'dealTheTurn'};
                   
                     stompClient.send('/server/dealCards', {}, JSON.stringify(dealCardsMessage));
-                    stompClient.send('/server/dealTheFlop', {}, JSON.stringify(dealtheFlopMessage));
+                    stompClient.send('/server/dealTheFlop', {}, JSON.stringify(dealTheFlopMessage));
+                    setTimeout(() => {
+                        stompClient.send('/server/dealTheTurn', {}, JSON.stringify(dealTheTurnMessage));
+                      }, 1000); // one second between flop and turn
+                    
 
-                    startRoundRef.current = false; // Nastavenie startRound na false po rozdání karet
+                    startRoundRef.current = false; //set startRoundRef tu false after deal the cards
                  
                 }
             });
 
-            // Inicializácia - získanie zoznamu hráčov
+            //inicialization list of player 
             stompClient.send('/server/getPlayers', {}, {});
         });
 
@@ -75,7 +88,7 @@ const App = () => {
                 return newPositions;
             });
 
-            // Odoslanie správy na server
+            //send message to server
             const playerData = { name: playerName, position: selectedPlayer - 1 };
         stompClient.send('/server/addPlayer', {}, JSON.stringify(playerData));
 
@@ -94,7 +107,7 @@ const App = () => {
 
     return (
         <div>
-            <PokerTable flopCards={flopCards} />
+            <PokerTable flopCards = {flopCards} turnCard = {turnCard} />
             {[...Array(9)].map((_, index) => (
                 <div
                     key={index}
