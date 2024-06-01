@@ -35,6 +35,17 @@ const App = () => {
                 setTurnCard(turn);
               });
 
+              stompClient.subscribe('/client/river', (message) => {
+                const river = JSON.parse(message.body);
+                console.log('Received river:', river); 
+                setRiverCard(river);
+              });
+
+
+              
+              
+
+
             stompClient.subscribe('/client/players', (message) => {
                 const updatedPlayers = JSON.parse(message.body);
                 setPlayers(updatedPlayers);
@@ -44,12 +55,17 @@ const App = () => {
                     const dealCardsMessage = { action: 'dealCards' };
                     const dealTheFlopMessage = { action: 'dealTheFlop' };
                     const dealTheTurnMessage = {action: 'dealTheTurn'};
+                    const dealTheRiverMessage = {action: 'dealTheRiver'};
                   
                     stompClient.send('/server/dealCards', {}, JSON.stringify(dealCardsMessage));
                     stompClient.send('/server/dealTheFlop', {}, JSON.stringify(dealTheFlopMessage));
                     setTimeout(() => {
                         stompClient.send('/server/dealTheTurn', {}, JSON.stringify(dealTheTurnMessage));
                       }, 1000); // one second between flop and turn
+                      setTimeout(() => {
+                        stompClient.send('/server/dealTheRiver', {}, JSON.stringify(dealTheRiverMessage));
+                      }, 1000); // one second between turn and river
+                    
                     
 
                     startRoundRef.current = false; //set startRoundRef tu false after deal the cards
