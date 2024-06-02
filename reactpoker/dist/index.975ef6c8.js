@@ -27277,8 +27277,14 @@ const App = ()=>{
                 console.log("Received turn:", turn);
                 setTurnCard(turn);
             });
-            (0, _webSocketDefault.default).subscribe("/client/players", (message)=>{
-                const updatedPlayers = JSON.parse(message.body);
+            (0, _webSocketDefault.default).subscribe("/client/river", (message)=>{
+                const river = JSON.parse(message.body);
+                console.log("Received river:", river);
+                setRiverCard(river);
+            });
+            (0, _webSocketDefault.default).subscribe("/client/game", (message)=>{
+                const gameState = JSON.parse(message.body);
+                const updatedPlayers = gameState.players;
                 setPlayers(updatedPlayers);
                 const realPlayers = updatedPlayers.filter((player)=>player !== null);
                 if (realPlayers.length >= 2 && startRoundRef.current) {
@@ -27291,11 +27297,17 @@ const App = ()=>{
                     const dealTheTurnMessage = {
                         action: "dealTheTurn"
                     };
+                    const dealTheRiverMessage = {
+                        action: "dealTheRiver"
+                    };
                     (0, _webSocketDefault.default).send("/server/dealCards", {}, JSON.stringify(dealCardsMessage));
                     (0, _webSocketDefault.default).send("/server/dealTheFlop", {}, JSON.stringify(dealTheFlopMessage));
                     setTimeout(()=>{
                         (0, _webSocketDefault.default).send("/server/dealTheTurn", {}, JSON.stringify(dealTheTurnMessage));
                     }, 1000); // one second between flop and turn
+                    setTimeout(()=>{
+                        (0, _webSocketDefault.default).send("/server/dealTheRiver", {}, JSON.stringify(dealTheRiverMessage));
+                    }, 1000); // one second between turn and river
                     startRoundRef.current = false; //set startRoundRef tu false after deal the cards
                 }
             });
@@ -27343,10 +27355,11 @@ const App = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _pokerTableDefault.default), {
                 flopCards: flopCards,
-                turnCard: turnCard
+                turnCard: turnCard,
+                riverCard: riverCard
             }, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 110,
+                lineNumber: 127,
                 columnNumber: 13
             }, undefined),
             [
@@ -27361,33 +27374,33 @@ const App = ()=>{
                             children: "+"
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 118,
+                            lineNumber: 135,
                             columnNumber: 21
                         }, undefined),
                         selectedPlayer === index + 1 && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _addPlayerDefault.default), {
                             onAddPlayer: handleAddPlayer
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 120,
+                            lineNumber: 137,
                             columnNumber: 25
                         }, undefined),
                         playerPositions[index] && players[index] && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _playerTableDefault.default), {
                             player: players[index]
                         }, void 0, false, {
                             fileName: "src/App.js",
-                            lineNumber: 123,
+                            lineNumber: 140,
                             columnNumber: 25
                         }, undefined)
                     ]
                 }, index, true, {
                     fileName: "src/App.js",
-                    lineNumber: 112,
+                    lineNumber: 129,
                     columnNumber: 17
                 }, undefined))
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 109,
+        lineNumber: 126,
         columnNumber: 9
     }, undefined);
 };
@@ -50932,11 +50945,12 @@ var _aHeartsPngDefault = parcelHelpers.interopDefault(_aHeartsPng);
 var _cardBackPng = require("../../public/images/cardBack.png");
 var _cardBackPngDefault = parcelHelpers.interopDefault(_cardBackPng);
 var _loadImages = require("../utils/loadImages");
-const PokerTable = ({ flopCards, turnCard })=>{
+const PokerTable = ({ flopCards, turnCard, riverCard })=>{
     // Preverenie, že flopCards je platné pole
     const cardsToShow = [
         ...flopCards || [],
-        turnCard
+        turnCard,
+        riverCard
     ].filter(Boolean);
     if (cardsToShow.length === 0) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "background",

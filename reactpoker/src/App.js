@@ -46,8 +46,9 @@ const App = () => {
               
 
 
-            stompClient.subscribe('/client/players', (message) => {
-                const updatedPlayers = JSON.parse(message.body);
+            stompClient.subscribe('/client/game', (message) => {
+                const gameState = JSON.parse(message.body);
+                const updatedPlayers = gameState.players;
                 setPlayers(updatedPlayers);
                 
                 const realPlayers = updatedPlayers.filter(player => player !== null);
