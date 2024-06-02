@@ -44,4 +44,12 @@
 #playerTable h3, #playerTable p {
   margin: 5px 0;
 }
+
+.blind {
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 /*# sourceMappingURL=index.db9ed22c.css.map */

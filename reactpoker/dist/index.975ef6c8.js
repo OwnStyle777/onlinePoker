@@ -50606,6 +50606,12 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _playerTableCss = require("./PlayerTable.css");
 var _loadImages = require("../utils/loadImages");
+var _bigBlindPng = require("../../public/images/bigBlind.png");
+var _bigBlindPngDefault = parcelHelpers.interopDefault(_bigBlindPng);
+var _smallBlindPng = require("../../public/images/smallBlind.png");
+var _smallBlindPngDefault = parcelHelpers.interopDefault(_smallBlindPng);
+var _dealerPng = require("../../public/images/dealer.png");
+var _dealerPngDefault = parcelHelpers.interopDefault(_dealerPng);
 const PlayerTable = ({ player })=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         id: "playerTable",
@@ -50614,7 +50620,7 @@ const PlayerTable = ({ player })=>{
                 children: player.name
             }, void 0, false, {
                 fileName: "src/components/PlayerTable.js",
-                lineNumber: 10,
+                lineNumber: 13,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -50624,7 +50630,7 @@ const PlayerTable = ({ player })=>{
                 ]
             }, void 0, true, {
                 fileName: "src/components/PlayerTable.js",
-                lineNumber: 11,
+                lineNumber: 14,
                 columnNumber: 13
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -50635,18 +50641,54 @@ const PlayerTable = ({ player })=>{
                         alt: card
                     }, index, false, {
                         fileName: "src/components/PlayerTable.js",
-                        lineNumber: 14,
+                        lineNumber: 17,
                         columnNumber: 18
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/PlayerTable.js",
-                lineNumber: 12,
+                lineNumber: 15,
+                columnNumber: 13
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "playerStatus",
+                children: [
+                    player.bigBlind && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _bigBlindPngDefault.default),
+                        className: "blind",
+                        alt: "bigBlind"
+                    }, void 0, false, {
+                        fileName: "src/components/PlayerTable.js",
+                        lineNumber: 21,
+                        columnNumber: 37
+                    }, undefined),
+                    player.smallBlind && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _smallBlindPngDefault.default),
+                        className: "blind",
+                        alt: "smallBlind"
+                    }, void 0, false, {
+                        fileName: "src/components/PlayerTable.js",
+                        lineNumber: 22,
+                        columnNumber: 39
+                    }, undefined),
+                    player.dealer && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _dealerPngDefault.default),
+                        className: "blind",
+                        alt: "dealer"
+                    }, void 0, false, {
+                        fileName: "src/components/PlayerTable.js",
+                        lineNumber: 23,
+                        columnNumber: 35
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/PlayerTable.js",
+                lineNumber: 20,
                 columnNumber: 13
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/PlayerTable.js",
-        lineNumber: 9,
+        lineNumber: 12,
         columnNumber: 9
     }, undefined);
 };
@@ -50660,7 +50702,7 @@ $RefreshReg$(_c, "PlayerTable");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PlayerTable.css":"jGkGR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/loadImages":"4kgN4"}],"jGkGR":[function() {},{}],"4kgN4":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./PlayerTable.css":"jGkGR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utils/loadImages":"4kgN4","../../public/images/bigBlind.png":"dY7WK","../../public/images/smallBlind.png":"gX83Y","../../public/images/dealer.png":"wdhFd"}],"jGkGR":[function() {},{}],"4kgN4":[function(require,module,exports) {
 // src/utils/loadImages.js
 // src/utils/loadImages.js
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
@@ -50915,7 +50957,16 @@ module.exports = require("c0ca2e777eba3391").getBundleURL("bLxZJ") + "TWO_DIAMON
 },{"c0ca2e777eba3391":"lgJ39"}],"d91ZT":[function(require,module,exports) {
 module.exports = require("4b1217d1ec57124d").getBundleURL("bLxZJ") + "TWO_CLUBS.10c0a38f.png" + "?" + Date.now();
 
-},{"4b1217d1ec57124d":"lgJ39"}],"4H2TI":[function(require,module,exports) {
+},{"4b1217d1ec57124d":"lgJ39"}],"dY7WK":[function(require,module,exports) {
+module.exports = require("2276b8a08e190059").getBundleURL("bLxZJ") + "bigBlind.5bf5b90b.png" + "?" + Date.now();
+
+},{"2276b8a08e190059":"lgJ39"}],"gX83Y":[function(require,module,exports) {
+module.exports = require("53511487c67f09ac").getBundleURL("bLxZJ") + "smallBlind.98a66268.png" + "?" + Date.now();
+
+},{"53511487c67f09ac":"lgJ39"}],"wdhFd":[function(require,module,exports) {
+module.exports = require("4e1f2fab3df36b4c").getBundleURL("bLxZJ") + "dealer.52256aaf.png" + "?" + Date.now();
+
+},{"4e1f2fab3df36b4c":"lgJ39"}],"4H2TI":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ad55 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -51071,10 +51122,7 @@ $RefreshReg$(_c, "PokerTable");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../index.css":"irmnC","../../public/images/greenTable.png":"54LJw","../../public/images/dealer.png":"wdhFd","../../public/chips/blueChip.png":"6u0tb","../../public/chips/blackChip.png":"40zvb","../../public/chips/redChip.png":"3zJoS","../../public/chips/yellowChip.png":"1sFga","../../public/images/cardBack.png":"fryiY","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../public/cards/A_HEARTS.png":"ccqGO","../utils/loadImages":"4kgN4"}],"irmnC":[function() {},{}],"54LJw":[function(require,module,exports) {
 module.exports = require("2128a6e03f9a1f8").getBundleURL("bLxZJ") + "greenTable.54d15fce.png" + "?" + Date.now();
 
-},{"2128a6e03f9a1f8":"lgJ39"}],"wdhFd":[function(require,module,exports) {
-module.exports = require("4e1f2fab3df36b4c").getBundleURL("bLxZJ") + "dealer.52256aaf.png" + "?" + Date.now();
-
-},{"4e1f2fab3df36b4c":"lgJ39"}],"6u0tb":[function(require,module,exports) {
+},{"2128a6e03f9a1f8":"lgJ39"}],"6u0tb":[function(require,module,exports) {
 module.exports = require("2d0b1866ed1ed80").getBundleURL("bLxZJ") + "blueChip.aa39f75c.png" + "?" + Date.now();
 
 },{"2d0b1866ed1ed80":"lgJ39"}],"40zvb":[function(require,module,exports) {
