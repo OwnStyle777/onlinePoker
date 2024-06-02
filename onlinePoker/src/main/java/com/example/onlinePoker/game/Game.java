@@ -5,6 +5,7 @@ import com.example.onlinePoker.table.Card;
 import com.example.onlinePoker.table.Table;
 
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class Game {
     private List<Player> players;
@@ -215,47 +216,65 @@ public class Game {
         System.out.println(player.getName() + "fold");
     }
 
+    public List<Player> returnNonNullPlayers(List<Player> players){
+       return players.stream()
+                .filter(Objects::nonNull)
+                .collect(Collectors.toList());
+    }
 
-    public int getBlinds(int smallBlindIndex){
+
+    public int getBlinds(int smallBlindIndex, List<Player> players){
+        List <Player> nonNullPlayers = returnNonNullPlayers(players);
         int dealerIndex ;
         int bigBlindIndex ;
         deactivateBlinds();
-        if (smallBlindIndex >= players.size()) {
+
+        Player dealer = null;
+        Player smallBlindPl;
+        Player bigBlindPl;
+
+        if (smallBlindIndex >= nonNullPlayers.size()) {
             smallBlindIndex = 0;
         }
         if (smallBlindIndex == 0) {
-            dealerIndex = players.size() - 1;
+            dealerIndex = nonNullPlayers.size() - 1;
         } else {
             dealerIndex = smallBlindIndex - 1;
         }
-        if (smallBlindIndex == players.size() - 1) {
+        if (smallBlindIndex == nonNullPlayers.size() - 1) {
             bigBlindIndex = 0;
         } else {
             bigBlindIndex = smallBlindIndex + 1;
         }
-        if(players.size() == 2){
-            players.get(smallBlindIndex).setSmallBlind(true);
-            players.get(bigBlindIndex).setBigBlind(true);
+
+     if(nonNullPlayers.size() > 2 ) {
+         dealer = nonNullPlayers.get(dealerIndex);
+     }
+            smallBlindPl  = nonNullPlayers.get(smallBlindIndex);
+
+            bigBlindPl = nonNullPlayers.get(bigBlindIndex);
 
 
-        }else {
-            Player dealer = players.get(dealerIndex);
-            dealer.setDealer(true);
+            for(Player player: players){
+                if(player != null && nonNullPlayers.contains(player)){
+                    if(player.equals(smallBlindPl)) { // Kontrola pre small blind
+                        player.setSmallBlind(true);
+                        player.setRoundStake(smallBlind);
+                        player.setTotalChips(player.getTotalChips() - smallBlind);
+                        table.setPot(table.getPot() + smallBlind);
+                    }
+                    if(player.equals(bigBlindPl)) { // Kontrola pre big blind
+                        player.setBigBlind(true);
+                        player.setRoundStake(bigBlind);
+                        player.setTotalChips(player.getTotalChips() - bigBlind);
+                        table.setPot(table.getPot() + bigBlind);
+                    }
+                    if(player.equals(dealer)) { // Kontrola pre dealera
+                        player.setDealer(true);
+                    }
+                }
+            }
 
-            Player smallBlindPl  = players.get(smallBlindIndex);
-            smallBlindPl.setSmallBlind(true);
-            smallBlindPl.setRoundStake(smallBlind);
-            smallBlindPl.setTotalChips(smallBlindPl.getTotalChips() - smallBlind);
-            table.setPot(table.getPot() + smallBlind);
-
-
-            Player bigBlindPl = players.get(bigBlindIndex);
-            bigBlindPl.setBigBlind(true);
-            bigBlindPl.setRoundStake(bigBlind);
-            bigBlindPl.setTotalChips(bigBlindPl.getTotalChips() - bigBlind);
-            table.setPot(table.getPot() + bigBlind);
-
-        }
 
      return smallBlindIndex + 1 ;
     }
@@ -268,11 +287,23 @@ public class Game {
 
     public void deactivateBlinds (){
         for(Player player: players){
-            player.setBigBlind(false);
-            player.setSmallBlind(false);
-            player.setDealer(false);
+            if(player != null) {
+                player.setBigBlind(false);
+                player.setSmallBlind(false);
+                player.setDealer(false);
+            }
         }
 
+    }
+
+    public int checkPlayersNumber(List<Player> listOfPlayers){
+        int number = 0;
+        for(Player player: listOfPlayers){
+            if(player != null){
+                number ++;
+            }
+        }
+        return number;
     }
 
 
