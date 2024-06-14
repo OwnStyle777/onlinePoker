@@ -1,8 +1,8 @@
 package com.example.onlinePoker.game;
 
 import com.example.onlinePoker.players.Player;
-import com.example.onlinePoker.table.Card;
-import com.example.onlinePoker.table.Table;
+import com.example.onlinePoker.api.table.Card;
+import com.example.onlinePoker.api.table.Table;
 
 import java.util.*;
 import java.util.stream.Collectors;
