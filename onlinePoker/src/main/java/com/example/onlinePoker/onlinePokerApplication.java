@@ -5,24 +5,27 @@ import com.example.onlinePoker.game.HandEvaluator;
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.table.Card;
 import com.example.onlinePoker.table.Table;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.web.accept.HeaderContentNegotiationStrategy;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
+
 import java.util.List;
 
 @SpringBootApplication
 public class onlinePokerApplication   {
 
+	private static final Logger logger = LoggerFactory.getLogger(onlinePokerApplication.class);
 
 
 
 	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		SpringApplication.run(onlinePokerApplication.class, args);
+
+
 
 		Game game = new Game();
 		Table table = game.getTable();
@@ -33,8 +36,8 @@ public class onlinePokerApplication   {
 		Player player4 = new Player();
 		Player player5 = new Player();
 		Player player6 = new Player();
-//		Player player7 = new Player();
-//		Player player8 = new Player();
+////		Player player7 = new Player();
+////		Player player8 = new Player();
 
 
 		List<Player> playerList = new ArrayList<>();
@@ -57,9 +60,7 @@ public class onlinePokerApplication   {
 
 
 		game.setPlayers(playerList);
-
-
-
+		logger.info("Players Initialized");
 
 		int smallBlind = 1;
 		int rounds = 0;
@@ -68,7 +69,8 @@ public class onlinePokerApplication   {
 
 			game.preparePlayersForNextRound(playerList);
 			game.dealTheCards(playerList);
-			 smallBlind = game.getBlinds(smallBlind);
+			logger.info("Game Started");
+			 smallBlind = game.getBlinds(smallBlind,playerList);
 
 			 int firstPlayer = smallBlind + 1;
 
@@ -91,7 +93,7 @@ public class onlinePokerApplication   {
 
 			}
 
-//			game.callBets(firstPlayer, true);
+			game.callBets(firstPlayer, true);
 
 		HandEvaluator handEvaluator = new HandEvaluator() {
 		};
@@ -154,13 +156,6 @@ public class onlinePokerApplication   {
 				System.out.println(playerC.getName() + " combination: " + playerC.getCombination());
 			}
 			System.out.println();
-
-
-
-
-
-
-
 
 		rounds ++;
 		}

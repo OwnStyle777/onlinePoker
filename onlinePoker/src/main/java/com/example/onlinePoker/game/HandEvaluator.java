@@ -446,6 +446,36 @@ public interface HandEvaluator {
         return "";
     }
 
+//    default void setPlayerCombination (List<Player> playerList , List<Card> tableCards){
+//        for(Player player: playerList){
+//            String combination = "";
+//            String[] methodsToCheck = {
+//                    "checkTheHighestCard",
+//                    "checkHighestPair",
+//                    "checkHighest2pairs",
+//                    "check3ofKind",
+//                    "checkStraight",
+//                    "checkTheFlush",
+//                    "checkTheFullHouse",
+//                    "checkFourOfKind",
+//                    "checkTheStraightFlush",
+//                    "checkTheRoyalFlush"
+//            };
+//
+//            for (String methodName : methodsToCheck) {
+//                //first get class of instance , get specific method by name and argument types after all invoke method on instance with specific arguments
+//                String currentCombination = handEvaluator.getClass().getMethod(methodName, Card[].class, List.class)
+//                        .invoke(handEvaluator, player.getCards(), tableCards).toString();
+//
+//                if (currentCombination.length() > 1) {
+//                    combination = currentCombination;
+//
+//                }
+//            }
+//
+//            player.setCombination(combination);
+//    }
+
 
 
 }
