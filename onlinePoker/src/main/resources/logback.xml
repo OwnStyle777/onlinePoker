@@ -27,13 +27,13 @@
     <!-- Specific logger for Console appender -->
 <loggers>
         <logger level="debug">
-            <appender-ref ref="CONSOLE" />
+            <appender-ref ref="FILE" />
         </logger>
 
     <!-- Root logger for FILE appender -->
 </loggers>
-    <root level="debug">
-        <appender-ref ref="FILE" />
+    <root level="info">
+        <appender-ref ref="CONSOLE" />
     </root>
 
 </configuration>
