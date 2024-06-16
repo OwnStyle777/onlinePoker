@@ -88,8 +88,8 @@ public class onlinePokerApplication   {
 					role ="";
 				}
 
+				logger.info("Player:  "+ playerC.getName()  + " Card1: " + cards[0].toString() + " Card2: " + cards[1].toString() + role);
 
-					System.out.println("Player:  "+ playerC.getName()  + " Card1: " + cards[0].toString() + " Card2: " + cards[1].toString() + role) ;
 
 			}
 
@@ -101,18 +101,16 @@ public class onlinePokerApplication   {
 
 			game.dealTheFlop();
 
-			System.out.println();
-//			System.out.println("Flop :" + (table.getFlop()));
-			System.out.println();
+			logger.info("Flop :" + (table.getFlop()));
 
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheTurn();
-//			System.out.println(" Turn :" + table.getTurn());
+			logger.info(" Turn :" + table.getTurn());
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheRiver();
-//			System.out.println(" River :" + table.getRiver());
+			logger.info(" River :" + table.getRiver());
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 
@@ -120,8 +118,7 @@ public class onlinePokerApplication   {
 
 			allTable.add(table.getTurn());
 			allTable.add(table.getRiver());
-			System.out.println("Table :" + (allTable));
-			System.out.println();
+			logger.info("Table :" + (allTable));
 
 			for(Player playerk: playerList){
 				String combination = "";
@@ -153,7 +150,7 @@ public class onlinePokerApplication   {
 			}
 			System.out.println();
 			for(Player playerC: playerList){
-				System.out.println(playerC.getName() + " combination: " + playerC.getCombination());
+				logger.info(playerC.getName() + " combination: " + playerC.getCombination());
 			}
 			System.out.println();
 

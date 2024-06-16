@@ -1,0 +1,809 @@
+10:56:33.870 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 14360 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+10:56:33.873 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+10:56:33.874 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+10:56:36.832 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+10:56:36.970 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+10:56:36.983 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+10:56:36.983 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+10:56:36.984 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+10:56:36.984 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+10:56:36.984 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+10:56:36.985 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+10:56:36.986 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+10:56:36.986 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+10:56:36.986 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+10:56:36.987 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+10:56:36.987 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+10:56:36.987 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+10:56:36.988 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+10:56:36.988 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+10:56:36.988 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+10:56:36.988 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+10:56:36.989 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+10:56:36.989 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+10:56:36.989 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+10:56:36.989 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+10:56:36.989 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+10:56:36.990 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+10:56:36.991 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+10:56:36.991 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:56:37.370 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2bb62414
+10:56:37.380 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:56:37.486 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+10:56:37.626 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@471ae587
+10:56:37.754 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@49dd1314
+10:56:37.888 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4de28ef7
+10:56:37.997 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8e0192f
+10:56:38.124 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1846e369
+10:56:38.253 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@392216c6
+10:56:38.358 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@606eb223
+10:56:38.475 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@68cfe660
+10:56:38.600 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@47bd1dbb
+10:56:38.627 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+10:56:40.711 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.613 seconds (process running for 8.664)
+10:56:40.718 INFO  c.e.o.onlinePokerApplication - Players Initialized
+10:56:40.718 INFO  c.e.o.onlinePokerApplication - Game Started
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: K_DIAMONDS Card2: SEVEN_HEARTS DEALER
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: NINE_SPADES Card2: A_HEARTS SMALL BLIND
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: TWO_DIAMONDS Card2: SEVEN_CLUBS BIG BLIND
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: K_SPADES Card2: NINE_DIAMONDS
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: K_HEARTS Card2: EIGHT_CLUBS
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: SEVEN_SPADES Card2: TWO_SPADES
+10:56:40.720 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: THREE_SPADES Card2: SIX_CLUBS
+10:59:19.945 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 1288 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+10:59:19.949 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+10:59:19.950 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+10:59:23.000 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+10:59:23.163 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+10:59:23.175 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+10:59:23.176 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+10:59:23.176 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+10:59:23.176 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+10:59:23.176 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+10:59:23.177 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+10:59:23.178 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+10:59:23.178 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+10:59:23.178 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+10:59:23.179 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+10:59:23.179 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+10:59:23.566 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5aa62ee7
+10:59:23.569 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+10:59:23.686 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+10:59:23.814 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3a44e489
+10:59:23.948 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@34830db1
+10:59:24.074 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@30bc8ff9
+10:59:24.210 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@75be078a
+10:59:24.319 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6843c518
+10:59:24.474 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4481b324
+10:59:24.590 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@10962f0a
+10:59:24.700 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1591f8c5
+10:59:24.857 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@630c846a
+10:59:24.873 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+10:59:27.368 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 8.204 seconds (process running for 9.324)
+10:59:27.380 INFO  c.e.o.onlinePokerApplication - Players Initialized
+10:59:27.381 INFO  c.e.o.onlinePokerApplication - Game Started
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: THREE_HEARTS Card2: Q_CLUBS DEALER
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: K_HEARTS Card2: Q_DIAMONDS SMALL BLIND
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: THREE_CLUBS Card2: A_CLUBS BIG BLIND
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: SEVEN_SPADES Card2: FIVE_DIAMONDS
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: THREE_DIAMONDS Card2: FOUR_HEARTS
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: SEVEN_DIAMONDS Card2: TEN_DIAMONDS
+10:59:27.382 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: J_CLUBS Card2: A_SPADES
+10:59:53.691 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+10:59:53.692 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:00:23.704 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:00:23.705 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:00:53.717 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:00:53.717 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:01:23.723 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:01:23.724 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:01:53.735 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:01:53.735 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:02:23.742 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:02:23.743 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:02:43.466 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 21860 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:02:43.468 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:02:43.468 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:02:46.479 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:02:46.651 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:02:46.668 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:02:46.669 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:02:46.670 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:02:46.672 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:02:46.673 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:02:46.674 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:02:46.679 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:02:46.680 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:02:46.681 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:02:46.682 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:02:46.683 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:02:46.687 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:02:46.689 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:02:46.690 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:02:46.695 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:02:46.696 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:02:46.697 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:02:46.697 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:02:46.697 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:02:46.699 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:02:46.700 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:02:46.701 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:02:46.702 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:02:46.702 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:02:46.702 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:02:46.702 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:02:46.702 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:02:46.702 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:02:47.131 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6371cf2f
+11:02:47.140 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:02:47.248 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:02:47.351 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@26eeec46
+11:02:47.459 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@282906eb
+11:02:47.589 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2c168736
+11:02:47.714 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@69140cd0
+11:02:47.828 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38495168
+11:02:47.950 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@583706d4
+11:02:48.079 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@408005d3
+11:02:48.216 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@93bf39f
+11:02:48.341 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b0b31c1
+11:02:48.365 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:02:50.665 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 8.098 seconds (process running for 9.133)
+11:02:50.672 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:02:50.672 INFO  c.e.o.onlinePokerApplication - Game Started
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: NINE_DIAMONDS Card2: THREE_SPADES DEALER
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: SEVEN_CLUBS Card2: SIX_CLUBS SMALL BLIND
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: EIGHT_HEARTS Card2: SIX_HEARTS BIG BLIND
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: K_CLUBS Card2: TWO_SPADES
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: THREE_HEARTS Card2: K_DIAMONDS
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: NINE_CLUBS Card2: K_HEARTS
+11:02:50.674 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: TWO_CLUBS Card2: TEN_HEARTS
+11:03:20.399 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 21312 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:03:20.401 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:03:20.402 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:03:23.591 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:03:23.738 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:03:23.746 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:03:23.747 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:03:23.747 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:03:23.747 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:03:23.747 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:03:23.749 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:03:23.749 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:03:23.749 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:03:23.750 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:03:23.751 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:03:23.751 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:03:23.752 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:03:23.753 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:03:23.754 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:03:23.755 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:03:23.755 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:03:23.755 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:03:23.755 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:03:23.755 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:03:23.755 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:03:24.183 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e98b788
+11:03:24.186 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:03:24.289 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:03:24.429 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d7d8380
+11:03:24.531 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ba6c5f
+11:03:24.642 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@785e8f0
+11:03:24.771 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@42876664
+11:03:24.885 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@23878c37
+11:03:24.997 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@738fc48c
+11:03:25.116 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b657065
+11:03:25.230 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@22a8992b
+11:03:25.342 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3d515f7d
+11:03:25.353 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:03:27.240 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.526 seconds (process running for 8.628)
+11:03:27.247 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:03:27.248 INFO  c.e.o.onlinePokerApplication - Game Started
+11:03:27.248 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: TWO_HEARTS Card2: NINE_DIAMONDS DEALER
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: THREE_CLUBS Card2: FOUR_CLUBS SMALL BLIND
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: J_SPADES Card2: SEVEN_CLUBS BIG BLIND
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: TWO_CLUBS Card2: FOUR_HEARTS
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: SEVEN_DIAMONDS Card2: TEN_CLUBS
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: K_HEARTS Card2: SIX_HEARTS
+11:03:27.249 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: J_CLUBS Card2: TEN_SPADES
+11:03:54.305 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:03:54.306 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:04:24.321 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:04:24.321 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:04:54.326 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:04:54.327 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:05:24.332 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:05:24.333 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:05:54.336 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:05:54.336 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:06:24.345 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:06:24.346 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:06:54.350 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:06:54.350 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:07:24.356 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:07:24.357 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:07:51.258 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 8156 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:07:51.264 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:07:51.267 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:07:54.524 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:07:54.700 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:07:54.708 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:07:54.708 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:07:54.708 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:07:54.708 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:07:54.709 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:07:54.711 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:07:54.711 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:07:54.711 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:07:54.711 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:07:54.712 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:07:54.713 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:07:54.714 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:07:54.714 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:07:54.715 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:07:54.715 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:07:54.715 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:07:54.715 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:07:54.716 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:07:54.717 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:07:54.717 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:07:54.717 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:07:54.717 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:07:54.717 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:07:54.718 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:07:54.719 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:07:54.719 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:07:55.129 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64518270
+11:07:55.131 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:07:55.237 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:07:55.383 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7df047f0
+11:07:55.514 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7337b63e
+11:07:55.638 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@77082c80
+11:07:55.772 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@320abc05
+11:07:55.885 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d3aa273
+11:07:56.111 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f26bac
+11:07:56.219 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@35282b7e
+11:07:56.355 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5225434a
+11:07:56.585 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a945a47
+11:07:56.600 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:07:58.273 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.778 seconds (process running for 9.172)
+11:07:58.278 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:07:58.281 INFO  c.e.o.onlinePokerApplication - Game Started
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: TEN_CLUBS Card2: NINE_SPADES DEALER
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: THREE_SPADES Card2: A_HEARTS SMALL BLIND
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: NINE_HEARTS Card2: TEN_SPADES BIG BLIND
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: Q_CLUBS Card2: FOUR_DIAMONDS
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: TWO_HEARTS Card2: K_SPADES
+11:07:58.282 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: J_DIAMONDS Card2: FIVE_HEARTS
+11:07:58.283 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: J_CLUBS Card2: TWO_DIAMONDS
+11:08:25.252 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:08:25.253 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:08:55.259 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:08:55.259 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:09:25.270 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:09:25.271 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:09:55.278 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:09:55.279 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:10:28.845 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 17168 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:10:28.847 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:10:28.850 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:10:31.755 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:10:31.891 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:10:31.899 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:10:31.899 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:10:31.901 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:10:31.901 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:10:31.901 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:10:31.902 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:10:31.902 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:10:31.903 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:10:31.903 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:10:31.903 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:10:31.904 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:10:31.904 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:10:31.905 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:10:31.905 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:10:31.905 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:10:31.905 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:10:31.906 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:10:31.906 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:10:31.907 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:10:31.907 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:10:31.907 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:10:31.909 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:10:31.909 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:10:31.909 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:10:31.909 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:10:31.909 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:10:31.910 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:10:31.911 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:10:31.911 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:10:31.911 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:10:31.911 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:10:32.333 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b8572df
+11:10:32.341 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:10:32.451 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:10:32.558 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@38f4abe6
+11:10:32.671 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36335288
+11:10:32.806 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@320cc096
+11:10:33.008 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@770e58b3
+11:10:33.117 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6a38762f
+11:10:33.252 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@46b3cef2
+11:10:33.383 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@126fbec2
+11:10:33.515 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1721a7fc
+11:10:33.644 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3e012239
+11:10:33.662 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:10:35.506 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.822 seconds (process running for 9.066)
+11:10:35.513 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:10:35.515 INFO  c.e.o.onlinePokerApplication - Game Started
+11:10:35.515 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: FIVE_HEARTS Card2: SIX_SPADES DEALER
+11:10:35.515 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: Q_CLUBS Card2: A_CLUBS SMALL BLIND
+11:10:35.516 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: THREE_CLUBS Card2: EIGHT_SPADES BIG BLIND
+11:10:35.516 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: SEVEN_CLUBS Card2: TEN_CLUBS
+11:10:35.516 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: THREE_DIAMONDS Card2: K_DIAMONDS
+11:10:35.516 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: FOUR_HEARTS Card2: SEVEN_SPADES
+11:10:35.516 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: J_SPADES Card2: FOUR_DIAMONDS
+11:11:02.458 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:11:02.464 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:11:32.472 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:11:32.473 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:12:02.483 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:12:02.483 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:12:32.488 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:12:32.489 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:13:02.496 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:13:02.496 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:13:21.516 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 24068 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:13:21.521 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:13:21.523 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:13:24.563 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:13:24.709 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:13:24.717 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:13:24.718 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:13:24.719 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:13:24.719 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:13:24.719 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:13:24.722 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:13:24.723 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:13:24.723 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:13:24.723 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:13:24.723 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:13:24.725 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:13:24.725 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:13:24.725 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:13:24.726 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:13:24.726 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:13:24.726 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:13:24.727 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:13:24.727 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:13:24.727 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:13:24.728 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:13:24.729 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:13:24.729 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:13:24.729 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:13:24.729 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:13:24.729 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:13:24.730 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:13:24.730 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:13:24.730 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:13:24.730 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:13:24.730 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:13:24.730 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:13:25.150 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1f4f0fcc
+11:13:25.157 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:13:25.263 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:13:25.397 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f450b8
+11:13:25.512 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b33ae76
+11:13:25.633 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@f0c3bc8
+11:13:25.741 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a0ea44d
+11:13:25.978 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6dd85c24
+11:13:26.108 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7b8e0ff7
+11:13:26.224 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@15b2a935
+11:13:26.362 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a215b02
+11:13:26.475 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5b71b1e
+11:13:26.499 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:13:28.287 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.663 seconds (process running for 8.766)
+11:13:28.294 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:13:28.295 INFO  c.e.o.onlinePokerApplication - Game Started
+11:13:28.296 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: SEVEN_HEARTS Card2: EIGHT_DIAMONDS DEALER
+11:13:28.296 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: TEN_HEARTS Card2: FIVE_SPADES SMALL BLIND
+11:13:28.296 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: NINE_SPADES Card2: FOUR_CLUBS BIG BLIND
+11:13:28.297 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: J_SPADES Card2: J_HEARTS
+11:13:28.297 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: J_DIAMONDS Card2: A_SPADES
+11:13:28.297 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: J_CLUBS Card2: Q_HEARTS
+11:13:28.297 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: NINE_CLUBS Card2: SEVEN_DIAMONDS
+11:13:53.022 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 23008 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:13:53.023 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:13:53.025 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:13:56.006 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:13:56.140 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:13:56.147 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:13:56.147 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:13:56.147 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:13:56.148 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:13:56.148 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:13:56.150 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:13:56.150 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:13:56.151 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:13:56.151 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:13:56.152 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:13:56.152 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:13:56.153 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:13:56.153 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:13:56.153 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:13:56.153 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:13:56.154 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:13:56.154 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:13:56.154 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:13:56.155 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:13:56.155 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:13:56.155 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:13:56.155 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:13:56.156 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:13:56.156 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:13:56.156 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:13:56.156 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:13:56.157 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:13:56.157 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:13:56.158 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:13:56.160 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:13:56.160 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:13:56.575 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7aaad0
+11:13:56.578 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:13:56.681 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:13:56.805 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@337a3364
+11:13:56.936 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3dbdcb7b
+11:13:57.160 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@39825814
+11:13:57.282 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7c80c140
+11:13:57.395 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e832ca7
+11:13:57.530 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4d36da1f
+11:13:57.639 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66df6955
+11:13:57.768 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1caf3e0f
+11:13:57.880 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b4ecf29
+11:13:57.899 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:13:59.647 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.51 seconds (process running for 8.603)
+11:13:59.652 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:13:59.653 INFO  c.e.o.onlinePokerApplication - Game Started
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: NINE_SPADES Card2: Q_SPADES DEALER
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: SEVEN_HEARTS Card2: EIGHT_HEARTS SMALL BLIND
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: NINE_DIAMONDS Card2: THREE_SPADES BIG BLIND
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: A_DIAMONDS Card2: FOUR_HEARTS
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: SIX_CLUBS Card2: J_CLUBS
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: SEVEN_SPADES Card2: K_SPADES
+11:13:59.654 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: TEN_SPADES Card2: SIX_SPADES
+11:14:26.913 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 5604 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:14:26.914 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:14:26.919 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:14:29.877 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:14:30.030 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:14:30.040 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:14:30.040 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:14:30.040 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:14:30.040 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:14:30.040 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:14:30.042 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:14:30.042 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:14:30.043 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:14:30.043 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:14:30.043 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:14:30.044 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:14:30.045 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:14:30.046 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:14:30.047 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:14:30.047 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:14:30.047 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:14:30.047 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:14:30.047 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:14:30.471 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7aaad0
+11:14:30.477 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:14:30.587 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:14:30.724 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4a8bc8d
+11:14:30.829 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@a6f5268
+11:14:30.949 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@e50d7fd
+11:14:31.050 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b525853
+11:14:31.160 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@adfc960
+11:14:31.269 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7a533641
+11:14:31.410 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7234f9c9
+11:14:31.523 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2b7da71c
+11:14:31.641 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@5f9defda
+11:14:31.655 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:14:33.443 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.411 seconds (process running for 8.767)
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Game Started
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: Q_SPADES Card2: A_CLUBS DEALER
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: FIVE_HEARTS Card2: TWO_DIAMONDS SMALL BLIND
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: K_HEARTS Card2: Q_CLUBS BIG BLIND
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: K_SPADES Card2: A_DIAMONDS
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: Q_HEARTS Card2: J_CLUBS
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: EIGHT_CLUBS Card2: A_HEARTS
+11:14:33.451 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: EIGHT_SPADES Card2: SIX_CLUBS
+11:15:00.591 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:15:00.591 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:15:30.598 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:15:30.599 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:16:00.605 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:16:00.605 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:16:30.607 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=10, active=0, idle=10, waiting=0)
+11:16:30.607 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Fill pool skipped, pool has sufficient level or currently being filled (queueDepth=0).
+11:16:52.947 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 2480 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:16:52.950 DEBUG c.e.o.onlinePokerApplication - Running with Spring Boot v3.2.5, Spring v6.1.6
+11:16:52.952 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:16:54.305 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:16:54.362 INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 0 JPA repository interfaces.
+11:16:55.597 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+11:16:55.618 INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+11:16:55.623 INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+11:16:55.623 INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+11:16:55.721 INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+11:16:55.729 INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2672 ms
+11:16:55.886 DEBUG com.zaxxer.hikari.HikariConfig - Driver class org.postgresql.Driver found in Thread context class loader jdk.internal.loader.ClassLoaders$AppClassLoader@33909752
+11:16:56.040 DEBUG com.zaxxer.hikari.HikariConfig - HikariPool-1 - configuration:
+11:16:56.050 DEBUG com.zaxxer.hikari.HikariConfig - allowPoolSuspension.............false
+11:16:56.050 DEBUG com.zaxxer.hikari.HikariConfig - autoCommit......................true
+11:16:56.051 DEBUG com.zaxxer.hikari.HikariConfig - catalog.........................none
+11:16:56.051 DEBUG com.zaxxer.hikari.HikariConfig - connectionInitSql...............none
+11:16:56.052 DEBUG com.zaxxer.hikari.HikariConfig - connectionTestQuery.............none
+11:16:56.054 DEBUG com.zaxxer.hikari.HikariConfig - connectionTimeout...............30000
+11:16:56.055 DEBUG com.zaxxer.hikari.HikariConfig - dataSource......................none
+11:16:56.055 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceClassName.............none
+11:16:56.055 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceJNDI..................none
+11:16:56.056 DEBUG com.zaxxer.hikari.HikariConfig - dataSourceProperties............{password=<masked>}
+11:16:56.056 DEBUG com.zaxxer.hikari.HikariConfig - driverClassName................."org.postgresql.Driver"
+11:16:56.056 DEBUG com.zaxxer.hikari.HikariConfig - exceptionOverrideClassName......none
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckProperties...........{}
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - healthCheckRegistry.............none
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - idleTimeout.....................600000
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - initializationFailTimeout.......1
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - isolateInternalQueries..........false
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - jdbcUrl.........................jdbc:postgresql://localhost:5432/insuranceDatabase
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - keepaliveTime...................0
+11:16:56.057 DEBUG com.zaxxer.hikari.HikariConfig - leakDetectionThreshold..........0
+11:16:56.058 DEBUG com.zaxxer.hikari.HikariConfig - maxLifetime.....................1800000
+11:16:56.058 DEBUG com.zaxxer.hikari.HikariConfig - maximumPoolSize.................10
+11:16:56.058 DEBUG com.zaxxer.hikari.HikariConfig - metricRegistry..................none
+11:16:56.059 DEBUG com.zaxxer.hikari.HikariConfig - metricsTrackerFactory...........none
+11:16:56.059 DEBUG com.zaxxer.hikari.HikariConfig - minimumIdle.....................10
+11:16:56.059 DEBUG com.zaxxer.hikari.HikariConfig - password........................<masked>
+11:16:56.059 DEBUG com.zaxxer.hikari.HikariConfig - poolName........................"HikariPool-1"
+11:16:56.060 DEBUG com.zaxxer.hikari.HikariConfig - readOnly........................false
+11:16:56.060 DEBUG com.zaxxer.hikari.HikariConfig - registerMbeans..................false
+11:16:56.060 DEBUG com.zaxxer.hikari.HikariConfig - scheduledExecutor...............none
+11:16:56.060 DEBUG com.zaxxer.hikari.HikariConfig - schema..........................none
+11:16:56.060 DEBUG com.zaxxer.hikari.HikariConfig - threadFactory...................internal
+11:16:56.061 DEBUG com.zaxxer.hikari.HikariConfig - transactionIsolation............default
+11:16:56.061 DEBUG com.zaxxer.hikari.HikariConfig - username........................"postgres"
+11:16:56.061 DEBUG com.zaxxer.hikari.HikariConfig - validationTimeout...............5000
+11:16:56.061 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:16:56.486 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a8f6e6
+11:16:56.493 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:16:56.570 INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:16:56.601 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Pool stats (total=1, active=0, idle=1, waiting=0)
+11:16:56.707 INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.4.4.Final
+11:16:56.740 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@315f38a1
+11:16:56.797 INFO  o.h.c.i.RegionFactoryInitiator - HHH000026: Second-level cache disabled
+11:16:56.849 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f98c0fa
+11:16:56.965 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3ba753d1
+11:16:57.075 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7ea5cac1
+11:16:57.305 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36f77f84
+11:16:57.339 INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+11:16:57.452 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4f11f6b0
+11:16:57.569 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4ea91d58
+11:16:57.697 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1e8a358e
+11:16:57.799 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@130c6284
+11:16:57.815 DEBUG com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - After adding stats (total=10, active=0, idle=10, waiting=0)
+11:16:58.293 INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+11:16:58.315 INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:16:58.760 WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:16:59.672 INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@43ca96a0, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7c68a63c, org.springframework.security.web.context.SecurityContextHolderFilter@a926db4, org.springframework.security.web.header.HeaderWriterFilter@5810772a, org.springframework.web.filter.CorsFilter@5443086a, org.springframework.security.web.csrf.CsrfFilter@4f0c1409, org.springframework.security.web.authentication.logout.LogoutFilter@c3d4bd7, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@39840986, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@22cb8e5f, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@5740ad76, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@22b3b5d0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7a51dc38, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@31a4db4f, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@40a84ea8, org.springframework.security.web.access.ExceptionTranslationFilter@279ab15e, org.springframework.security.web.access.intercept.AuthorizationFilter@54c3e686]
+11:16:59.756 INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+11:16:59.790 INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+11:16:59.795 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Starting...
+11:16:59.797 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - BrokerAvailabilityEvent[available=true, SimpleBrokerMessageHandler [org.springframework.messaging.simp.broker.DefaultSubscriptionRegistry@f83d121]]
+11:16:59.797 INFO  o.s.m.s.b.SimpleBrokerMessageHandler - Started.
+11:16:59.808 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.842 seconds (process running for 8.881)
+11:16:59.817 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:16:59.817 INFO  c.e.o.onlinePokerApplication - Game Started
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: FOUR_CLUBS Card2: K_HEARTS DEALER
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: K_CLUBS Card2: FOUR_HEARTS SMALL BLIND
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: EIGHT_DIAMONDS Card2: J_DIAMONDS BIG BLIND
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: A_SPADES Card2: EIGHT_SPADES
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: EIGHT_HEARTS Card2: NINE_SPADES
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: NINE_DIAMONDS Card2: THREE_DIAMONDS
+11:16:59.818 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: TEN_CLUBS Card2: Q_DIAMONDS
+11:26:03.771 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 20156 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:26:03.774 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:26:07.176 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:26:07.571 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@b950f82
+11:26:07.574 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:26:10.571 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.673 seconds (process running for 9.11)
+11:26:10.578 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:26:10.579 INFO  c.e.o.onlinePokerApplication - Game Started
+11:26:10.579 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: SIX_HEARTS Card2: EIGHT_DIAMONDS DEALER
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: THREE_HEARTS Card2: J_CLUBS SMALL BLIND
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: NINE_CLUBS Card2: K_SPADES BIG BLIND
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: K_DIAMONDS Card2: NINE_HEARTS
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: TEN_SPADES Card2: Q_HEARTS
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: THREE_SPADES Card2: EIGHT_HEARTS
+11:26:10.580 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: THREE_CLUBS Card2: SEVEN_DIAMONDS
+11:27:50.829 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 18056 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:27:50.834 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:27:53.974 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:27:54.376 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b325930
+11:27:54.378 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:27:57.494 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.624 seconds (process running for 8.777)
+11:27:57.503 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:27:57.504 INFO  c.e.o.onlinePokerApplication - Game Started
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: SEVEN_CLUBS Card2: SIX_SPADES DEALER
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: NINE_DIAMONDS Card2: A_SPADES SMALL BLIND
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: TEN_CLUBS Card2: K_SPADES BIG BLIND
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: K_HEARTS Card2: TWO_SPADES
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: NINE_SPADES Card2: Q_HEARTS
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: SEVEN_DIAMONDS Card2: TWO_HEARTS
+11:27:57.505 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: K_DIAMONDS Card2: A_DIAMONDS
+11:32:49.299 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 21156 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:32:49.302 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:32:52.476 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:32:52.938 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@32a72c4
+11:32:52.944 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:32:56.168 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.598 seconds (process running for 8.706)
+11:32:56.175 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:32:56.176 INFO  c.e.o.onlinePokerApplication - Game Started
+11:32:56.177 INFO  c.e.o.onlinePokerApplication - Player: Martin Card1: TWO_SPADES Card2: J_HEARTS DEALER
+11:32:56.177 INFO  c.e.o.onlinePokerApplication - Player: Peter Card1: SIX_CLUBS Card2: NINE_DIAMONDS SMALL BLIND
+11:32:56.178 INFO  c.e.o.onlinePokerApplication - Player: Jozef Card1: SEVEN_SPADES Card2: Q_CLUBS BIG BLIND
+11:32:56.178 INFO  c.e.o.onlinePokerApplication - Player: Andrej Card1: EIGHT_CLUBS Card2: EIGHT_HEARTS
+11:32:56.178 INFO  c.e.o.onlinePokerApplication - Player: Ondrej Card1: THREE_DIAMONDS Card2: A_HEARTS
+11:32:56.178 INFO  c.e.o.onlinePokerApplication - Player: Kamil Card1: TEN_HEARTS Card2: FOUR_CLUBS
+11:32:56.178 INFO  c.e.o.onlinePokerApplication - Player: Adam Card1: J_CLUBS Card2: TEN_DIAMONDS
+11:34:21.962 INFO  c.e.o.onlinePokerApplication - Flop: [Q_DIAMONDS, SEVEN_DIAMONDS, TWO_HEARTS]
+11:34:21.964 INFO  c.e.o.onlinePokerApplication - Turn: K_SPADES
+11:34:21.965 INFO  c.e.o.onlinePokerApplication - River: TWO_DIAMONDS
+11:34:21.965 INFO  c.e.o.onlinePokerApplication - Table: [Q_DIAMONDS, SEVEN_DIAMONDS, TWO_HEARTS, K_SPADES, TWO_DIAMONDS]
+11:34:21.981 INFO  c.e.o.onlinePokerApplication - Andrej combination: Pair of EIGHT_CLUBS with TWO_HEARTS
+11:34:21.983 INFO  c.e.o.onlinePokerApplication - Ondrej combination: is pair of TWO_DIAMONDS
+11:34:21.983 INFO  c.e.o.onlinePokerApplication - Kamil combination: is pair of TWO_DIAMONDS
+11:34:21.984 INFO  c.e.o.onlinePokerApplication - Adam combination: is pair of TWO_DIAMONDS
+11:34:21.984 INFO  c.e.o.onlinePokerApplication - Martin combination: Three of kind with TWO_HEARTS
+11:34:21.985 INFO  c.e.o.onlinePokerApplication - Peter combination: is pair of TWO_DIAMONDS
+11:34:21.985 INFO  c.e.o.onlinePokerApplication - Jozef combination: Pair of Q_CLUBS with SEVEN_SPADES
+11:34:21.985 INFO  c.e.o.onlinePokerApplication - Game Started
+11:34:21.985 INFO  c.e.o.onlinePokerApplication - Player: Andrej Card1: SEVEN_DIAMONDS Card2: THREE_SPADES
+11:34:21.986 INFO  c.e.o.onlinePokerApplication - Player: Ondrej Card1: NINE_HEARTS Card2: NINE_SPADES DEALER
+11:34:21.986 INFO  c.e.o.onlinePokerApplication - Player: Kamil Card1: NINE_DIAMONDS Card2: FOUR_HEARTS SMALL BLIND
+11:34:21.986 INFO  c.e.o.onlinePokerApplication - Player: Adam Card1: SIX_DIAMONDS Card2: A_CLUBS BIG BLIND
+11:34:21.986 INFO  c.e.o.onlinePokerApplication - Player: Martin Card1: K_DIAMONDS Card2: Q_CLUBS
+11:34:21.987 INFO  c.e.o.onlinePokerApplication - Player: Peter Card1: FOUR_CLUBS Card2: Q_HEARTS
+11:34:21.987 INFO  c.e.o.onlinePokerApplication - Player: Jozef Card1: SEVEN_HEARTS Card2: FIVE_HEARTS
+11:37:00.657 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 12192 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:37:00.667 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:37:03.768 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:37:04.168 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3434a4f0
+11:37:04.176 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:37:07.260 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:37:07.269 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+11:37:17.037 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 17712 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:37:17.045 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:37:20.273 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:37:20.660 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7f3fc42f
+11:37:20.663 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:37:23.976 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.96 seconds (process running for 9.091)
+11:37:23.984 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:37:23.985 INFO  c.e.o.onlinePokerApplication - Game Started
+11:37:23.985 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: SIX_CLUBS Card2: K_CLUBS DEALER
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: TEN_HEARTS Card2: SEVEN_SPADES SMALL BLIND
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: TWO_DIAMONDS Card2: SIX_DIAMONDS BIG BLIND
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: NINE_CLUBS Card2: A_DIAMONDS
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: Q_DIAMONDS Card2: THREE_CLUBS
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: SIX_HEARTS Card2: A_CLUBS
+11:37:23.986 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: J_HEARTS Card2: TWO_SPADES
+11:37:45.043 INFO  c.e.o.onlinePokerApplication - Game Started
+11:37:45.046 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: NINE_DIAMONDS Card2: TEN_SPADES
+11:37:45.046 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: K_HEARTS Card2: TWO_SPADES DEALER
+11:37:45.046 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: A_HEARTS Card2: Q_CLUBS SMALL BLIND
+11:37:45.046 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: FIVE_SPADES Card2: FOUR_CLUBS BIG BLIND
+11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: TEN_CLUBS Card2: A_CLUBS
+11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: SIX_SPADES Card2: EIGHT_DIAMONDS
+11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: FIVE_HEARTS Card2: SIX_CLUBS
