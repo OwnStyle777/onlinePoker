@@ -7,32 +7,33 @@
         </encoder>
     </appender>
 
-    <!--  rolling File Appender -->
+    <!-- Rolling File Appender -->
+
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>logs/logback.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>logs/logback.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
-            <timeBasedFileNamingAndTriggeringPolicy
-                    class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
                 <maxFileSize>10MB</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
             <maxHistory>7</maxHistory>
         </rollingPolicy>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n</pattern>
-            <outputPatternAsHeader>true</outputPatternAsHeader>
+            <outputPatternAsHeader>false</outputPatternAsHeader>
         </encoder>
     </appender>
 
-    <!-- Specific logger for Console appender -->
-<loggers>
-        <logger level="debug">
-            <appender-ref ref="FILE" />
-        </logger>
+    <!-- Logger for File appender with DEBUG level -->
+    <logger name="com" level="debug" additivity="false" >
+        <appender-ref ref="FILE" />
+    </logger>
 
-    <!-- Root logger for FILE appender -->
-</loggers>
-    <root level="info">
+    <!-- Logger for CONSOLE appender with INFO level for com package -->
+    <logger name="com" level="info" >
+        <appender-ref ref="CONSOLE" />
+    </logger>
+    <!-- Root logger with INFO level for Console appender -->
+    <root  level="info" >
         <appender-ref ref="CONSOLE" />
     </root>
 
