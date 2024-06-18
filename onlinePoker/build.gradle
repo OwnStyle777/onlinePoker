@@ -16,9 +16,18 @@ repositories {
 }
 
 dependencies {
-	//logback dependencies
-	implementation 'ch.qos.logback:logback-classic:1.4.12'
-	implementation 'ch.qos.logback:logback-core:1.4.14'
+//	//logback dependencies
+//	implementation 'ch.qos.logback:logback-classic:1.4.12'
+//	implementation 'ch.qos.logback:logback-core:1.4.14'
+
+	//log4j2
+	implementation 'org.apache.logging.log4j:log4j-api:2.20.0'
+	implementation 'org.apache.logging.log4j:log4j-core:2.20.0'
+	implementation 'org.apache.logging.log4j:log4j-slf4j-impl:2.20.0'
+
+	// Lombok dependency
+	implementation 'org.projectlombok:lombok:1.18.32'
+	annotationProcessor 'org.projectlombok:lombok:1.18.32'
 
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
