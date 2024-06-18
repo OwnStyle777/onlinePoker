@@ -807,3 +807,38 @@
 11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: TEN_CLUBS Card2: A_CLUBS
 11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: SIX_SPADES Card2: EIGHT_DIAMONDS
 11:37:45.047 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: FIVE_HEARTS Card2: SIX_CLUBS
+11:43:02.359 INFO  c.e.o.onlinePokerApplication - Starting onlinePokerApplication using Java 21.0.2 with PID 19056 (C:\Users\DELL\Desktop\OnlinePoker\onlinePoker\build\classes\java\main started by DELL in C:\Users\DELL\Desktop\OnlinePoker\onlinePoker)
+11:43:02.364 INFO  c.e.o.onlinePokerApplication - No active profile set, falling back to 1 default profile: "default"
+11:43:05.757 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:43:06.150 INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3434a4f0
+11:43:06.153 INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:43:09.292 INFO  c.e.o.onlinePokerApplication - Started onlinePokerApplication in 7.908 seconds (process running for 9.253)
+11:43:09.299 INFO  c.e.o.onlinePokerApplication - Players Initialized
+11:43:09.300 INFO  c.e.o.onlinePokerApplication - Game Started
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: FOUR_DIAMONDS Card2: TEN_SPADES DEALER
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: FIVE_SPADES Card2: FIVE_HEARTS SMALL BLIND
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: EIGHT_CLUBS Card2: EIGHT_SPADES BIG BLIND
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: J_HEARTS Card2: Q_SPADES
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: K_CLUBS Card2: FOUR_CLUBS
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: J_DIAMONDS Card2: THREE_SPADES
+11:43:09.301 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: SIX_DIAMONDS Card2: K_SPADES
+11:43:28.150 INFO  c.e.o.onlinePokerApplication - Flop :[TEN_CLUBS, THREE_CLUBS, SIX_SPADES]
+11:43:28.150 INFO  c.e.o.onlinePokerApplication -  Turn :TWO_DIAMONDS
+11:43:28.153 INFO  c.e.o.onlinePokerApplication -  River :FOUR_HEARTS
+11:43:28.153 INFO  c.e.o.onlinePokerApplication - Table :[TEN_CLUBS, THREE_CLUBS, SIX_SPADES, TWO_DIAMONDS, FOUR_HEARTS]
+11:43:28.165 INFO  c.e.o.onlinePokerApplication - Andrej combination: hight card Q_SPADES with J_HEARTS
+11:43:28.165 INFO  c.e.o.onlinePokerApplication - Ondrej combination: is pair of FOUR_HEARTS
+11:43:28.165 INFO  c.e.o.onlinePokerApplication - Kamil combination: is pair of THREE_CLUBS
+11:43:28.165 INFO  c.e.o.onlinePokerApplication - Adam combination: is pair of SIX_SPADES
+11:43:28.165 INFO  c.e.o.onlinePokerApplication - Martin combination: Pair of TEN_SPADES with FOUR_DIAMONDS
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Peter combination:  is Straight
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Jozef combination: is pair of EIGHT_SPADES
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Game Started
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Player:  Andrej Card1: SEVEN_SPADES Card2: FOUR_CLUBS
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Player:  Ondrej Card1: J_HEARTS Card2: FIVE_HEARTS DEALER
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Player:  Kamil Card1: Q_SPADES Card2: THREE_SPADES SMALL BLIND
+11:43:28.169 INFO  c.e.o.onlinePokerApplication - Player:  Adam Card1: THREE_DIAMONDS Card2: J_CLUBS BIG BLIND
+11:43:28.171 INFO  c.e.o.onlinePokerApplication - Player:  Martin Card1: TEN_DIAMONDS Card2: EIGHT_CLUBS
+11:43:28.171 INFO  c.e.o.onlinePokerApplication - Player:  Peter Card1: SIX_CLUBS Card2: A_HEARTS
+11:43:28.171 INFO  c.e.o.onlinePokerApplication - Player:  Jozef Card1: FOUR_HEARTS Card2: K_CLUBS
+21:04:36.043 WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9h12m59s655ms606µs900ns).
