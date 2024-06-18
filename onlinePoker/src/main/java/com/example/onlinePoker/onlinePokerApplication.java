@@ -24,7 +24,7 @@ import java.util.List;
 public class onlinePokerApplication   {
 
 
-	private static final Logger log = LogManager.getLogger(onlinePokerApplication.class);
+	
 
 	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		SpringApplication.run(onlinePokerApplication.class, args);
