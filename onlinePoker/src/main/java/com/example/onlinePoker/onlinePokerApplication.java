@@ -5,10 +5,14 @@ import com.example.onlinePoker.game.HandEvaluator;
 import com.example.onlinePoker.players.Player;
 import com.example.onlinePoker.api.table.Card;
 import com.example.onlinePoker.api.table.Table;
-import org.slf4j.Logger;
+import lombok.extern.log4j.Log4j;
+import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
@@ -16,11 +20,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootApplication
+@Log4j2
 public class onlinePokerApplication   {
 
-	private static final Logger logger = LoggerFactory.getLogger(onlinePokerApplication.class);
 
-
+	private static final Logger log = LogManager.getLogger(onlinePokerApplication.class);
 
 	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		SpringApplication.run(onlinePokerApplication.class, args);
@@ -60,7 +64,8 @@ public class onlinePokerApplication   {
 
 
 		game.setPlayers(playerList);
-		logger.info("Players Initialized");
+
+		log.info("Players Initialized");
 
 		int smallBlind = 1;
 		int rounds = 0;
@@ -69,7 +74,7 @@ public class onlinePokerApplication   {
 
 			game.preparePlayersForNextRound(playerList);
 			game.dealTheCards(playerList);
-			logger.info("Game Started");
+			log.info("Game Started");
 			 smallBlind = game.getBlinds(smallBlind,playerList);
 
 			 int firstPlayer = smallBlind + 1;
@@ -88,7 +93,7 @@ public class onlinePokerApplication   {
 					role ="";
 				}
 
-				logger.info("Player:  "+ playerC.getName()  + " Card1: " + cards[0].toString() + " Card2: " + cards[1].toString() + role);
+				log.info("Player:  "+ playerC.getName()  + " Card1: " + cards[0].toString() + " Card2: " + cards[1].toString() + role);
 
 
 			}
@@ -101,16 +106,16 @@ public class onlinePokerApplication   {
 
 			game.dealTheFlop();
 
-			logger.info("Flop :" + (table.getFlop()));
+			log.info("Flop :" + (table.getFlop()));
 
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheTurn();
-			logger.info(" Turn :" + table.getTurn());
+			log.info(" Turn :" + table.getTurn());
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 			game.dealTheRiver();
-			logger.info(" River :" + table.getRiver());
+			log.info(" River :" + table.getRiver());
 			game.resetRoundStakes();
 //			game.callBetsNextRounds(smallBlind, true);
 
@@ -118,7 +123,7 @@ public class onlinePokerApplication   {
 
 			allTable.add(table.getTurn());
 			allTable.add(table.getRiver());
-			logger.info("Table :" + (allTable));
+			log.info("Table :" + (allTable));
 
 			for(Player playerk: playerList){
 				String combination = "";
@@ -150,7 +155,7 @@ public class onlinePokerApplication   {
 			}
 			System.out.println();
 			for(Player playerC: playerList){
-				logger.info(playerC.getName() + " combination: " + playerC.getCombination());
+				log.info(playerC.getName() + " combination: " + playerC.getCombination());
 			}
 			System.out.println();
 
