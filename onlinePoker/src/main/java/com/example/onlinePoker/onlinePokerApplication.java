@@ -9,6 +9,7 @@ import lombok.extern.log4j.Log4j;
 import lombok.extern.log4j.Log4j2;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.core.config.Configurator;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -29,6 +30,9 @@ public class onlinePokerApplication   {
 	public static void main(String[] args) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
 		SpringApplication.run(onlinePokerApplication.class, args);
 
+
+
+		System.out.println("Log4j2 configuration file: " + System.getProperty("log4j2.configurationFile"));
 
 
 		Game game = new Game();

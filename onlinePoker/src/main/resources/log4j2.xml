@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="TRACE">
+<Configuration>
+
+<Properties>
+        <Property name="logFileName">logs/log4j2-${date:yyyy-MM-dd}.log</Property>
+    </Properties>
     <Appenders>
         <!-- Console Appender -->
         <Console name="CONSOLE" target="SYSTEM_OUT">
@@ -7,29 +11,23 @@
         </Console>
 
         <!-- Rolling File Appender -->
-        <RollingFile name="FILE" fileName="logs/app.log" filePattern="logs/log4j2.%d{yyyy-MM-dd}.%i.log.gz">
+        <RollingFile name="FILE" fileName="${logFileName}" filePattern="logs/log4j2-%d{yyyy-MM-dd}.%i.log">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
             <Policies>
-                <TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+                <TimeBasedTriggeringPolicy />
                 <SizeBasedTriggeringPolicy size="10MB" />
             </Policies>
-            <PatternLayout pattern="%d{HH:mm:ss.SSS} %-5level %logger{36} - %msg%n" />
         </RollingFile>
     </Appenders>
 
-    <Loggers>
-        <!-- Logger for File appender with DEBUG level -->
+    <Loggers>  <!-- Logger for File appender with DEBUG level -->
         <Logger name="com" level="debug" additivity="false">
             <AppenderRef ref="FILE" />
         </Logger>
 
-        <!-- Logger for CONSOLE appender with INFO level for com package -->
-        <Logger name="com" level="info" additivity="true">
-            <AppenderRef ref="CONSOLE" />
-        </Logger>
-
         <!-- Root logger with INFO level for Console appender -->
-        <Root level="debug">
+        <Root level="info">
             <AppenderRef ref="CONSOLE" />
-        </Root>
+                  </Root>
     </Loggers>
 </Configuration>
